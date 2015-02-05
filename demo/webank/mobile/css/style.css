@@ -1993,8 +1993,9 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 	.join_us_title{ top:250px;}
 	.email_link{ top:340px;}
 	.webank_it_bg{ top:50px;}
-	.we_slogan{ top:265px;}
-	.share_we{ top:340px;}
+	.we_slogan{ top:260px;}
+	.share_we{ top:330px;}
+	..notice_wrap .notice_link{ top:380px;}
 	.detail_cover .dot_wrap{ bottom:55px;}
 	.cover_link_next{ bottom:40px;}
 	.wrap_show .current .dot_large{ bottom:47px;}
