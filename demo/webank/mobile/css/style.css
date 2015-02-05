@@ -1821,18 +1821,23 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .share_we_guide{ display: block; height:132px; width:235px; background:url(../images/detail/share_we_guide.png) no-repeat 0 0; background-size:contain; position: fixed; right:30px; top:10px; z-index:100;}
 .mask{ display: block; background:#20539f; opacity:0.77; height:100%; width:100%; z-index:99; position:absolute; left:0px; top:0px;}
 
+.notice_wrap .notice_link{ display:block; height:35px; width:100px; text-align:center; position:absolute; top:460px; left:50%; margin-left:-50px; z-index:2;}
+.notice_wrap .notice_link .icon_pdf{ display:inline-block; height:18px; width:16px; margin-right:5px; background:url(../images/detail/notice_bg.png) no-repeat 0 0; background-size:67px 18px; vertical-align:middle; margin-left:-18px;}
+.notice_wrap .notice_link .txt{ display:inline-block; height:12px; width:49px; background:url(../images/detail/notice_bg.png) no-repeat -18px 0; background-size:67px 18px; margin-top:3px; text-indent:-9999px; overflow:hidden; position:relative; top:1px; vertical-align:middle;}
+
 .current .webank_it_bg .we_penguin_bg{ -webkit-animation:a_we_penguin 0.2s 0.4s linear both; }
 .current .webank_it_bg .it_earth_bg{ -webkit-animation:a_it_earth 0.2s 0.4s linear both; }
 .current .we_slogan{ -webkit-animation:a_we_slogan 0.3s 0.7s linear both; }
 .current .share_we{ -webkit-animation:a_we_slogan 0.3s 1s linear both; }
-.current .penguin_wrap_10_hook{ -webkit-animation:a_we_slogan 0.3s 1.3s linear both; }
-.current .penguin_wrap_10{ -webkit-animation:a_penguin_wrap_10 1.6s 0.9s linear infinite; }
-.current .penguin_wrap_10 .penguin_hand_1{ -webkit-animation:a_penguin_wrap_10_hand_1 0.5s 0.3s linear infinite; }
-.current .penguin_wrap_10 .penguin_hand_2{ -webkit-animation:a_penguin_wrap_10_hand_2 1.6s 0.9s linear infinite; }
-.current .penguin_wrap_10 .penguin_foot_1{ -webkit-animation:a_penguin_wrap_10_foot_1 1.6s 0.9s linear infinite; }
-.current .penguin_wrap_10 .penguin_foot_2{ -webkit-animation:a_penguin_wrap_10_foot_2 1.6s 0.9s linear infinite; }
-.current .penguin_shadow_10{ -webkit-animation:a_penguin_shadow_10 1.6s 0.9s linear infinite; }
-.current .penguin_dialog{ -webkit-animation:a_penguin_dialog 1.6s 0.9s linear infinite; }
+.current .notice_wrap .notice_link{ -webkit-animation:a_we_slogan 0.3s 1.3s linear both;}
+.current .penguin_wrap_10_hook{ -webkit-animation:a_we_slogan 0.3s 1.6s linear both; }
+.current .penguin_wrap_10{ -webkit-animation:a_penguin_wrap_10 1.6s 1.2s linear infinite; }
+.current .penguin_wrap_10 .penguin_hand_1{ -webkit-animation:a_penguin_wrap_10_hand_1 0.5s 0.6s linear infinite; }
+.current .penguin_wrap_10 .penguin_hand_2{ -webkit-animation:a_penguin_wrap_10_hand_2 1.6s 1.2s linear infinite; }
+.current .penguin_wrap_10 .penguin_foot_1{ -webkit-animation:a_penguin_wrap_10_foot_1 1.6s 1.2s linear infinite; }
+.current .penguin_wrap_10 .penguin_foot_2{ -webkit-animation:a_penguin_wrap_10_foot_2 1.6s 1.2s linear infinite; }
+.current .penguin_shadow_10{ -webkit-animation:a_penguin_shadow_10 1.6s 1.2s linear infinite; }
+.current .penguin_dialog{ -webkit-animation:a_penguin_dialog 1.6s 1.2s linear infinite; }
 
 @-webkit-keyframes a_we_penguin{
 	0%{ opacity:0; -webkit-transform:translate(-200px,0px);}
