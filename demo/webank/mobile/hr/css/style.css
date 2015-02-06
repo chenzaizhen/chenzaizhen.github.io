@@ -214,6 +214,40 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 
 /*简历投递提示 弹层*/
 
+/*个人中心 我的简历*/
+
+.my_resume_wrap .title{ display:block; height:38px; line-height:38px; width:100%; background:#ebebeb; color:#6f6f6f; font-size:16px; font-family:"microsoft yahei"; font-weight:normal; border-bottom: 1px solid #bdbdbd; padding-left:10px; }
+.resume_info_wrap .basic_info{ display:block; height:47px; line-height:47px; border-bottom: 1px solid #bdbdbd; color:#6f6f6f; font-size:14px; font-family:"microsoft yahei"; padding-left:10px; position:relative;}
+.resume_info_wrap .basic_info:hover{ text-decoration:none;}
+.resume_info_wrap .icon_arrow{ display:block; height:19px; width:11px; background:url(../images/user_center/icon_arrow.png) no-repeat 0 0; background-size:contain; position:absolute; right:15px; top:14px; text-indent:-9999px; overflow:hidden; }
+.pc_resume{ border-bottom:1px solid #bdbdbd; width:100%;}
+.bar_wrap{ margin-top:18px;}
+.bar_wrap .txt{ color:#6f6f6f; font-size:14px; font-family:"microsoft yahei"; margin-right:5px; margin-left:10px;}
+.bar_wrap .bar_area{ display:inline-block; vertical-align:middle; margin-right:5px; height:2px; width:140px; background:#bfbfbf; position:relative;}
+.bar_wrap .bar_area .bar{ display:block; vertical-align:middle; margin-right:5px; height:2px; width:100%; background:#bfbfbf; position:absolute; left:0px; top:0px; -webkit-transition:width 0.3s linear;}
+.bar_wrap .bar_area .state_lack{background:#f53c3c;}
+.bar_wrap .bar_area .state_incomplete{background:#fca933;}
+.bar_wrap .bar_area .state_complete{background:#20bd45;}
+
+.bar_wrap .percent{ display:inline-block; vertical-align:middle; color:#6f6f6f; font-size:14px; font-family:"microsoft yahei";}
+.pc_resume .tips{ padding-left:10px; color:#bfbfbf; font-size:14px; font-family:"microsoft yahei"; margin-bottom:18px;}
+
+.delivery_wrap .tit_area{ display:block; height:38px; line-height:38px; width:100%; background:#ebebeb; color:#6f6f6f; font-size:16px; font-family:"microsoft yahei"; border-bottom: 1px solid #bdbdbd; padding-left:10px; }
+.delivery_wrap .tit_area .tit{ float:left; font-weight:normal;}
+
+.delivery_list li{ display:block; height:66px; border-bottom:1px solid #bdbdbd; padding-left:10px; position:relative; }
+.delivery_list li .tit{ color:#6f6f6f; font-size:16px; font-family:"microsoft yahei"; font-weight:normal; margin-top:15px; margin-bottom:3px;}
+.delivery_list li .d_time{color:#bfbfbf; font-size:14px; font-family:"microsoft yahei";}
+.delivery_list li .hr_state{color:#bfbfbf; font-size:14px; font-family:"microsoft yahei"; position:absolute; right:10px; top:2px;}
+
+
+
+
+
+/*个人中心 我的简历*/
+
+
+
 
 
 
