@@ -18,7 +18,7 @@ button {cursor:pointer;}
 
 html,body{ height:100%; width:100%; position: relative;}
 
-.notice_wrap{ margin-top:25px;}
+.notice_wrap{ padding-top:25px;}
 .notice_wrap .notice_title{ font-size:20px; font-family:'microsoft yahei'; text-align:center; margin-bottom:15px;}
 .notice_wrap .notice_txt{ margin-bottom:50px;}
 .notice_wrap .notice_txt .txt{ font-size:14px; font-family:'microsoft yahei'; margin-bottom:10px; padding:0px 15px; text-indent:2em;}
