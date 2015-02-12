@@ -240,7 +240,7 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 .delivery_list li .d_time{color:#bfbfbf; font-size:14px; font-family:"microsoft yahei";}
 .delivery_list li .hr_state{color:#bfbfbf; font-size:14px; font-family:"microsoft yahei"; position:absolute; right:10px; top:2px;}
 
-
+.edit_info_list li .ipt{ width:80%; color:#6f6f6f;}
 
 
 
