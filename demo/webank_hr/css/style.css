@@ -16,7 +16,7 @@ legend{ display:none;}
 textarea{resize:none;}
 button {cursor:pointer;}
 
-body,html{ display:block; height:100%; width:100%;}
+body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .head_wrap{ display:block; height:93px; width:100%; background:#2a5eab;}
 .head{ display:block; height:93px; width:1000px; margin:0 auto; position:relative;}
 .head .logo a{ display:block; display:block; height:30px; width:150px; background:url(../images/global/logo.png) no-repeat 0 0; text-indent:-9999px; overflow:hidden; position:absolute; top:26px;}
