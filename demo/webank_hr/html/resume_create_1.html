@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html><!--  manifest="js/cache.appcache" -->
+<head>
+<meta  charset="utf-8" />
+<title>WeBank 微众银行</title>
+<meta name="description" content="WeBank" />
+<meta name="keywords" content="深圳前海微众银行、前海微众银行、微众银行、腾讯银行、企鹅银行、WeBank、互联网银行、首家民营银行、民营银行" />
+<link type="image/x-icon" href="fav_icon_32.ico" rel="Shortcut Icon">
+<link type="image/x-icon" href="fav_icon_32.ico" rel="bookmark">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />-->
+
+<!--<script type="text/javascript">
+(function() {
+
+	var ua = navigator.userAgent;
+	var istablet = /android/i.test(ua) && !/mobile/i.test(ua);
+	if (!istablet && /(android)|(iphone)|(ipod)/i.test(ua) && (!/mi pad/i.test(ua))) {
+		try {
+			var jumpUrl = "mobile/index.html";
+			location.replace(jumpUrl)
+		} catch (d) {}
+	}
+	
+})(); </script>-->
+
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+
+
+</head>
+<body>
+
+<div class="wrap">
+	
+    <div class="head_wrap">
+        <div class="head">
+            <h1 class="logo"><a href="#">WeBank</a></h1>
+            <ul class="menu_list">
+                <li class="current">
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">社会招聘</a>
+                </li>
+                <li>
+                    <a href="#">校园招聘</a>
+                </li>
+                <li>
+                    <a href="#">关于微众</a>
+                </li>
+            </ul>
+            <a href="#" class="link_login" style="display:none;">QQ登录</a>
+            
+            <div class="user_area">
+                <a href="#" class="link_name">
+                    <p class="name">你好，飞翔的企鹅</p>
+                    <i class="icon_arrow"></i>
+                </a>
+                <div class="pop_user">
+                    <ul class="user_list">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#" class="log_out">退出</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+    <div class="resume_step_wrap">
+    	<div class="step_item step_item_1 step_finish">
+        	<span class="txt">简历完整度<span class="num">15</span>%</span>
+            <i class="arrow"></i>
+        </div>
+        <div class="step_item step_item_2 step_current">
+        	<span class="icon_num"><span class="num">1</span></span>
+        	<span class="txt">个人基本信息</span>
+            <i class="arrow"></i>
+        </div>
+        <div class="step_item step_item_3 step_unfinish">
+        	<span class="icon_num"><span class="num">2</span></span>
+        	<span class="txt">个人经历</span>
+            <i class="arrow"></i>
+        </div>
+        <div class="step_item step_item_4 step_unfinish">
+        	<span class="icon_num"><span class="num">3</span></span>
+        	<span class="txt">家庭情况</span>
+            <i class="arrow"></i>
+        </div>
+        <div class="step_item step_item_5 step_unfinish">
+        	<span class="icon_num"><span class="num">4</span></span>
+        	<span class="txt">提交简历</span>
+        </div>
+    </div>
+    
+    <div class="resume_create_wrap">
+    	<div class="resume_area">
+            <div class="title">
+                <h3 class="tit">个人基本信息</h3>
+            </div>
+            <div class="con">
+                <form>
+                	<div class="form_area">
+                        <div class="form_row">
+                            <div class="form_item">
+                                <input class="ipt ipt_name ipt_error" type="text" value="姓名" />
+                                <i class="i_star">*</i>
+                            </div>
+                            <div class="form_item">
+                                <input class="ipt ipt_user_id" type="text" value="身份证号" />
+                                <i class="i_star">*</i>
+                            </div>
+                            <div class="form_item">
+                                <input class="ipt ipt_birth" type="text" value="出生日期" />
+                                <span class="icon_calendar"></span>
+                                <i class="i_star">*</i>
+                            </div>
+                            <div class="form_item no_margin select_current"><!-- 当选择时，需要添加类名 select_current 增加层高，避免遮挡 -->
+                                <input class="ipt ipt_sex" type="text" value="性别" />
+                                <span class="icon_arrow"></span>
+                                <i class="i_star">*</i>
+                                <div class="pop_select">
+                                	<ul class="select_list">
+                                    	<li><a href="##">男</a></li>
+                                        <li><a href="##">女</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form_row">
+                            <div class="form_item">
+                                <input class="ipt ipt_phone ipt_error" type="text" value="手机号码" />
+                                <span class="tips_error"><i class="icon_error">!</i>请填写正确的手机号码</span>
+                                <i class="i_star">*</i>
+                            </div>
+                            <div class="form_item">
+                                <input class="ipt ipt_email" type="text" value="邮箱" />
+                                <i class="i_star">*</i>
+                            </div>
+                            <div class="form_item">
+                                <input class="ipt ipt_country" type="text" value="国籍" />
+                                <span class="icon_arrow"></span>
+                                <i class="i_star">*</i>
+                            </div>
+                            <div class="form_item no_margin">
+                                <input class="ipt ipt_health" type="text" value="健康状况" />
+                                <i class="i_star">*</i>
+                            </div>
+                        </div>
+                        
+                        <div class="form_row">
+                            <div class="form_item">
+                                <input class="ipt ipt_school" type="text" value="毕业院校" />
+                                <i class="i_star">*</i>
+                            </div>
+                            <div class="form_item">
+                                <input class="ipt ipt_education" type="text" value="最高学历" />
+                                <span class="icon_arrow"></span>
+                                <i class="i_star">*</i>
+                            </div>
+                        </div>
+                        
+                        <div class="s_line"></div>
+                        
+                        <div class="form_row">
+                            <div class="form_item">
+                                <input class="ipt ipt_native_place" type="text" value="籍贯" />
+                            </div>
+                            <div class="form_item">
+                                <input class="ipt ipt_favour" type="text" value="兴趣爱好" />
+                            </div>
+                            <div class="form_item">
+                                <input class="ipt ipt_political" type="text" value="政治面貌" />
+                                <span class="icon_arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="resume_create_wrap">
+    	<div class="resume_area">
+            <div class="title">
+                <h3 class="tit">简历上传</h3>
+            </div>
+            <div class="con">
+                <div class="resume_upload">
+                	<p class="upload_tips">上传简历：建议命名格式为：“应聘职位名称-姓名”</p>
+                    <div class="upload_area">
+                        <input type="file" class="ipt_file" style="display:none;" />
+                        <input type="button" class="ipt_file_btn" value="上传文件" onClick="javascript:alert('hi');" />
+                        <input type="text" class="ipt_file_text" value="为选择任何文件" readonly="readonly" />
+                    </div>
+                    <p class="tips_file_limit">仅接受word、wps、pdf等标准文档格式文件，不超过5M</p>
+                </div>
+                <div class="photo_wrap">
+                	<a href="#" class="photo_area">
+                    	<img src="../images/data/head.jpg" alt="" class="photo_user" />
+                        <div class="tips_photo">近期照片</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="btn_wrap btn_wrap_create_resume">
+    	<a href="#" class="btn_next">下一步：继续完善个人经历</a>
+        <span class="tips_error">
+        	<i class="icon_error">!</i>请在红框内填写正确信息
+        </span>
+    </div>
+    
+    
+    <div class="footer">
+    	<p class="slogan">科技·普惠·连接</p>
+        <p class="copyright">Copyright © 1998 - 2014 Tencent. All Rights Reserved.</p>
+    </div>
+</div>
+
+
+<script language="javascript" type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=39617597" charset="UTF-8"></script>
+
+</body>
+</html>

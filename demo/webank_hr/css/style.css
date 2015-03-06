@@ -17,21 +17,28 @@ textarea{resize:none;}
 button {cursor:pointer;}
 
 body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
-.head_wrap{ display:block; height:93px; width:100%; background:#2a5eab;}
-.head{ display:block; height:93px; width:1000px; margin:0 auto; position:relative;}
-.head .logo a{ display:block; display:block; height:30px; width:150px; background:url(../images/global/logo.png) no-repeat 0 0; text-indent:-9999px; overflow:hidden; position:absolute; top:26px;}
-.head_wrap_index{ margin-bottom:-93px; background:none; position:relative; z-index:2;}
+.head_wrap{ display:block; height:75px; width:100%; background:#2a5eab; z-index:2; position:relative;}
+.head{ display:block; height:75px; width:1000px; margin:0 auto; position:relative;}
+.head .logo a{ display:block; display:block; height:30px; width:150px; background:url(../images/global/logo.png) no-repeat 0 0; text-indent:-9999px; overflow:hidden; position:absolute; top:20px;}
+.head_wrap_index{ margin-bottom:-75px; background:none; position:relative; z-index:2;}
 
-.menu_list{ display:block; width:480px; position:absolute; right:194px; top:31px;}
+.menu_list{ display:block; width:480px; position:absolute; right:194px; top:22px;}
 .menu_list li{ display:block; width:120px; height:30px; float:left; text-align:right;}
 .menu_list li a{ font-size:16px; font-family:"microsoft yahei"; color:#a0c6ff; padding-bottom:3px;}
 .menu_list li a:hover{ text-decoration:none;}
 .menu_list li.current a{ color:#fff; border-bottom:2px solid #fff;}
 
-.link_login{ display:block; height:30px; width:84px; border:1px solid #a0c6ff; text-align:center; line-height:30px; font-size:16px; font-family:"microsoft yahei"; color:#a0c6ff; position:absolute; right:0px; top:27px;}
-.link_name{ display:block; height:30px; width:140px;  text-align:right; line-height:30px; font-size:14px; font-family:"microsoft yahei"; color:#a0c6ff; position:absolute; right:0px; top:27px;}
+.link_login{ display:block; height:30px; width:84px; border:1px solid #a0c6ff; text-align:center; line-height:30px; font-size:16px; font-family:"microsoft yahei"; color:#a0c6ff; position:absolute; right:0px; top:20px;}
+.user_area{ display:block; height:30px; width:140px; position:absolute; right:0px; top:20px;}
+.link_name{ display:block; height:30px; width:140px; text-align:right; line-height:30px; font-size:14px; font-family:"microsoft yahei"; color:#a0c6ff; position:absolute; right:0px; top:0px;}
+.link_name:hover{ text-decoration:none; font-size:14px;}
 .link_name .name{ width:125px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
 .link_name .icon_arrow{ display:block; height:4px; width:7px; background:url(../images/index/icon_arrow_2.png) no-repeat 0 0; position:absolute; right:0px; top:13px;}
+.user_area .pop_user{ display:block; height:101px; width:112px; position:absolute; right:0px; top:37px;}
+.user_area .user_list{ border:1px solid #d3d3d3;}
+.user_area .user_list li a{ display:block; height:33px; width:110px; background:rgba(255, 255, 255, 1); text-align:center; line-height:33px; font-size:14px; font-family:"microsoft yahei"; color:#2c2c2c; border-bottom:1px solid #d3d3d3;}
+.user_area .user_list li a:hover{ text-decoration:none;}
+.user_area .user_list li .log_out{ border:none;}
 
 .banner{ display: block; height:560px; width:100%; background:#1d3d78 url(../images/index/banner.jpg) no-repeat center 0; position:relative;}
 .banner .banner_slogan{ display:block; width:503px; height:92px; background:url(../images/index/slogan.png) no-repeat 0 0; position:absolute; left:50%; top:165px; margin-left:-251px; text-indent:-9999px; overflow:hidden;}
@@ -40,7 +47,8 @@ body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .search_wrap .search_area{ display:inline; height:57px; width:133px; background:#fff; margin-right:1px; float:left;}
 .search_wrap .search_area .sel_search{ display:block; height:57px; width:133px; text-align:center; font-size:16px; font-family:'microsoft yahei'; line-height:57px; position:relative; color:#2c2c2c;}
 .search_wrap .search_area .sel_search .icon_arrow{ display:block; height:5px; width:9px; background:url(../images/index/icon_arrow.png) no-repeat 0 0; position:absolute; right:20px; top:26px;}
-.key_list li a{ display:block; background:rgba(255,255,255,0.95); height:57px; width:133px; text-align:center; font-size:16px; font-family:'microsoft yahei'; line-height:57px; margin-top:1px; color:#2c2c2c;}
+.key_list{ margin-top:1px;}
+.key_list li a{ display:block; background:rgba(255,255,255,0.95); height:45px; width:133px; text-align:center; font-size:16px; font-family:'microsoft yahei'; line-height:45px; border-bottom:1px solid #d6d6d6; color:#2c2c2c;}
 .key_list li a:hover{ text-decoration:none;}
 
 .search_wrap .ipt_area{ display:block; height:57px; width:421px; float:left; background:#fff;}
@@ -60,15 +68,35 @@ body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
 
 .job_con{}
 .job_con .job_list{ overflow:hidden;}
-.job_con .job_list .job_item{ display:inline; float:left; margin-right:10px; width:156px; height:156px; border:1px solid #e3e3e3; position:relative;}
-.job_con .job_list .job_item .pic{ display:block; height:90px; width:156px; background:url(../images/index/icon_sort_1.png) no-repeat 0 0;}
+.job_con .job_list .job_item{ display:inline; float:left; margin-right:10px; width:156px; height:156px;}
+.job_con .job_list .job_item .a_link{ display:block; width:156px; height:156px; background:#fcfcfc; border:1px solid #e3e3e3; position:relative; -moz-transition:background 0.2s linear,border 0.2s linear; -webkit-transition:background 0.2s linear,border 0.2s linear;}
+.job_con .job_list .job_item .pic{ display:block; height:90px; width:156px; background:url(../images/index/icon_sort_1.png) no-repeat center center;}
 .job_con .job_list .job_item .pic_2{ background-image:url(../images/index/icon_sort_2.png);}
 .job_con .job_list .job_item .pic_3{ background-image:url(../images/index/icon_sort_3.png);}
 .job_con .job_list .job_item .pic_4{ background-image:url(../images/index/icon_sort_4.png);}
 .job_con .job_list .job_item .pic_5{ background-image:url(../images/index/icon_sort_5.png);}
 .job_con .job_list .job_item .pic_6{ background-image:url(../images/index/icon_sort_6.png);}
 
-.job_con .job_list .job_item .job_tit{ text-align:center; font-size:16px; font-weight:bold; font-family:'microsoft yahei'; color:#5f5f5f;}
+.job_con .job_list .job_item .a_link:hover{ text-decoration:none;}
+.job_con .job_list .job_item_1 .a_link:hover{ background:#2a5eab; border:1px solid #2a5eab;}
+.job_con .job_list .job_item_2 .a_link:hover{ background:#1997d8; border:1px solid #1997d8;}
+.job_con .job_list .job_item_3 .a_link:hover{ background:#29c7be; border:1px solid #29c7be;}
+.job_con .job_list .job_item_4 .a_link:hover{ background:#ebb615; border:1px solid #ebb615;}
+.job_con .job_list .job_item_5 .a_link:hover{ background:#ea7332; border:1px solid #ea7332;}
+.job_con .job_list .job_item_6 .a_link:hover{ background:#c32525; border:1px solid #c32525;}
+
+.job_con .job_list .job_item_1 .a_link:hover .pic_1{ background-image:url(../images/index/icon_sort_1_hover.png);}
+.job_con .job_list .job_item_2 .a_link:hover .pic_2{ background-image:url(../images/index/icon_sort_2_hover.png);}
+.job_con .job_list .job_item_3 .a_link:hover .pic_3{ background-image:url(../images/index/icon_sort_3_hover.png);}
+.job_con .job_list .job_item_4 .a_link:hover .pic_4{ background-image:url(../images/index/icon_sort_4_hover.png);}
+.job_con .job_list .job_item_5 .a_link:hover .pic_5{ background-image:url(../images/index/icon_sort_5_hover.png);}
+.job_con .job_list .job_item_6 .a_link:hover .pic_6{ background-image:url(../images/index/icon_sort_6_hover.png);}
+
+.job_con .job_list .job_item .a_link:hover .job_tit{ color:#fff;}
+.job_con .job_list .job_item .a_link:hover .job_tit_en{ color:#fff;}
+
+
+.job_con .job_list .job_item .job_tit{ text-align:center; font-size:16px; font-weight: normal; font-family:'microsoft yahei'; color:#5f5f5f;}
 .job_con .job_list .job_item .job_tit_en{ text-align:center; font-size:12px; font-family:'Arial'; color:#bfbfbf;}
 .job_con .job_list .job_item .hook_line{ display:block; height:4px; background:#2a5eab; width:158px; position:absolute; bottom:-1px; left:-1px;}
 .job_con .job_list .job_item_2 .hook_line{ background:#1ca5ec;}
@@ -81,11 +109,11 @@ body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .qr_code_wrap{ display:block; height:36px; width:36px; position: absolute; right:-73px; bottom:-1px;}
 .qr_code_wrap .qr_code_link{ display:block; height:36px; width:36px;}
 .qr_code_wrap .icon_qr_code{ display:block; height:36px; width:36px; background:url(../images/index/scan_qr_code.png) no-repeat 0 0;}
-.qr_code_wrap .pop_qr_code{ display:block; height:110px; width:90px; text-align:center; border:1px solid #dadada; position:absolute; left:-28px; top:-123px; opacity:0;}
+.qr_code_wrap .pop_qr_code{ display:none; height:110px; width:90px; text-align:center; border:1px solid #dadada; position:absolute; left:-28px; top:-123px;}
 .qr_code_wrap .pop_qr_code .qr_img{ display:inline-block; height:64px; width:64px; margin-top:5px; margin-bottom:5px;}
 .qr_code_wrap .pop_qr_code .detail{ display:block; text-align:center; font-size:12px; color:#000; font-family:'microsoft yahei'; line-height:1.3;}
 .qr_code_wrap .qr_code_link:hover .icon_qr_code{ background-image:url(../images/index/scan_qr_code_hover.png);}
-.qr_code_wrap .qr_code_link:hover .pop_qr_code{ opacity:1;}
+.qr_code_wrap .qr_code_link:hover .pop_qr_code{ display:block;}
 
 .footer{ display:block; height:105px; width:1000px; margin:0px auto; text-align:center; position:relative; border-top:1px solid #e6e6e6;}
 .footer .slogan{ display:block; width:127px; height:14px; background:url(../images/global/foot_slogan.png) no-repeat 0 0; position:absolute; left:50%; top:25px; margin-left:-63px; text-indent:-9999px; overflow:hidden;}
@@ -96,12 +124,13 @@ body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .detail_con .search_wrap{ width:800px; position: relative; top:0; left:0; margin:55px auto 50px; z-index:2;}
 .detail_con .search_wrap .search_area{ border:1px solid #e4e4e4; height:44px; width:135px; margin-right:10px;}
 .detail_con .search_wrap .search_area .sel_search{ height:44px; line-height:44px; width:135px;}
+.detail_con .search_wrap .search_area .sel_search:hover{ text-decoration:none;}
 .detail_con .search_wrap .search_area .sel_search .icon_arrow{ top:20px;}
-.detail_con .key_list{ margin-left:-1px; margin-top:2px; display:none;}
-.detail_con .key_list li a{ height:44px; line-height:44px; border:1px solid #e4e4e4; width:135px;}
+.detail_con .key_list{ margin-left:-1px; margin-top:1px; display:none;}
+.detail_con .key_list li a{ height:44px; line-height:44px; border:1px solid #e4e4e4; border-top:none; width:135px;}
 .detail_con .search_wrap .ipt_area{ border:1px solid #e4e4e4; width:382px; height:44px; margin-right:10px;}
 .detail_con .search_wrap .ipt_area .ipt_job{ width:382px; height:44px;}
-.detail_con .search_wrap .btn_search{ height:44px; width:77px; border:1px solid #20b540;}
+.detail_con .search_wrap .btn_search{ height:44px; width:77px; border:1px solid #20b540; border-radius:3px;}
 .detail_con .search_wrap .btn_search .icon_search{ top:10px; background:url(../images/index/icon_search_2.png) no-repeat 0 0; width:26px; height:24px; margin-left:-11px;}
 
 .detail_con .search_wrap .search_area_2{ width:168px;}
@@ -121,9 +150,228 @@ body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .script_info .txt{ font-size:14px; font-family:'microsoft yahei'; color:#2c2c2c; margin-bottom:40px;}
 
 .btn_wrap{ margin-bottom:200px;}
-.btn_wrap .btn{ display:block; height:45px; width:140px; background:#1ca5ec; border:1px solid #168fce; color:#fff; text-align:center; line-height:45px; font-size:16px; font-family:'microsoft yahei';}
+.btn_wrap .btn{ display:block; height:45px; width:140px; background:#1ca5ec; border:1px solid #168fce; color:#fff; text-align:center; line-height:45px; font-size:16px; font-family:'microsoft yahei'; border-radius:3px;}
+.btn_wrap .btn:hover{ text-decoration:none;}
 
 /*详情页*/
+
+/*岗位列表页*/
+
+.job_list_wrap{ width:800px; margin:0px auto; height:610px; position:relative; margin-bottom:60px;}
+.job_list_table{ color:#2c2c2c; width:800px; margin:0 auto; text-align: left; font-size:14px; font-family:'microsoft yahei'; margin-bottom:30px;}
+.job_list_table th{ background:#e1ecfb; height:40px; line-height:40px; padding-left:15px;}
+.job_list_table td{ border-bottom:1px solid #d6d6d6; height:50px; line-height:50px; padding-left:15px;}
+.job_list_table .job_name{ width:550px;}
+.job_list_table .job_name p{ width:550px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+.job_list_info{ width:800px; margin:0px auto; overflow:hidden; position:absolute; left:0px; bottom:0px;}
+.job_list_info .total_data{ width:200px; float:left; color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; margin-left:15px;}
+.job_list_info .total_data .num{ margin:0px 3px;}
+.job_list_info .pager_wrap{ float:right; width:550px;}
+.pager_wrap{ font-size:14px; text-align:right; padding-right:12px;}
+.pager_wrap .link_pre{ display:inline-block; font-family:'microsoft yahei'; padding:2px 8px;}
+.pager_wrap .link_next{ display:inline-block; font-family:'microsoft yahei'; padding:2px 8px;}
+.pager_wrap .link_pre_disable{ color:#bfbfbf;}
+.pager_wrap .link_next_disable{ color:#bfbfbf;}
+.pager_wrap .list_page,.pager_wrap .list_page li{ display:inline-block;}
+.pager_wrap .list_page li a{ display:inline-block; height:25px; width:25px; text-align:center; line-height:25px; margin-right:5px; color:#000; font-family:'Arial';}
+.pager_wrap .list_page li a.current{ color:#2a5eab; font-weight:bold;}
+
+/*岗位列表页*/
+
+/*个人简历页*/
+
+.resume_detail_wrap{ margin-bottom:200px; padding-top:50px;}
+.resume_area{ width:800px; margin:0px auto 30px;}
+.resume_area .title{ background:#e1ecfb; height:40px; line-height:40px; margin-bottom:20px; position:relative;}
+.resume_area .title .tit{ color:#000; font-weight:normal; font-size:16px; font-family:'microsoft yahei'; margin-left:15px;}
+.resume_area .title .edit_area{position:absolute; right:15px; top:1px;}
+.resume_area .title .edit_area a{ font-size:14px; font-family:'microsoft yahei'; text-decoration:underline; color:#000; }
+.resume_area .title .edit_area .link_save{ margin-left:10px;}
+
+.resume_detail_table{ width:800px; font-size:14px; font-family:'microsoft yahei';}
+.resume_detail_table td{ padding:5px 0 5px 15px;}
+.resume_detail_table .user_head{ border:1px solid #d8d8d8;}
+.resume_detail_table .td_img{ width:115px;}
+.resume_detail_table .td_1{ width:225px;}
+.resume_detail_table .td_2{ width:220px;}
+.resume_detail_table .td_3{}
+.resume_detail_table .td_4{ width:240px;}
+.resume_detail_table .td_5{ width:335px;}
+.resume_detail_table .td_6{}
+
+/*个人简历页*/
+
+
+/*简历填写页*/
+
+.resume_step_wrap { overflow:hidden; width:800px; margin:50px auto;}
+.resume_step_wrap .step_item{ display:block; height:46px; width:167px; line-height:46px; background:#f9f9f9; border:1px solid #d4d4d4; border-radius:3px; float:left; text-align:center; font-size:14px; font-family:'microsoft yahei'; color:#000; position:relative; margin-left:-1px;}
+.resume_step_wrap .step_item .icon_num{ display:inline-block; height:17px; width:17px; border:2px solid #fff; box-shadow:0px 0px 3px rgba(42,94,171,0.4); border-radius:17px; line-height:17px; background:#ddd; margin-right:2px;}
+.resume_step_wrap .step_item .icon_num .num{ font-size:12px; font-family:'Arial'; font-weight:bold; position:relative; top:-1px; color:#fff;}
+.resume_step_wrap .step_item .txt .num{ margin-left:3px;}
+.resume_step_wrap .step_item .arrow{ display:block; height:48px; width:13px; background:url(../images/resume/arrow_unfinish.png) no-repeat 0 0; position:absolute; right:-13px; top:-1px;}
+.resume_step_wrap .step_item_1{ z-index:5; width:126px; margin-left:0px;}
+.resume_step_wrap .step_item_2{ z-index:4;}
+.resume_step_wrap .step_item_3{ z-index:3;}
+.resume_step_wrap .step_item_4{ z-index:2;}
+.resume_step_wrap .step_item_5{ z-index:1;}
+
+.resume_step_wrap .step_finish{ background:#41bd5b; color:#fff; border:1px solid #1cb03b;}
+.resume_step_wrap .step_finish .arrow{ background-image:url(../images/resume/arrow_finish.png);}
+.resume_step_wrap .step_finish .icon_num{ background:none; box-shadow:0px 0px 3px rgba(45,204,79,0.6);}
+
+.resume_step_wrap .step_current{ background:#69dd7f; color:#fff; border:1px solid #57c970 ;}
+.resume_step_wrap .step_current .arrow{ background-image:url(../images/resume/arrow_current.png);}
+.resume_step_wrap .step_current .icon_num{ background:none; box-shadow:0px 0px 3px rgba(45,204,79,0.6);}
+
+.resume_create_wrap{ clear:both;}
+.form_area{}
+.form_area .form_row{ margin-bottom:30px; clear:both; float:left;}
+.form_area .form_item{ display:inline; position:relative; float:left; margin-right:25px;}
+.form_area .form_item .ipt{ display:block; width:168px; height:48px; border:1px solid #d6d6d6; background:#fff; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; color:#d6d6d6;}
+.form_area .form_item .ipt:focus{ color:#2c2c2c; border:1px solid #999;}
+.form_area .form_item .i_star{ color:#d01b25; font-size:16px; font-family:'microsoft yahei'; position:absolute; left:-12px; top:16px;}
+.form_area .form_item .ipt_error{ color:#d01b25; border:1px solid #d01b25;}
+.form_area .form_item .tips_error{ color:#d01b25; font-size:12px; font-family:'microsoft yahei'; position:absolute; left:0px; bottom:-20px;}
+.form_area .form_item .tips_error .icon_error{ display:inline-block; height:14px; width:14px; background:url(../images/resume/icon_error.png) no-repeat 0 0; margin-right:3px; text-indent:-9999px; overflow:hidden; vertical-align:middle; position:relative; top:-2px;}
+.form_area .form_item .icon_calendar{ display:block; height:16px; width:16px; background:url(../images/resume/icon_calendar.png) no-repeat 0 0; position:absolute; right:15px; top:17px;}
+.form_area .form_item .icon_arrow{ display:block; height:5px; width:9px; background:url(../images/resume/icon_arrow.png) no-repeat 0 0; position:absolute; right:15px; top:23px;}
+
+
+.form_area .no_margin{ margin:0px;}
+.form_area .s_line{ display:block; height:1px; width:800px; margin:0px auto 30px; clear:both; background:#d6d6d6;}
+
+
+.form_area .form_item .ipt_user_id{ width:248px;}
+.form_area .form_item .ipt_birth{ width:120px;}
+.form_area .form_item .ipt_sex{ width:100px;}
+
+.form_area .form_item .ipt_email{ width:248px;}
+.form_area .form_item .ipt_country{ width:120px;}
+.form_area .form_item .ipt_health{ width:100px;}
+
+.form_area .form_item .ipt_school{ width:463px;}
+.form_area .form_item .ipt_education{ width:120px;}
+
+.form_area .form_item .ipt_favour{ width:248px;}
+.form_area .form_item .ipt_political{ width:120px;}
+
+.form_area .form_item .ipt_working_life{ width:145px; margin-right:1px;}
+.form_area .form_item .ipt_state{ width:145px;}
+.form_area .form_item .ipt_intention_job{ width:393px;}
+
+.form_area .form_item .ipt_company{ width:338px;}
+.form_area .form_item .ipt_time_start{ width:153px;}
+.form_area .form_item .ipt_time_end{ width:153px;}
+.form_area .word_separate{ width:40px; float:left; height:48px; line-height:48px; color:#2c2c2c; font-size:14px; font-family:'microsoft yahei';}
+
+.form_area .form_item .ipt_position{ width:338px;}
+.form_area .form_item .ipt_witness{ width:153px;}
+.form_area .form_item .ipt_contact{ width:153px;}
+
+.form_area .form_item .ipt_project{ width:338px;}
+.form_area .form_item .ipt_role{ width:338px;}
+.form_area .form_item .ipt_school{ width:338px;}
+
+.form_area .form_item .ipt_major{ width:338px;}
+.form_area .form_item .ipt_education{ width:153px;}
+.form_area .form_item .ipt_full_time{ width:153px;}
+
+.form_area .form_item .ipt_certificate{ width:338px;}
+.form_area .form_item .ipt_language_level{ width:153px;}
+
+
+
+
+.form_area .form_item .ta{ display:block; width:778px; height:92px; border:1px solid #d6d6d6; background:#fff; font-size:14px; font-family:'microsoft yahei'; padding:13px; color:#d6d6d6;}
+.form_area .form_item .ta:focus{ color:#2c2c2c; border:1px solid #999;}
+
+.link_add_info{ display:block; height:28px; width:98px; line-height:28px; border:1px solid #d6d6d6; color:#2c2c2c; border-radius:3px; text-align:center; font-size:14px; font-family:'microsoft yahei';}
+.link_add_info .icon_add{ display:inline-block; vertical-align:middle; font-size:26px; font-family:"Arial"; color:#d6d6d6; margin-right:5px; margin-top:-3px; }
+
+.resume_upload .upload_tips{ color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; margin-bottom:20px;}
+.resume_upload .upload_area{ margin-bottom:20px; height:30px;}
+.resume_upload .upload_area .ipt_file_btn{ display:block; height:34px; width:88px; border:1px solid #d6d6d6; color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; background:none; float:left; border-radius:3px;}
+.resume_upload .upload_area .ipt_file_text{ border:none; color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; margin-top:5px;}
+.resume_upload .tips_file_limit{ color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; margin-bottom:20px;}
+
+.photo_wrap{ margin-bottom:60px;}
+.photo_wrap .photo_area{ display:block; height:118px; width:98px; background:url(../images/resume/upload_img.png) no-repeat center 10px; position:relative; border:1px solid #d6d6d6;}
+.photo_wrap .photo_area .photo_user{ display:block; height:118px; width:98px; position:absolute; left:0px; top:0px;}
+.photo_wrap .photo_area .tips_photo{ display:block; height:25px; line-height:25px; width:100px; position:absolute; left:-1px; bottom:-1px; background:rgba(0,0,0,0.5); color:#fff; text-align:center; font-size:12px; font-family:'microsoft yahei';}
+
+.btn_wrap_create_resume{ width:800px; margin:0px auto 200px; text-align:center; position:relative; clear:both;}
+.btn_wrap_create_resume .btn_next{ display:block; width:238px; height:46px; background:#448af2; border:1px solid #3479df; line-height:46px; color:#fff; text-align:center; font-size:14px; font-family:'microsoft yahei'; border-radius:3px; position:absolute; left:50%; margin-left:-129px; top:0px;}
+.btn_wrap_create_resume .tips_error{ display:inline-block; vertical-align:middle; color:#ce0f19; font-size:14px; font-family:'microsoft yahei'; width:180px; position:absolute; left:50%; margin-left:120px; top:13px;  }
+.btn_wrap_create_resume .tips_error .icon_error{ display:inline-block; height:14px; width:14px; background:url(../images/resume/icon_error.png) no-repeat 0 0; margin-right:3px; text-indent:-9999px; overflow:hidden; vertical-align:middle; position:relative; top:-1px;}
+
+.btn_wrap_create_resume_next{ width:800px; margin:0px auto 200px; text-align:center; position:relative; clear:both;}
+.btn_wrap_create_resume_next .btn_next{ display:block; width:238px; height:46px; background:#448af2; border:1px solid #3479df; line-height:46px; color:#fff; text-align:center; font-size:14px; font-family:'microsoft yahei'; border-radius:3px; position:absolute; left:50%; margin-left:-38px; top:0px;}
+.btn_wrap_create_resume_next .tips_error{ display:inline-block; vertical-align:middle; color:#ce0f19; font-size:14px; font-family:'microsoft yahei'; width:180px; position:absolute; left:50%; margin-left:213px; top:13px;  }
+.btn_wrap_create_resume_next .tips_error .icon_error{ display:inline-block; height:14px; width:14px; background:url(../images/resume/icon_error.png) no-repeat 0 0; margin-right:3px; text-indent:-9999px; overflow:hidden; vertical-align:middle; position:relative; top:-1px;}
+.btn_wrap_create_resume_next .btn_pre{ display:block; width:138px; height:46px; background:#f2f2f2; border:1px solid #d8d8d8; line-height:46px; color:#2c2c2c; text-align:center; font-size:14px; font-family:'microsoft yahei'; border-radius:3px; position:absolute; left:50%; margin-left:-200px; top:0px;}
+
+.pop_select{ display:none; width:100%; height:px; background:#fff; position:absolute; left:0px; top:49px;}
+.select_list li a{ display:block; height:35px; line-height:35px; text-align:center; color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; border:1px solid #d6d6d6; margin-top:-1px;}
+.select_list li a:hover{ text-decoration:none; background:#fbfbfb;}
+
+.select_current{ z-index:2;}
+.select_current .pop_select{ display:block;}
+
+/*简历填写页*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
