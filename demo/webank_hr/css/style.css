@@ -17,7 +17,7 @@ textarea{resize:none;}
 button {cursor:pointer;}
 
 body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
-.head_wrap{ display:block; height:75px; width:100%; background:#2a5eab; z-index:2; position:relative;}
+.head_wrap{ display:block; height:75px; width:100%; background:#2a5eab; z-index:2; position:relative; margin-bottom:50px;}
 .head{ display:block; height:75px; width:1000px; margin:0 auto; position:relative;}
 .head .logo a{ display:block; display:block; height:30px; width:150px; background:url(../images/global/logo.png) no-repeat 0 0; text-indent:-9999px; overflow:hidden; position:absolute; top:20px;}
 .head_wrap_index{ margin-bottom:-75px; background:none; position:relative; z-index:2;}
@@ -181,7 +181,7 @@ body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
 
 /*个人简历页*/
 
-.resume_detail_wrap{ margin-bottom:200px; padding-top:50px;}
+.resume_detail_wrap{ margin-bottom:30px;}
 .resume_area{ width:800px; margin:0px auto 30px;}
 .resume_area .title{ background:#e1ecfb; height:40px; line-height:40px; margin-bottom:20px; position:relative;}
 .resume_area .title .tit{ color:#000; font-weight:normal; font-size:16px; font-family:'microsoft yahei'; margin-left:15px;}
@@ -200,12 +200,78 @@ body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .resume_detail_table .td_5{ width:335px;}
 .resume_detail_table .td_6{}
 
+.resume_detail_wrap .ipt{ display:inline-block; height:28px; border:1px solid #d6d6d6; background:#fff; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; color:#d6d6d6;}
+.resume_detail_wrap .ipt:focus{ color:#2c2c2c; border:1px solid #999;}
+.resume_detail_wrap .ta{ display:inline-block; width:686px; height:92px; border:1px solid #d6d6d6; background:#fff; font-size:14px; font-family:'microsoft yahei'; padding:13px; color:#d6d6d6; vertical-align:top;}
+.resume_detail_wrap .ta:focus{ color:#2c2c2c; border:1px solid #999;}
+
+.resume_detail_wrap .ipt{ width:138px;}
+
+.resume_detail_wrap .ipt_name{ width:150px;}
+.resume_detail_wrap .ipt_sex{ width:150px;}
+.resume_detail_wrap .ipt_birth{ width:88px;}
+
+.resume_detail_wrap .ipt_country{ width:150px;}
+.resume_detail_wrap .ipt_native_place{ width:150px;}
+.resume_detail_wrap .ipt_phone{ width:88px;}
+
+.resume_detail_wrap .ipt_school{ width:122px;}
+.resume_detail_wrap .ipt_education{ width:122px;}
+.resume_detail_wrap .ipt_political{ width:88px;}
+
+.resume_detail_wrap .ipt_favour{ width:122px;}
+.resume_detail_wrap .ipt_health{ width:122px;}
+
+.resume_detail_wrap .ipt_user_id{ width:122px;}
+.resume_detail_wrap .ipt_email{ width:150px;}
+
+.resume_detail_wrap .ipt_working_life{ width:138px;}
+.resume_detail_wrap .ipt_state{ width:237px;}
+.resume_detail_wrap .ipt_intention_job{ width:88px;}
+
+.resume_detail_wrap .ipt_time{ width:166px;}
+.resume_detail_wrap .ipt_company{ width:237px;}
+.resume_detail_wrap .ipt_position{ width:116px;}
+
+.resume_detail_wrap .ipt_witness{ width:152px;}
+.resume_detail_wrap .ipt_contact{ width:237px;}
+
+.resume_detail_wrap .ipt_edu_time{ width:166px;}
+.resume_detail_wrap .ipt_edu_school{ width:237px;}
+.resume_detail_wrap .ipt_major{ width:116px;}
+
+.resume_detail_wrap .ipt_edu_education{ width:166px;}
+.resume_detail_wrap .ipt_full_time{ width:194px;}
+.resume_detail_wrap .ipt_certificate{ width:88px;}
+
+.resume_detail_wrap .ipt_language_level{ width:124px;}
+
+.resume_detail_wrap .ipt_marital_status{ width:138px;}
+.resume_detail_wrap .ipt_child{ width:237px;}
+
+.resume_detail_wrap .ipt_fam_name{ width:110px;}
+.resume_detail_wrap .ipt_fam_position{ width:265px;}
+.resume_detail_wrap .ipt_fam_relation{ width:116px;}
+
+.resume_detail_wrap .ipt_fam_workplace{ width:138px;}
+
+.resume_detail_wrap .ipt_radio_1{ width:27px;}
+.resume_detail_wrap .ipt_radio_2{ width:41px;}
+
+.resume_delivery_table{ margin-top:-20px;}
+.resume_delivery_table td{ padding:5px 0 5px 15px; border-bottom:1px solid #e6e6e6; font-size:14px; font-family:'microsoft yahei'; height:44px; line-height:44px;}
+.resume_delivery_table .last td{ border-bottom:none;}
+.resume_delivery_table .td_4{ width:240px;}
+.resume_delivery_table .td_5{ width:335px;}
+.resume_delivery_table .td_6{ width:225px;}
+
+
 /*个人简历页*/
 
 
 /*简历填写页*/
 
-.resume_step_wrap { overflow:hidden; width:800px; margin:50px auto;}
+.resume_step_wrap { overflow:hidden; width:800px; margin:0 auto 50px;}
 .resume_step_wrap .step_item{ display:block; height:46px; width:167px; line-height:46px; background:#f9f9f9; border:1px solid #d4d4d4; border-radius:3px; float:left; text-align:center; font-size:14px; font-family:'microsoft yahei'; color:#000; position:relative; margin-left:-1px;}
 .resume_step_wrap .step_item .icon_num{ display:inline-block; height:17px; width:17px; border:2px solid #fff; box-shadow:0px 0px 3px rgba(42,94,171,0.4); border-radius:17px; line-height:17px; background:#ddd; margin-right:2px;}
 .resume_step_wrap .step_item .icon_num .num{ font-size:12px; font-family:'Arial'; font-weight:bold; position:relative; top:-1px; color:#fff;}
@@ -281,7 +347,13 @@ body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .form_area .form_item .ipt_certificate{ width:338px;}
 .form_area .form_item .ipt_language_level{ width:153px;}
 
+.form_area .form_item .ipt_marital_status{ width:208px;}
+.form_area .form_item .ipt_child{ width:113px;}
 
+.form_area .form_item .ipt_fam_name{ width:208px;}
+.form_area .form_item .ipt_fam_relation{ width:113px;}
+.form_area .form_item .ipt_fam_workplace{ width:203px;}
+.form_area .form_item .ipt_fam_position{ width:113px;}
 
 
 .form_area .form_item .ta{ display:block; width:778px; height:92px; border:1px solid #d6d6d6; background:#fff; font-size:14px; font-family:'microsoft yahei'; padding:13px; color:#d6d6d6;}
@@ -318,6 +390,14 @@ body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
 
 .select_current{ z-index:2;}
 .select_current .pop_select{ display:block;}
+
+.radio_area{ display:block; overflow:hidden; margin-bottom:10px;}
+.radio_area .info{ color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; margin-right:40px; float:left;}
+.radio_area .ipt_radio{ margin-right:10px;}
+.radio_area .label_radio{ margin-right:30px; font-size:14px; font-family:'microsoft yahei';}
+
+.form_row .agreement{ font-size:14px; font-family:'microsoft yahei';}
+.form_row .ipt_check{ margin-right:3px; font-size:14px; font-family:'microsoft yahei';}
 
 /*简历填写页*/
 
