@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* 浏览器样式清除 reset */
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body, button, input, select, textarea{ font:12px/1.5 Tahoma,Arial,'宋体'; }
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:focus,input,button,select,textarea{outline:none; font-size:100%;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-variant: normal;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+button {cursor:pointer;}
+
+body,html{ display:block; height:100%; width:100%; overflow-x: hidden;}
+.head_wrap{ display:block; height:75px; width:100%; background:#2a5eab; z-index:2; position:relative; margin-bottom:50px;}
+.head{ display:block; height:75px; width:1000px; margin:0 auto; position:relative;}
+.head .logo a{ display:block; display:block; height:30px; width:150px; background:url(../images/global/logo.png) no-repeat 0 0; text-indent:-9999px; overflow:hidden; position:absolute; top:20px;}
+.head_wrap_index{ margin-bottom:-75px; background:none; position:relative; z-index:2;}
+
+.menu_list{ display:block; width:480px; position:absolute; right:194px; top:22px;}
+.menu_list li{ display:block; width:120px; height:30px; float:left; text-align:right;}
+.menu_list li a{ font-size:16px; font-family:"microsoft yahei"; color:#a0c6ff; padding-bottom:3px;}
+.menu_list li a:hover{ text-decoration:none;}
+.menu_list li.current a{ color:#fff; border-bottom:2px solid #fff;}
+
+.link_login{ display:block; height:30px; width:84px; border:1px solid #a0c6ff; text-align:center; line-height:30px; font-size:16px; font-family:"microsoft yahei"; color:#a0c6ff; position:absolute; right:0px; top:20px;}
+.user_area{ display:block; height:30px; width:140px; position:absolute; right:0px; top:20px;}
+.link_name{ display:block; height:30px; width:140px; text-align:right; line-height:30px; font-size:14px; font-family:"microsoft yahei"; color:#a0c6ff; position:absolute; right:0px; top:0px;}
+.link_name:hover{ text-decoration:none; font-size:14px;}
+.link_name .name{ width:125px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.link_name .icon_arrow{ display:block; height:4px; width:7px; background:url(../images/index/icon_arrow_2.png) no-repeat 0 0; position:absolute; right:0px; top:13px;}
+.user_area .pop_user{ display:block; height:101px; width:112px; position:absolute; right:0px; top:37px;}
+.user_area .user_list{ border:1px solid #d3d3d3;}
+.user_area .user_list li a{ display:block; height:33px; width:110px; background:rgba(255, 255, 255, 1); text-align:center; line-height:33px; font-size:14px; font-family:"microsoft yahei"; color:#2c2c2c; border-bottom:1px solid #d3d3d3;}
+.user_area .user_list li a:hover{ text-decoration:none;}
+.user_area .user_list li .log_out{ border:none;}
+
+.footer{ display:block; height:105px; width:1000px; margin:0px auto; text-align:center; position:relative; border-top:1px solid #e6e6e6;}
+.footer .slogan{ display:block; width:127px; height:14px; background:url(../images/global/foot_slogan.png) no-repeat 0 0; position:absolute; left:50%; top:25px; margin-left:-63px; text-indent:-9999px; overflow:hidden;}
+.footer .copyright{ display:block; font-size:14px; font-family:'Arial'; color:#bfbfbf; margin-top:50px;}
