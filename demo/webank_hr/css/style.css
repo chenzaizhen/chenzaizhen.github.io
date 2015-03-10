@@ -1,15 +1,16 @@
 @charset "utf-8";
 @import url("global.css");
 
-.banner{ display: block; height:560px; width:100%; background:#1d3d78 url(../images/index/banner.jpg) no-repeat center 0; position:relative;}
+.banner{ display: block; height:560px; width:100%; background:#244a94 url(../images/index/banner.jpg) no-repeat center 0; position:relative;}
 .banner .banner_slogan{ display:block; width:503px; height:92px; background:url(../images/index/slogan.png) no-repeat 0 0; position:absolute; left:50%; top:165px; margin-left:-251px; text-indent:-9999px; overflow:hidden;}
 
 .search_wrap{ display:block; height:57px; width:635px; position:absolute; left:50%; margin-left:-317px; top:252px;}
 .search_wrap .search_area{ display:inline; height:57px; width:133px; background:#fff; margin-right:1px; float:left;}
 .search_wrap .search_area .sel_search{ display:block; height:57px; width:133px; text-align:center; font-size:16px; font-family:'microsoft yahei'; line-height:57px; position:relative; color:#2c2c2c;}
 .search_wrap .search_area .sel_search .icon_arrow{ display:block; height:5px; width:9px; background:url(../images/index/icon_arrow.png) no-repeat 0 0; position:absolute; right:20px; top:26px;}
+.search_wrap .search_area .sel_search:hover{ text-decoration:none;}
 .key_list{ margin-top:1px;}
-.key_list li a{ display:block; background:rgba(255,255,255,0.95); height:45px; width:133px; text-align:center; font-size:16px; font-family:'microsoft yahei'; line-height:45px; border-bottom:1px solid #d6d6d6; color:#2c2c2c;}
+.key_list li a{ display:block; background:#fff; height:45px; width:133px; text-align:center; font-size:16px; font-family:'microsoft yahei'; line-height:45px; border-bottom:1px solid #d6d6d6; color:#2c2c2c;}
 .key_list li a:hover{ text-decoration:none;}
 
 .search_wrap .ipt_area{ display:block; height:57px; width:421px; float:left; background:#fff;}
@@ -79,6 +80,7 @@
 
 /*详情页*/
 
+.detail_con{ position:relative; z-index:1;}
 .detail_con .search_wrap{ width:800px; position: relative; top:0; left:0; margin:55px auto 50px; z-index:2;}
 .detail_con .search_wrap .search_area{ border:1px solid #e4e4e4; height:44px; width:135px; margin-right:10px;}
 .detail_con .search_wrap .search_area .sel_search{ height:44px; line-height:44px; width:135px;}
@@ -107,7 +109,7 @@
 .script_info .tit{ font-size:16px; font-family:'microsoft yahei'; color:#2c2c2c; margin-bottom:5px;}
 .script_info .txt{ font-size:14px; font-family:'microsoft yahei'; color:#2c2c2c; margin-bottom:40px;}
 
-.btn_wrap{ margin-bottom:200px;}
+.btn_wrap{ margin-bottom:100px;}
 .btn_wrap .btn{ display:block; height:45px; width:140px; background:#1ca5ec; border:1px solid #168fce; color:#fff; text-align:center; line-height:45px; font-size:16px; font-family:'microsoft yahei'; border-radius:3px;}
 .btn_wrap .btn:hover{ text-decoration:none;}
 
@@ -115,7 +117,7 @@
 
 /*岗位列表页*/
 
-.job_list_wrap{ width:800px; margin:0px auto; height:610px; position:relative; margin-bottom:60px;}
+.job_list_wrap{ width:800px; margin:0px auto 100px; height:610px; position:relative;}
 .job_list_table{ color:#2c2c2c; width:800px; margin:0 auto; text-align: left; font-size:14px; font-family:'microsoft yahei'; margin-bottom:30px;}
 .job_list_table th{ background:#e1ecfb; height:40px; line-height:40px; padding-left:15px;}
 .job_list_table td{ border-bottom:1px solid #d6d6d6; height:50px; line-height:50px; padding-left:15px;}
@@ -139,7 +141,7 @@
 
 /*个人简历页*/
 
-.resume_detail_wrap{ margin-bottom:30px;}
+.resume_detail_wrap{ margin-bottom:100px;}
 .resume_area{ width:800px; margin:0px auto 30px;}
 .resume_area .title{ background:#e1ecfb; height:40px; line-height:40px; margin-bottom:20px; position:relative;}
 .resume_area .title .tit{ color:#000; font-weight:normal; font-size:16px; font-family:'microsoft yahei'; margin-left:15px;}
@@ -331,12 +333,12 @@
 .photo_wrap .photo_area .photo_user{ display:block; height:118px; width:98px; position:absolute; left:0px; top:0px;}
 .photo_wrap .photo_area .tips_photo{ display:block; height:25px; line-height:25px; width:100px; position:absolute; left:-1px; bottom:-1px; background:rgba(0,0,0,0.5); color:#fff; text-align:center; font-size:12px; font-family:'microsoft yahei';}
 
-.btn_wrap_create_resume{ width:800px; margin:0px auto 200px; text-align:center; position:relative; clear:both;}
+.btn_wrap_create_resume{ display:block; height:48px; width:800px; margin:0px auto 100px; text-align:center; position:relative; clear:both;}
 .btn_wrap_create_resume .btn_next{ display:block; width:238px; height:46px; background:#448af2; border:1px solid #3479df; line-height:46px; color:#fff; text-align:center; font-size:14px; font-family:'microsoft yahei'; border-radius:3px; position:absolute; left:50%; margin-left:-129px; top:0px;}
 .btn_wrap_create_resume .tips_error{ display:inline-block; vertical-align:middle; color:#ce0f19; font-size:14px; font-family:'microsoft yahei'; width:180px; position:absolute; left:50%; margin-left:120px; top:13px;  }
 .btn_wrap_create_resume .tips_error .icon_error{ display:inline-block; height:14px; width:14px; background:url(../images/resume/icon_error.png) no-repeat 0 0; margin-right:3px; text-indent:-9999px; overflow:hidden; vertical-align:middle; position:relative; top:-1px;}
 
-.btn_wrap_create_resume_next{ width:800px; margin:0px auto 200px; text-align:center; position:relative; clear:both;}
+.btn_wrap_create_resume_next{ display:block; height:48px; width:800px; margin:0px auto 100px; text-align:center; position:relative; clear:both;}
 .btn_wrap_create_resume_next .btn_next{ display:block; width:238px; height:46px; background:#448af2; border:1px solid #3479df; line-height:46px; color:#fff; text-align:center; font-size:14px; font-family:'microsoft yahei'; border-radius:3px; position:absolute; left:50%; margin-left:-38px; top:0px;}
 .btn_wrap_create_resume_next .tips_error{ display:inline-block; vertical-align:middle; color:#ce0f19; font-size:14px; font-family:'microsoft yahei'; width:180px; position:absolute; left:50%; margin-left:213px; top:13px;  }
 .btn_wrap_create_resume_next .tips_error .icon_error{ display:inline-block; height:14px; width:14px; background:url(../images/resume/icon_error.png) no-repeat 0 0; margin-right:3px; text-indent:-9999px; overflow:hidden; vertical-align:middle; position:relative; top:-1px;}
@@ -405,7 +407,7 @@
 .btn_wrap .btn_find_more{ display:inline-block; height:45px; width:238px; background:#448af2; border:1px solid #3479df; color:#fff; text-align:center; line-height:45px; font-size:16px; font-family:'microsoft yahei'; border-radius:3px;}
 .btn_wrap .btn_find_more:hover{ text-decoration:none;}
 
-.hr_qr_code_wrap{ display:block; margin-bottom:140px;}
+.hr_qr_code_wrap{ display:block; margin-bottom:100px;}
 .hr_qr_code_wrap .img_area{ display:block; height:114px; width:114px; background:#fff; border:1px solid #d6d6d6; margin:0px auto 10px;}
 .hr_qr_code_wrap .img_area .img_qr_code{ display:block; height:98px; width:98px; margin:8px auto;}
 .hr_qr_code_wrap .txt{ display:block; font-size:12px; font-family:'microsoft yahei'; color:#2c2c2c; text-align:center;}

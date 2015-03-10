@@ -8,7 +8,7 @@
 .head_wrap_campus .link_name:hover{ color:#fff;}
 .link_name .icon_arrow{ background-image:url(../images/campus_index/icon_arrow_2.png);}
 
-.campus_area{ display:block; height:720px; width:100%; background:url(../images/campus_index/campus_bg.jpg) no-repeat center center; position:relative;}
+.campus_area{ display:block; height:720px; width:100%; background:url(../images/campus_index/campus_bg.jpg) no-repeat center center; background-size:cover; position:relative;}
 .campus_area .campus_slogan{ display:block; height:189px; width:347px; background:url(../images/campus_index/campus_slogan.png) no-repeat 0 0; position:absolute; left:50%; top:265px; margin-left:-174px; text-indent:-9999px; overflow:hidden;}
 .campus_area .campus_slogan_en{ display:none;}
 
