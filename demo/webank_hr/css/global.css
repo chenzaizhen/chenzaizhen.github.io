@@ -46,3 +46,91 @@ body{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .footer{ display:block; height:105px; width:1000px; margin:0px auto; text-align:center; position:relative; border-top:1px solid #e6e6e6;}
 .footer .slogan{ display:block; width:127px; height:14px; background:url(../images/global/foot_slogan.png) no-repeat 0 0; position:absolute; left:50%; top:25px; margin-left:-63px; text-indent:-9999px; overflow:hidden;}
 .footer .copyright{ display:block; font-size:14px; font-family:'Arial'; color:#bfbfbf; margin-top:50px;}
+
+/*loading*/
+
+.loading_wrap{ position:relative; text-align:center; font-size:16px; font-family:"microsoft yahei"; }
+.loading_wrap{}
+.loading_wrap .penguin_wrap{ display:block; height:24px; width:25px; position:absolute; left:50%; top:0px; margin-left:-12px;}
+.loading_wrap .penguin_wrap .penguin_area{ display:block; height:93px; width:68px; position:absolute; left:0px; top:0px; z-index:1; -webkit-transform-origin:50% 100%;}
+.loading_wrap .penguin_wrap .penguin_body{ display:block; height:93px; width:68px; background:  url(../images/global/loading/penguin_bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; z-index:2;}
+.loading_wrap .penguin_wrap .penguin_hand_1{ display:block; height:27px; width:19px; background: url(../images/global/loading/penguin_hand_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:-13px; top:46px; z-index:1; -webkit-transform-origin:100% 20%;}
+.loading_wrap .penguin_wrap .penguin_hand_2{ display:block; height:44px; width:24px; background: url(../images/global/loading/penguin_hand_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:58px; top:19px; z-index:1; -webkit-transform-origin:0% 80%; -webkit-transform: rotate(10deg);}
+.loading_wrap .penguin_wrap .penguin_foot_1{ display:block; height:6px; width:31px; background: url(../images/global/loading/penguin_foot_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:1px; top:89px; z-index:1; -webkit-transform-origin:100% 50%;}
+.loading_wrap .penguin_wrap .penguin_foot_2{ display:block; height:6px; width:31px; background: url(../images/global/loading/penguin_foot_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:38px; top:89px; z-index:1; -webkit-transform-origin:0% 50%;}
+.loading_wrap .penguin_shadow{ display:block; height:4px; width:25px; border-radius:25px/4px; background:#cddef2; position:absolute; right:31px; top:49px;}
+
+.loading_show .penguin_area{ -webkit-animation:a_loading_penguin_wrap 1.6s 0.3s linear infinite; }
+.loading_show .penguin_area .penguin_hand_1{ -webkit-animation:a_loading_penguin_wrap_hand_1 0.5s 0.3s linear infinite; }
+.loading_show .penguin_area .penguin_hand_2{ -webkit-animation:a_loading_penguin_wrap_hand_2 1.6s 0.3s linear infinite; }
+.loading_show .penguin_area .penguin_foot_1{ -webkit-animation:a_loading_penguin_wrap_foot_1 1.6s 0.3s linear infinite; }
+.loading_show .penguin_area .penguin_foot_2{ -webkit-animation:a_loading_penguin_wrap_foot_2 1.6s 0.3s linear infinite; }
+.loading_show .penguin_shadow{ -webkit-animation:a_loading_penguin_shadow 1.6s 1.2s linear infinite; }
+
+@-webkit-keyframes a_loading_penguin_wrap{
+	0%{ -webkit-transform:translate(0,0) scale(1,1);}
+	30%{ -webkit-transform:translate(0,0) scale(1,1);}
+	35%{ -webkit-transform:translate(0,2px) scale(1.1,0.95);}
+	40%{ -webkit-transform:translate(0,-8px) scale(0.95,1.1);}
+	45%{ -webkit-transform:translate(0,-8px) scale(1,1);}
+	
+	70%{ -webkit-transform:translate(0,-8px) scale(1,1);}
+	75%{ -webkit-transform:translate(0,2px) scale(1.1,0.95);}
+	80%{ -webkit-transform:translate(0,0) scale(1,1);}
+	100%{ -webkit-transform:translate(0,0) scale(1,1);}
+}
+
+@-webkit-keyframes a_loading_penguin_wrap_hand_1{
+	0%{ -webkit-transform: rotate(0deg);}
+	50%{ -webkit-transform: rotate(10deg);}
+	100%{ -webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes a_loading_penguin_wrap_hand_2{
+	0%{ -webkit-transform: rotate(10deg);}
+	45%{ -webkit-transform: rotate(0deg);}
+	
+	50%{ -webkit-transform: translate(0,-6px) rotate(0deg);}
+	55%{ -webkit-transform: translate(0,-3px) rotate(0deg);}
+	60%{ -webkit-transform: translate(0,-6px) rotate(0deg);}
+	65%{ -webkit-transform: translate(0,-3px) rotate(0deg);}
+	
+	70%{ -webkit-transform: rotate(0deg);}
+	100%{ -webkit-transform: rotate(10deg);}
+}
+
+@-webkit-keyframes a_loading_penguin_wrap_foot_1{
+	0%{ -webkit-transform: rotate(0deg);}
+	45%{ -webkit-transform: rotate(0deg);}
+	
+	50%{ -webkit-transform: rotate(-20deg);}
+	55%{ -webkit-transform: rotate(0deg);}
+	60%{ -webkit-transform: rotate(-20deg);}
+	65%{ -webkit-transform: rotate(0deg);}
+	
+	70%{ -webkit-transform: rotate(0deg);}
+	100%{ -webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes a_loading_penguin_wrap_foot_2{
+	0%{ -webkit-transform: rotate(0deg);}
+	45%{ -webkit-transform: rotate(0deg);}
+	
+	50%{ -webkit-transform: rotate(20deg);}
+	55%{ -webkit-transform: rotate(0deg);}
+	60%{ -webkit-transform: rotate(20deg);}
+	65%{ -webkit-transform: rotate(0deg);}
+	
+	70%{ -webkit-transform: rotate(0deg);}
+	100%{ -webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes a_loading_penguin_shadow{
+	0%{ -webkit-transform: scale(1);}
+	45%{ -webkit-transform: scale(0.6);}
+	
+	70%{ -webkit-transform: scale(0.6);}
+	100%{ -webkit-transform: scale(1);}
+}
+
+/*loading*/
