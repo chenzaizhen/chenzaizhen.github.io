@@ -103,6 +103,7 @@
 .detail_con .search_wrap .search_area_2 .sel_search{ width:128px;}
 .detail_con .search_wrap .search_area_2 .key_list{ width:168px;}
 .detail_con .search_wrap .search_area_2 .key_list li a{ width:128px;}
+.detail_con .loading_wrap{ margin-bottom:100px;}
 
 
 .job_detail_wrap{ display:block; width:800px; margin:0px auto;}
