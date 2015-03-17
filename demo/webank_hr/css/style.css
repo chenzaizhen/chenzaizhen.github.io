@@ -2,7 +2,7 @@
 @import url("global.css");
 
 .banner{ display: block; height:560px; width:100%; background:#244a94 url(../images/index/banner.jpg) no-repeat center 0; position:relative;}
-.banner .banner_slogan{ display:block; width:503px; height:92px; background:url(../images/index/slogan.png) no-repeat 0 0; position:absolute; left:50%; top:165px; margin-left:-251px; text-indent:-9999px; overflow:hidden;}
+.banner .banner_slogan{ display:block; width:503px; height:92px; background:url(../images/index/slogan.png) no-repeat 0 0; position:absolute; left:50%; top:140px; margin-left:-251px; text-indent:-9999px; overflow:hidden;}
 
 .search_wrap{ display:block; height:57px; width:635px; position:absolute; left:50%; margin-left:-317px; top:252px;}
 .search_wrap .search_area{ display:inline; height:57px; width:133px; background:#fff; margin-right:1px; float:left;}
@@ -233,6 +233,8 @@
 .resume_area .title .edit_area{position:absolute; right:15px; top:1px;}
 .resume_area .title .edit_area a{ font-size:14px; font-family:'microsoft yahei'; text-decoration:underline; color:#000; }
 .resume_area .title .edit_area .link_save{ margin-left:10px;}
+.resume_area .con{ clear:both;}
+.resume_area .s_line{ display:block; height:1px; width:100%; background:#d6d6d6; clear:both; margin-bottom:32px;}
 
 .resume_detail_table{ width:800px; font-size:14px; font-family:'microsoft yahei';}
 .resume_detail_table td{ padding:5px 0 5px 15px;}
@@ -338,8 +340,8 @@
 .resume_step_wrap .step_current .icon_num{ background:url(../images/resume/icon_num_bg_2.png);}
 
 .resume_create_wrap{ clear:both;}
-.form_area{}
-.form_area .form_row{ margin-bottom:30px; clear:both; float:left; width:800px;}
+.form_area{ float:left;}
+.form_area .form_row{ margin-bottom:30px; clear:both; float:left; width:800px; min-height:28px; position:relative;}
 .form_area .form_item{ display:inline; position:relative; float:left; margin-right:25px;}
 .form_area .form_item .ipt{ display:block; width:168px; height:48px; line-height:48px; border:1px solid #d6d6d6; background:#fff; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; color:#d6d6d6; -webkit-transition:border 0.2s linear,color 0.2s linear; transition:border 0.2s linear,color 0.2s linear;}
 .form_area .form_item .ipt:focus{ color:#2c2c2c; border:1px solid #999;}
@@ -352,7 +354,6 @@
 
 
 .form_area .no_margin{ margin:0px;}
-.form_area .s_line{ display:block; height:1px; width:800px; margin:0px auto 30px; clear:both; background:#d6d6d6;}
 
 
 .form_area .form_item .ipt_user_id{ width:248px;}
@@ -409,6 +410,7 @@
 .link_add_info .icon_add{ display:inline-block; vertical-align:middle; font-size:26px; font-family:"Arial"; color:#d6d6d6; margin-right:5px; margin-top:-3px; -webkit-transition: -webkit-transform 0.3s linear; transition: transform 0.3s linear; }
 .link_add_info:hover{ text-decoration:none;}
 .link_add_info:hover .icon_add{ -webkit-transform:rotate(180deg); transform:rotate(180deg);}
+.link_delete_info{ position: absolute; right:0px; top:4px; font-size:14px; font-family:'microsoft yahei'; color:#448af2; text-decoration:underline;}
 
 .resume_upload .upload_tips{ color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; margin-bottom:20px; *position:relative;}
 .resume_upload .upload_area{ margin-bottom:20px; height:30px; position:relative;}
@@ -416,6 +418,7 @@
 .resume_upload .upload_area .ipt_file_btn{ display:block; height:34px; width:88px; border:1px solid #d6d6d6; color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; background:none; float:left; border-radius:3px; display:none\9;}
 .resume_upload .upload_area .ipt_file_text{ border:none; color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; margin-top:5px; display:none\9;}
 .resume_upload .tips_file_limit{ color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; margin-bottom:20px; *position:relative;}
+.resume_upload .upload_area .link_clear_img{ font-size:14px; font-family:'microsoft yahei'; color:#448af2; text-decoration:underline; position:relative; top:5px; position:absolute\9; left:220px\9; }
 
 .photo_wrap{ margin-bottom:60px; position:relative;}
 .photo_wrap .photo_area{ display:block; height:118px; width:98px; background:url(../images/resume/upload_img.png) no-repeat center 20px; position:relative; border:1px solid #d6d6d6;}

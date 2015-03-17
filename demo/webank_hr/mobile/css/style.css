@@ -22,7 +22,7 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 
 .banner_wrap{ display:block; height:175px; width:100%; background:url(../images/global/banner_bg.png) repeat right top; background-size:10px 10px; margin-bottom:35px;}
 .banner_wrap .penguin_bg{ display:block; height:175px; width:150px; background:url(../images/index/banner_penguin.png) no-repeat 0 0; background-size:contain; position:absolute; right:0; top:0px;}
-.banner_wrap .title{ display:block; height:49px; width:142px; background:url(../images/index/banner_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:22px; top:59px; text-indent:-9999px; overflow:hidden;}
+.banner_wrap .title{ display:block; height:55px; width:145px; background:url(../images/index/banner_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:22px; top:60px; text-indent:-9999px; overflow:hidden; z-index:2;}
 .banner_wrap .title_en{ display:none;}
 
 .search_wrap{width:290px; margin:0 auto 35px; position:relative;}

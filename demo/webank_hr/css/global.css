@@ -59,7 +59,7 @@ body{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .penguin_wrap .penguin_hand_2{ display:block; height:44px; width:24px; background: url(../images/global/loading/penguin_hand_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:58px; top:17px; z-index:1; -webkit-transform-origin:0% 80%; -webkit-transform: rotate(10deg);}
 .penguin_wrap .penguin_foot_1{ display:block; height:7px; width:31px; background: url(../images/global/loading/penguin_foot_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:1px; top:87px; z-index:1; -webkit-transform-origin:100% 50%;}
 .penguin_wrap .penguin_foot_2{ display:block; height:7px; width:31px; background: url(../images/global/loading/penguin_foot_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:38px; top:87px; z-index:1; -webkit-transform-origin:0% 50%;}
-.penguin_wrap .penguin_shadow{ display:block; height:18px; width:96px; border-radius:96px/18px; background:#cddef2; position:absolute; left:50%; top:85px; margin-left:-48px;}
+.penguin_wrap .penguin_shadow{ display:block; height:18px; width:96px; border-radius:96px/18px; background:#cddef2; position:absolute; left:50%; top:85px; margin-left:-48px; background:url(../images/global/loading/penguin_shadow.png) no-repeat 0 0\9;}
 .loading_wrap .loading_info{ padding-top:130px;}
 
 .loading_show .penguin_area{ -webkit-animation:a_loading_penguin_wrap 1.6s 0.3s linear infinite; }
