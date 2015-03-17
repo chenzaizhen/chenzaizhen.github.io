@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/* 浏览器样式清除 reset */
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body, button, input, select, textarea{ font:12px/1.5 Tahoma,Arial,'宋体'; }
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:focus,input,button,select,textarea{outline:none; font-size:100%;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-variant: normal;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+button {cursor:pointer;}
+
+html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
+
+.wrap{ height:100%; width:100%; position: relative; overflow:hidden;}
+.page_wrap{ display:block; height:100%; width:100%; background:#10477e url(../../images/promote_images/page_1/bg.jpg) no-repeat 0 0; background-size:contain;}
+.li_wrap{ display:block; height:266px; width:240px; background:url(../../images/promote_images/page_1/li_bg.png) no-repeat center bottom; background-size:contain; position:absolute; left:50%; margin-left:-120px; top:100px; overflow:hidden;}
+.li_wrap .li_sir{ display:block; height:266px; width:183px; position:absolute; left:50%; margin-left:-70px; bottom:-1px;}
+.li_wrap .li_sir .body{ display:block; height:266px; width:183px; background:url(../../images/promote_images/page_1/li_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:2;}
+.li_wrap .li_sir .hand{ display:block; height:100px; width:75px; background:url(../../images/promote_images/page_1/li_hand.png) no-repeat 0 0; background-size:contain; position:absolute; left:-42px; top:123px; z-index:1; -webkit-transform-origin:100% 80%;}
+.li_wrap .li_sir .eyebrow_wrap{ display:block; height:12px; width:101px; position:absolute; left:29px; top:76px; z-index:3;}
+.li_wrap .li_sir .eyebrow_wrap .eyebrow_1{ display:block; height:12px; width:42px; background:url(../../images/promote_images/page_1/eyebrow_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0px;}
+.li_wrap .li_sir .eyebrow_wrap .eyebrow_2{ display:block; height:12px; width:42px; background:url(../../images/promote_images/page_1/eyebrow_2.png) no-repeat 0 0; background-size:contain; position:absolute; right:0; top:0px;}
+
+.eyeglass{ display:block; height:25px; width:97px; position:absolute; left:31px; top:87px; z-index:3;}
+.eyeglass .flash_light{ display:block; height:26px; width:38px; border-radius:38px/26px; position:absolute; left:0; top:0; overflow:hidden;}
+.eyeglass .flash_light_2{ right:0px; left:auto;}
+
+.eyeglass .flash_light .light{ display:block; height:45px; width:4px; background: -webkit-linear-gradient(top,rgba(255,255,255,0) 10%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 85%) ; position:absolute; left:-12px; top:-10px; -webkit-transform:rotate(20deg);}
+
+.li_wrap .li_bg_cover{display:block; height:120px; width:241px; background:url(../../images/promote_images/page_1/li_body_cover.png) no-repeat 0 0; background-size:contain; position:absolute; left:-1px; bottom:0; z-index:2;}
+
+.animate_show .li_wrap .li_sir{ -webkit-animation:a_li_sir 0.3s 0.3s linear both;}
+.animate_show .li_wrap .li_sir .hand{ -webkit-animation:a_li_hand 3s 0.6s linear infinite;}
+.animate_show .li_wrap .li_sir .eyebrow_wrap{ -webkit-animation:a_eyebrow_wrap 2s 0.6s linear infinite;}
+.animate_show .eyeglass .flash_light .light{ -webkit-animation:a_light 2s 0.6s linear infinite;}
+
+
+@-webkit-keyframes a_li_sir{
+	0%{ -webkit-transform: translate(0,270px);}
+	20%{ -webkit-transform: translate(0,0);}
+	50%{ -webkit-transform: translate(0,10px);}
+	70%{ -webkit-transform: translate(0,5px);}
+	100%{ -webkit-transform: translate(0,0);}
+}
+
+@-webkit-keyframes a_li_hand{
+	0%{ -webkit-transform:rotate(0deg);}
+	20%{ -webkit-transform:rotate(-5deg);}
+	50%{ -webkit-transform:rotate(5deg);}
+	80%{ -webkit-transform:rotate(-5deg);}
+	100%{ -webkit-transform:rotate(0deg);}
+}
+
+@-webkit-keyframes a_eyebrow_wrap{
+	0%{ -webkit-transform: translate(0,0);}
+	15%{ -webkit-transform: translate(0,0);}
+	25%{ -webkit-transform: translate(0,-3px);}
+	35%{ -webkit-transform: translate(0,1px);}
+	45%{ -webkit-transform: translate(0,-2px);}
+	55%{ -webkit-transform: translate(0,0);}
+	100%{ -webkit-transform: translate(0,0);}
+}
+
+@-webkit-keyframes a_light{
+	0%{ left:-12px; opacity:0;}
+	55%{ left:-12px; opacity:0;}
+	70%{ left:11px; opacity:1;}
+	80%{ left:35px; opacity:0;}
+	100%{ left:-12px; opacity:0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

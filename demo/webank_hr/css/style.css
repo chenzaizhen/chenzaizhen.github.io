@@ -2,6 +2,7 @@
 @import url("global.css");
 
 .banner{ display: block; height:560px; width:100%; background:#244a94 url(../images/index/banner.jpg) no-repeat center 0; position:relative;}
+.banner:after{ content:""; display: block; height:560px; width:100%; background:#244a94 url(../images/index/banner.jpg) no-repeat center 0; position:relative;}
 .banner .banner_slogan{ display:block; width:503px; height:92px; background:url(../images/index/slogan.png) no-repeat 0 0; position:absolute; left:50%; top:140px; margin-left:-251px; text-indent:-9999px; overflow:hidden;}
 
 .search_wrap{ display:block; height:57px; width:635px; position:absolute; left:50%; margin-left:-317px; top:252px;}
