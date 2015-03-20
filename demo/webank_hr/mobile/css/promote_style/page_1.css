@@ -19,42 +19,80 @@ button {cursor:pointer;}
 html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 
 .wrap{ height:100%; width:100%; position: relative; overflow:hidden;}
-.page_wrap{ display:block; height:100%; width:100%; background:#10477e url(../../images/promote_images/page_1/bg.jpg) no-repeat 0 0; background-size:contain;}
-.li_wrap{ display:block; height:266px; width:240px; background:url(../../images/promote_images/page_1/li_bg.png) no-repeat center bottom; background-size:contain; position:absolute; left:50%; margin-left:-120px; top:100px; overflow:hidden;}
-.li_wrap .li_sir{ display:block; height:266px; width:183px; position:absolute; left:50%; margin-left:-70px; bottom:-1px;}
-.li_wrap .li_sir .body{ display:block; height:266px; width:183px; background:url(../../images/promote_images/page_1/li_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:2;}
-.li_wrap .li_sir .hand{ display:block; height:100px; width:75px; background:url(../../images/promote_images/page_1/li_hand.png) no-repeat 0 0; background-size:contain; position:absolute; left:-42px; top:123px; z-index:1; -webkit-transform-origin:100% 80%;}
-.li_wrap .li_sir .eyebrow_wrap{ display:block; height:12px; width:101px; position:absolute; left:29px; top:76px; z-index:3;}
-.li_wrap .li_sir .eyebrow_wrap .eyebrow_1{ display:block; height:12px; width:42px; background:url(../../images/promote_images/page_1/eyebrow_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0px;}
-.li_wrap .li_sir .eyebrow_wrap .eyebrow_2{ display:block; height:12px; width:42px; background:url(../../images/promote_images/page_1/eyebrow_2.png) no-repeat 0 0; background-size:contain; position:absolute; right:0; top:0px;}
+.page_wrap{ display:block; height:100%; width:100%; background:#175998;}
 
-.eyeglass{ display:block; height:25px; width:97px; position:absolute; left:31px; top:87px; z-index:3;}
-.eyeglass .flash_light{ display:block; height:26px; width:38px; border-radius:38px/26px; position:absolute; left:0; top:0; overflow:hidden;}
+.iceberg_wrap{ display:block; height:131px; width:320px; position:absolute; left:50%; margin-left:-160px; bottom:-47px; }
+.iceberg_wrap .iceberg{ display:block; height:131px; width:320px; background:url(../../images/promote_images/page_1/iceberg.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; }
+.iceberg_wrap .ice_block{ display:block; height:39px; width:53px; background:url(../../images/promote_images/page_1/ice_block_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; bottom:28px; }
+
+.li_wrap{ display:block; height:278px; width:118px; position:absolute; left:50%; margin-left:25px; bottom:30px; z-index:2;}
+.li_wrap .li_sir{ display:block; height:278px; width:118px; position:absolute; left:0; top:0; -webkit-transform-origin:50% 100%;}
+.li_wrap .li_sir .body{ display:block; height:278px; width:118px; background:url(../../images/promote_images/page_1/li_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:2;}
+.li_wrap .li_sir .hand_1{ display:block; height:74px; width:57px; background:url(../../images/promote_images/page_1/li_hand_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:-31px; top:98px; z-index:1; -webkit-transform-origin:100% 80%;}
+.li_wrap .li_sir .hand_2{ display:block; height:79px; width:22px; background:url(../../images/promote_images/page_1/li_hand_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:90px; top:151px; z-index:1; -webkit-transform-origin:20% 0%;}
+.li_wrap .li_sir .eyebrow_wrap{ display:block; height:9px; width:74px; position:absolute; left:24px; top:59px; z-index:3;}
+.li_wrap .li_sir .eyebrow_wrap .eyebrow_1{ display:block; height:9px; width:29px; background:url(../../images/promote_images/page_1/eyebrow_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0px;}
+.li_wrap .li_sir .eyebrow_wrap .eyebrow_2{ display:block; height:8px; width:29px; background:url(../../images/promote_images/page_1/eyebrow_2.png) no-repeat 0 0; background-size:contain; position:absolute; right:0; top:0px;}
+.li_wrap .li_sir_shadow{ display:block; height:17px; width:92px; background:rgba(0,0,0,0.14); position:absolute; left:16px; bottom:-9px; border-radius:92px/17px; }
+
+.eyeglass{ display:block; height:18px; width:74px; position:absolute; left:24px; top:68px; z-index:3;}
+.eyeglass .flash_light{ display:block; height:18px; width:29px; border-radius:29px/18px; position:absolute; left:0; top:0; overflow:hidden;}
 .eyeglass .flash_light_2{ right:0px; left:auto;}
 
-.eyeglass .flash_light .light{ display:block; height:45px; width:4px; background: -webkit-linear-gradient(top,rgba(255,255,255,0) 10%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 85%) ; position:absolute; left:-12px; top:-10px; -webkit-transform:rotate(20deg);}
+.eyeglass .flash_light .light{ display:block; height:35px; width:4px; background: -webkit-linear-gradient(top,rgba(255,255,255,0) 10%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 85%) ; position:absolute; left:-12px; top:-10px; -webkit-transform:rotate(20deg);}
 
-.li_wrap .li_bg_cover{display:block; height:120px; width:241px; background:url(../../images/promote_images/page_1/li_body_cover.png) no-repeat 0 0; background-size:contain; position:absolute; left:-1px; bottom:0; z-index:2;}
+.arrow_area{ opacity:0;}
+.arrow_up{ display:block; height:21px; width:21px; background:url(../../images/promote_images/page_1/arrow_up.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; bottom:10px; margin-left:-10px; text-indent:-9999px; overflow:hidden;}
 
-.animate_show .li_wrap .li_sir{ -webkit-animation:a_li_sir 0.3s 0.3s linear both;}
-.animate_show .li_wrap .li_sir .hand{ -webkit-animation:a_li_hand 3s 0.6s linear infinite;}
-.animate_show .li_wrap .li_sir .eyebrow_wrap{ -webkit-animation:a_eyebrow_wrap 2s 0.6s linear infinite;}
-.animate_show .eyeglass .flash_light .light{ -webkit-animation:a_light 2s 0.6s linear infinite;}
+.animate_show .li_wrap .li_sir{ -webkit-animation:a_li_sir 0.5s 0.3s linear both;}
+.animate_show .li_wrap .li_sir_shadow{ -webkit-animation:a_li_sir_shadow 0.5s 0.3s linear both;}
+.animate_show .li_wrap .li_sir .hand_1{ -webkit-animation:a_li_hand_1 3s 0.8s linear infinite;}
+.animate_show .li_wrap .li_sir .hand_2{ -webkit-animation:a_li_hand_2 3s 0.8s linear infinite;}
+.animate_show .li_wrap .li_sir .eyebrow_wrap{ -webkit-animation:a_eyebrow_wrap 2s 0.8s linear infinite;}
+.animate_show .eyeglass .flash_light .light{ -webkit-animation:a_light 2s 0.8s linear infinite;}
+.animate_show .arrow_area{ -webkit-animation:a_arrow_area 0.3s 1.5s linear both;}
+.animate_show .arrow_up{ -webkit-animation:a_arrow_up 1.2s 0.6s linear infinite;}
 
-
-@-webkit-keyframes a_li_sir{
-	0%{ -webkit-transform: translate(0,270px);}
-	20%{ -webkit-transform: translate(0,0);}
-	50%{ -webkit-transform: translate(0,10px);}
-	70%{ -webkit-transform: translate(0,5px);}
-	100%{ -webkit-transform: translate(0,0);}
+@-webkit-keyframes a_arrow_area{
+	0%{ opacity:0; }
+	100%{  opacity:1; }
 }
 
-@-webkit-keyframes a_li_hand{
+@-webkit-keyframes a_arrow_up{
+	0%{ -webkit-transform: translate(0,0px);}
+	50%{ -webkit-transform: translate(0,-4px);}
+	100%{ -webkit-transform: translate(0,0px);}
+}
+
+@-webkit-keyframes a_li_sir{
+	0%{ -webkit-transform: translate(0,-570px) scale(1,1.05);}
+	20%{ -webkit-transform: translate(0,4px) scale(1.05,0.95);}
+	50%{ -webkit-transform: translate(0,-2px) scale(0.98,1.02);}
+	70%{ -webkit-transform: translate(0,1px) scale(1.02,0.98);}
+	100%{ -webkit-transform: translate(0,0) scale(1,1);}
+}
+
+@-webkit-keyframes a_li_sir_shadow{
+	0%{ -webkit-transform:scale(0.3);}
+	20%{ -webkit-transform:scale(1.05);}
+	50%{ -webkit-transform:scale(0.95);}
+	70%{ -webkit-transform:scale(1.01);}
+	100%{ -webkit-transform:scale(1);}
+}
+
+@-webkit-keyframes a_li_hand_1{
 	0%{ -webkit-transform:rotate(0deg);}
 	20%{ -webkit-transform:rotate(-5deg);}
 	50%{ -webkit-transform:rotate(5deg);}
 	80%{ -webkit-transform:rotate(-5deg);}
+	100%{ -webkit-transform:rotate(0deg);}
+}
+
+@-webkit-keyframes a_li_hand_2{
+	0%{ -webkit-transform:rotate(0deg);}
+	20%{ -webkit-transform:rotate(-1deg);}
+	50%{ -webkit-transform:rotate(2deg);}
+	80%{ -webkit-transform:rotate(-1deg);}
 	100%{ -webkit-transform:rotate(0deg);}
 }
 
@@ -77,10 +115,31 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 }
 
 
+.penguin_wrap{ display:block; display:block; height:63px; width:56px; position:absolute; left:50%; margin-left:-100px; bottom:50px; z-index:2;}
+.penguin_wrap .penguin_body{ display:block; display:block; height:63px; width:56px; background:url(../../images/promote_images/page_1/penguin_mail.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:2;}
+.penguin_wrap .penguin_shadow{ display:block; height:12px; width:70px; background:rgba(0,0,0,0.14); position:absolute; left:-7px; bottom:-4px; border-radius:70px/12px;}
 
+.slogan_wrap .txt{ display:block; height:98px; width:231px; background:url(../../images/promote_images/page_1/slogan_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-141px; bottom:374px; text-indent:-9999px; overflow:hidden; opacity:0;}
+.slogan_wrap .title{ display:block; height:75px; width:162px; background:url(../../images/promote_images/page_1/slogan_txt.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-140px; bottom:285px; text-indent:-9999px; overflow:hidden; -webkit-transform:scale(0.1); opacity:0; -webkit-transform-origin:100% 100%;}
 
+.animate_show .slogan_wrap .title{ -webkit-animation:a_slogan_tit 0.4s 0.8s linear both;}
+.animate_show .slogan_wrap .txt{ -webkit-animation:a_slogan_txt 0.3s 1.2s linear both;}
 
+@-webkit-keyframes a_slogan_tit{
+	0%{ -webkit-transform:scale(0.1); opacity:0;}
+	25%{ -webkit-transform:scale(1.03); opacity:1;}
+	50%{ -webkit-transform:scale(0.98); opacity:1;}
+	75%{ -webkit-transform:scale(1.01); opacity:1;}
+	100%{ -webkit-transform:scale(1); opacity:1;}
+}
 
+@-webkit-keyframes a_slogan_txt{
+	0%{ -webkit-transform:scale(5); opacity:0;}
+	25%{ -webkit-transform:scale(0.95); opacity:1;}
+	50%{ -webkit-transform:scale(1.02); opacity:1;}
+	75%{ -webkit-transform:scale(0.98); opacity:1;}
+	100%{ -webkit-transform:scale(1); opacity:1;}
+}
 
 
 

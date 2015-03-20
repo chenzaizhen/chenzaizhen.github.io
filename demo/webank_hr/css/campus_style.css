@@ -8,6 +8,8 @@
 .head_wrap_campus .menu_list li.current a{ color:#fff;}
 .head_wrap_campus .link_name{ color:#c6ffb6;}
 .head_wrap_campus .link_name:hover{ color:#fff;}
+.head_wrap_campus .link_login{ color:#c6ffb6; border-color:#c6ffb6;}
+.head_wrap_campus .link_login:hover{ color:#fff; border-color:#fff;}
 .link_name .icon_arrow{ background-image:url(../images/campus_index/icon_arrow_2.png);}
 .pop_user_show .link_name .icon_arrow{ background-image:url(../images/campus_index/icon_arrow_2_hover.png);}
 

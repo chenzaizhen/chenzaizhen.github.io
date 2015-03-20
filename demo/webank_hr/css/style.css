@@ -1,11 +1,30 @@
 @charset "utf-8";
 @import url("global.css");
 
-.banner{ display: block; height:560px; width:100%; background:#244a94 url(../images/index/banner.jpg) no-repeat center 0; position:relative;}
-.banner:after{ content:""; display: block; height:560px; width:100%; background:#244a94 url(../images/index/banner.jpg) no-repeat center 0; position:relative;}
-.banner .banner_slogan{ display:block; width:503px; height:92px; background:url(../images/index/slogan.png) no-repeat 0 0; position:absolute; left:50%; top:140px; margin-left:-251px; text-indent:-9999px; overflow:hidden;}
+.banner{ display: block; height:560px; width:100%; background:#244a94 url(../images/index/banner.jpg) no-repeat center 0; position:relative; overflow:hidden;}
+.banner .bg_1{display: block; height:560px; width:100%; background:#244a94 url(../images/index/banner.jpg) no-repeat center 0; position:relative; -webkit-animation:a_banner_bg 2s linear infinite; -webkit-transform-origin:50% 80%; position:absolute; left:0px; top:0px; z-index:2;}
+.banner .bg_2{display: block; height:560px; width:100%; background:#244a94 url(../images/index/banner.jpg) no-repeat center 0; position:relative; -webkit-animation:a_banner_bg_2 2s 0.5s linear infinite; -webkit-transform-origin:50% 80%; position:absolute; left:0px; top:0px; z-index:1;}
+.banner .banner_slogan{ display:block; width:503px; height:92px; background:url(../images/index/slogan.png) no-repeat 0 0; position:absolute; left:50%; top:140px; margin-left:-251px; text-indent:-9999px; overflow:hidden; z-index:4;}
 
-.search_wrap{ display:block; height:57px; width:635px; position:absolute; left:50%; margin-left:-317px; top:252px;}
+@-webkit-keyframes a_banner_bg{
+	0%{ transform: scale(1); opacity:1; z-index:2;}
+	50%{ transform: scale(4);  opacity:0.2; z-index:2;}
+	50.1%{ transform: scale(1); opacity:0.2; z-index:1;}
+	50.2%{ transform: scale(1); opacity:1; z-index:1;}
+	99.9%{ transform: scale(4);  opacity:0.2; z-index:1;}
+	100%{ transform: scale(1);  opacity:0.2; z-index:2;}
+}
+
+@-webkit-keyframes a_banner_bg_2{
+	0%{ transform: scale(1); opacity:1; z-index:1;}
+	50%{ transform: scale(4);  opacity:0.2; z-index:1;}
+	50.1%{ transform: scale(1); opacity:0.2; z-index:2;}
+	50.2%{ transform: scale(1); opacity:1; z-index:2;}
+	99.9%{ transform: scale(4);  opacity:0.2; z-index:2;}
+	100%{ transform: scale(1);  opacity:0.2; z-index:1;}
+}
+
+.search_wrap{ display:block; height:57px; width:635px; position:absolute; left:50%; margin-left:-317px; top:252px; z-index:4;}
 .search_wrap .search_area{ display:inline; height:57px; width:133px; background:#fff; margin-right:1px; float:left;}
 .search_wrap .search_area .sel_search{ display:block; height:57px; width:93px; text-align:left; font-size:16px; font-family:'microsoft yahei'; line-height:57px; position:relative; color:#2c2c2c; padding:0px 20px;}
 .search_wrap .search_area .sel_search .icon_arrow{ display:block; height:5px; width:9px; background:url(../images/index/icon_arrow.png) no-repeat 0 0; position:absolute; right:20px; top:26px;}
@@ -26,7 +45,7 @@
 .search_wrap .btn_search .icon_search{ display:block; height:32px; width:32px; background:url(../images/index/icon_search.png) no-repeat 0 0; position:absolute; left:50%; margin-left:-16px; top:12px;}
 .search_wrap .btn_search:hover{ background:#30d160;}
 
-.banner_penguin{ display:block; height:181px; width:151px; background:url(../images/index/banner_penguin.png) no-repeat 0 0; z-index:2; position:absolute; left:50%; margin-left:-75px; bottom:-23px; }
+.banner_penguin{ display:block; height:181px; width:151px; background:url(../images/index/banner_penguin.png) no-repeat 0 0; z-index:2; position:absolute; left:50%; margin-left:-75px; bottom:-23px; z-index:4; }
 
 .job_sort_wrap{ display:block; width:1000px; margin:50px auto 100px; margin-top:100px; position:relative;}
 .job_sort_wrap .title_area{ margin-bottom:50px;}
