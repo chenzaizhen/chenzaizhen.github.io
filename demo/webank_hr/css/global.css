@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url("pop_style.css");
 
 /* 浏览器样式清除 reset */
 body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
@@ -15,6 +16,7 @@ input,select,img{ vertical-align:middle;}
 legend{ display:none;}
 textarea{resize:none;}
 button {cursor:pointer;}
+.input::-ms-clear { display:none; }
 
 body{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .head_wrap{ display:block; height:75px; width:100%; background:#2a5eab; z-index:2; position:relative; margin-bottom:50px;}
