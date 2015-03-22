@@ -158,9 +158,9 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 
 
 .slogan_wrap .txt{ display:block; height:98px; width:231px; background:url(../../images/promote_images/page_1/slogan_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-141px; bottom:374px; text-indent:-9999px; overflow:hidden; opacity:0;}
-.slogan_wrap .title{ display:block; height:75px; width:162px; background:url(../../images/promote_images/page_1/slogan_txt.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-140px; bottom:285px; text-indent:-9999px; overflow:hidden; -webkit-transform:scale(0.1); opacity:0; -webkit-transform-origin:100% 100%;}
+.slogan_wrap .title .link{ display:block; height:75px; width:162px; background:url(../../images/promote_images/page_1/slogan_txt.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-140px; bottom:285px; text-indent:-9999px; overflow:hidden; -webkit-transform:scale(0.1); opacity:0; -webkit-transform-origin:100% 100%;}
 
-.animate_show .slogan_wrap .title{ -webkit-animation:a_slogan_tit 0.4s 1.2s linear both; }
+.animate_show .slogan_wrap .title .link{ -webkit-animation:a_slogan_tit 0.4s 1.2s linear both; }
 .animate_show .slogan_wrap .txt{ -webkit-animation:a_slogan_txt 0.3s 1.6s linear both; }
 
 .animate_show .penguin_wrap{ -webkit-animation:a_penguin 1.4s 1.7s linear both; }
@@ -228,6 +228,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 .iceberg_wrap_2 .ice_block_4{ display:block; height:48px; width:127px; background:url(../../images/promote_images/page_1/ice_block_4.png) no-repeat 0 0; background-size:contain; position:absolute; right:0; bottom:0px; }
 
 .qr_code_wrap{ display:block; height:230px; width:173px; position:absolute; left:50%; margin-left:-86px; top:50%; margin-top:-115px; z-index:2;}
+.qr_code_wrap .link_qr_code{ display:block; height:173px; width:173px;}
 .qr_code_wrap .qr_img{ display:block; height:173px; width:173px;}
 .qr_code_wrap .qr_code_tips{ display:block; height:41px; width:107px; background:url(../../images/promote_images/page_1/qr_code_tips.png) no-repeat 0 0; background-size:contain; position:absolute; left:30px; top:190px; text-indent:-9999px; overflow:hidden; }
 

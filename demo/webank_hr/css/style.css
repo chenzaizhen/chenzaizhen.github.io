@@ -322,6 +322,13 @@
 
 .resume_detail_wrap .ipt_fam_workplace{ width:138px;}
 
+.resume_detail_wrap .ipt_fam_name_2{ width:166px;}
+.resume_detail_wrap .ipt_fam_relation_2{ width:265px;}
+.resume_detail_wrap .ipt_fam_department_2{ width:116px;}
+
+.resume_detail_wrap .ipt_referee_name{ width:166px;}
+.resume_detail_wrap .ipt_radio{ margin-left:10px; position:relative; top:-2px;}
+
 .resume_detail_wrap .ipt_radio_1{ width:27px;}
 .resume_detail_wrap .ipt_radio_2{ width:41px;}
 

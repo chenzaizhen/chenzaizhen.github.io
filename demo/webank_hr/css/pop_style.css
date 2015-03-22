@@ -17,18 +17,19 @@ textarea{resize:none;}
 button {cursor:pointer;}
 
 .mask{ display:block; height:100%; width:100%; background:rgba(0,0,0,0.3); position: fixed; left:0px; top:0px; z-index:99;}
-.pop_wrap{ display:block; height:300px; width:500px; background:#fff; position: fixed; left:50%; top:50%; margin-top:-150px; margin-left:-250px; box-shadow:0px 0px 5px rgba(0,0,0,0.5); z-index:100; }
-.pop_wrap .pop_title{ display:block; height:50px; width:100%; background:#2a5eab; color:#fff; line-height:50px; position:relative;}
+.pop_wrap{ display:block; height:270px; width:470px; background:#fff; position: fixed; left:50%; top:50%; margin-top:-150px; margin-left:-250px; box-shadow:0px 0px 5px rgba(0,0,0,0.5); z-index:100; }
+.pop_wrap .pop_title{ display:block; height:50px; width:100%; background:#f2f2f2; color:#2d2d2d; border-bottom:1px solid #d6d6d6; line-height:50px; position:relative;}
 .pop_wrap .pop_title .title{ margin-left:18px; font-size:16px; font-family:'microsoft yahei'; font-weight:normal;}
-.pop_wrap .pop_title .link_close{ position:absolute; right:16px; top:2px; font-size:14px; font-family:'microsoft yahei'; color:#fff;}
+.pop_wrap .pop_title .link_close{ display:block; height:16px; width:16px; background:url(../images/global/pop/icon_close.png) no-repeat 0 0; position:absolute; right:18px; top:18px; text-indent:-9999px; overflow:hidden;}
 
 .pop_wrap .pop_con{}
-.pop_wrap .pop_con .icon_alert{ display:block; height:52px; width:52px; background: url(../images/global/pop/icon_alert.jpg) no-repeat 0 0; margin:40px 15px 0 70px; text-indent:-9999px; overflow:hidden; float:left;}
-.pop_wrap .pop_con .pop_detail{ display:block; float:left; margin-top:40px;}
+.pop_wrap .pop_con .icon_alert{ display:block; height:46px; width:46px; background: url(../images/global/pop/icon_alert.jpg) no-repeat 0 0; margin:40px 15px 0 46px; text-indent:-9999px; overflow:hidden; float:left;}
+.pop_wrap .pop_con .pop_detail{ display:block; float:left; margin-top:36px; width:300px; height:105px;}
 .pop_wrap .pop_con .pop_detail .pop_sub_tit{ font-size:18px; font-family:'microsoft yahei'; font-weight:normal; margin-bottom:5px;}
-.pop_wrap .pop_con .pop_detail .pop_sub_txt{ font-size:14px; font-family:'microsoft yahei'; margin-bottom:50px;}
-.pop_wrap .pop_con .pop_detail .btn_confirm{ margin-right:10px;}
-.pop_wrap .pop_con .pop_detail .btn_cancel{ background:#f2f2f2; border:1px solid #d8d8d8; color:#2c2c2c;}
+.pop_wrap .pop_con .pop_detail .pop_sub_txt{ font-size:14px; font-family:'microsoft yahei';}
+.pop_wrap .pop_con .btn_wrap{ clear:both; text-align:center; margin-bottom:0px;}
+.pop_wrap .pop_con .btn_wrap .btn{ height:38px; line-height:38px; width:120px;}
+.pop_wrap .pop_con .btn_cancel{ background:#f2f2f2; border:1px solid #d8d8d8; color:#2c2c2c; margin-right:10px;}
 
 
 
