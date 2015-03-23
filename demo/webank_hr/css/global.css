@@ -16,7 +16,8 @@ input,select,img{ vertical-align:middle;}
 legend{ display:none;}
 textarea{resize:none;}
 button {cursor:pointer;}
-.input::-ms-clear { display:none; }
+input::-ms-clear { display:none; }
+input:focus::-ms-clear { display: none;}
 
 body{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .head_wrap{ display:block; height:75px; width:100%; background:#2a5eab; z-index:2; position:relative; margin-bottom:50px;}
@@ -35,7 +36,7 @@ body{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .user_area{ display:block; height:30px; width:140px; position:absolute; right:0px; top:20px;}
 .link_name{ display:block; height:30px; width:140px; text-align:right; line-height:30px; font-size:14px; font-family:"microsoft yahei"; color:#a0c6ff; position:absolute; right:0px; top:0px; -webkit-transition:color 0.3s linear; transition:color 0.3s linear;}
 .link_name:hover{ text-decoration:none; color:#fff;}
-.link_name .name{ width:125px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; text-align:left;}
+.link_name .name{ width:125px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; text-align:right;}
 .link_name .icon_arrow{ display:block; height:4px; width:7px; background:url(../images/index/icon_arrow_2.png) no-repeat 0 0; position:absolute; right:0px; top:13px;}
 .user_area .pop_user{ display:none; width:112px; position:absolute; right:0px; top:37px;}
 .user_area .user_list{ border:1px solid #d3d3d3; border-radius:3px;}
@@ -47,7 +48,7 @@ body{ display:block; height:100%; width:100%; overflow-x: hidden;}
 
 .footer{ display:block; height:105px; width:1000px; margin:0px auto; text-align:center; position:relative; border-top:1px solid #e6e6e6;}
 .footer .slogan{ display:block; width:127px; height:14px; background:url(../images/global/foot_slogan.png) no-repeat 0 0; position:absolute; left:50%; top:25px; margin-left:-63px; text-indent:-9999px; overflow:hidden;}
-.footer .copyright{ display:block; font-size:14px; font-family:'Arial'; color:#bfbfbf; margin-top:50px;}
+.footer .copyright{ display:block; font-size:12px; font-family:'Arial','microsoft yahei'; color:#bfbfbf; margin-top:50px;}
 
 /*loading*/
 

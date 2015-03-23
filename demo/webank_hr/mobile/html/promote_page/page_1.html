@@ -77,8 +77,9 @@
     <div class="page_wrap back_page">
     	
         <div class="qr_code_wrap">
-        	<a href="http://hr.webank.com/" class="link_qr_code" target="_blank"><img src="../../images/promote_images/page_1/qr_code.png" class="qr_img" alt="" /></a>
-            <p class="qr_code_tips">扫二维码 即刻加入微众</p>
+        	<span class="link_qr_code"><img src="../../images/promote_images/page_1/qr_code.png" class="qr_img" alt="" /></span>
+            <p class="qr_code_tips">长按二维码 即刻加入微众</p>
+            <p class="webank_link"><a href="http://hr.webank.com/" class="link">hr.webank.com</a></p>
         </div>
     
     	<div class="iceberg_wrap_2">
@@ -92,17 +93,121 @@
     
 </div>
 
-
-
-<!-- pc test hook -->
-<!--
-<div class="hook_up">up</div>
-<div class="hook_down">down</div>
-<div class="hook_left">left</div>
-<div class="hook_right">right</div>-->
-
-<script language="javascript" type="text/javascript" src="../../js/jquery-1.9.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="../../js/promote_js/jquery-1.9.0.min.js"></script>
 <script language="javascript" type="text/javascript" src="../../js/promote_js/page_1.js"></script>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+	var currUrl = window.location.href.replace(window.location.hash, '');
+	$.getJSON('http://hr.webank.com/wx/signature.php?url=' + encodeURIComponent(currUrl)).done(function(data) {
+		wx.config({
+			debug: false,
+			appId: data.appId,
+			timestamp: data.timestamp,
+			nonceStr: data.nonceStr,
+			signature: data.signature,
+			jsApiList: [
+				'checkJsApi',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo',
+				'hideMenuItems',
+				'showMenuItems',
+				'hideAllNonBaseMenuItem',
+				'showAllNonBaseMenuItem',
+				'translateVoice',
+				'startRecord',
+				'stopRecord',
+				'onRecordEnd',
+				'playVoice',
+				'pauseVoice',
+				'stopVoice',
+				'uploadVoice',
+				'downloadVoice',
+				'chooseImage',
+				'previewImage',
+				'uploadImage',
+				'downloadImage',
+				'getNetworkType',
+				'openLocation',
+				'getLocation',
+				'hideOptionMenu',
+				'showOptionMenu',
+				'closeWindow',
+				'scanQRCode',
+				'chooseWXPay',
+				'openProductSpecificView',
+				'addCard',
+				'chooseCard',
+				'openCard'
+			]
+		});
+	});
+	
+  wx.ready(function () {
+	wx.checkJsApi({
+		jsApiList: [
+			'getNetworkType',
+			'previewImage'
+		],
+		success: function (res) {}
+	});
+	
+	// 2. 分享接口
+	// 2.1 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
+	
+	wx.onMenuShareAppMessage({
+		title: '微众招聘',
+		desc: '他来了，你来不来？',
+		link: '',
+		imgUrl: 'http://hr.webank.com/m/images/promote_images/page_1/icon_200x200.jpg',
+		trigger: function (res) {},
+		success: function (res) {},
+		cancel: function (res) {},
+		fail: function (res) {}
+	});
+	
+	// 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+	
+	wx.onMenuShareTimeline({
+		title: '微众银行招聘',
+		desc: '他来了，你来不来？',
+		link: '',
+		imgUrl: 'http://hr.webank.com/m/images/promote_images/page_1/icon_200x200.jpg',
+		trigger: function (res) {},
+		success: function (res) {},
+		cancel: function (res) {},
+		fail: function (res) {}
+	});
+	
+	// 2.3 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口
+	wx.onMenuShareQQ({
+		title: '微众银行招聘',
+		desc: '他来了，你来不来？',
+		link: '',
+		imgUrl: 'http://hr.webank.com/m/images/promote_images/page_1/icon_200x200.jpg',
+		trigger: function (res) {},
+		complete: function (res) {},
+		success: function (res) {},
+		cancel: function (res) {},
+		fail: function (res) {}
+	});
+	// 2.4 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口
+	wx.onMenuShareWeibo({
+		title: '微众银行招聘',
+		desc: '他来了，你来不来？',
+		link: '',
+		imgUrl: 'http://hr.webank.com/m/images/promote_images/page_1/icon_200x200.jpg',
+		trigger: function (res) {},
+		complete: function (res) {},
+		success: function (res) {},
+		cancel: function (res) {},
+		fail: function (res) {}
+	});
+	
+  });
+</script>
 
 </body>
 </html>

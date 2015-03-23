@@ -27,8 +27,8 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 
 .search_wrap{width:290px; margin:0 auto 35px; position:relative;}
 .search_wrap .ipt_area{ display:block; width:100%; height:45px; border:1px solid #1b4e9a; border-radius:3px;}
-.search_wrap .ipt_area .ipt_job{display:block; width:230px; padding-left:14px; padding-right:11px; height:45px; line-height:45px; font-size:16px; font-family:'microsoft yahei'; color:#bfbfbf; border:none;}
-.search_wrap .ipt_area .ipt_job:focus{ color:#6f6f6f;}
+.search_wrap .ipt_area .ipt_job{display:block; width:230px; padding-left:14px; padding-right:11px; height:45px; line-height:45px; font-size:16px; font-family:'microsoft yahei'; color:#333; border:none;}
+.search_wrap .ipt_area .ipt_job:focus{ color:#333;}
 .search_wrap .btn_search{ display:block; height:45px; width:50px; background:#2a5eab; position:absolute; right:-1px; top:1px; text-indent:-9999px; overflow:hidden;}
 .search_wrap .btn_search .icon_search{ display:block; height:20px; width:21px; background:url(../images/global/icon_search.png) no-repeat 0 0; background-size:contain; position:absolute; left:15px; top:12px; pointer-events:none;}
 
@@ -56,7 +56,7 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 .job_title_wrap .number{ color:#bfbfbf;  font-family:'microsoft yahei'; font-size:14px;}
 .job_title_wrap .date{ color:#bfbfbf;  font-family:'Arial'; font-size:14px; position:absolute; right:15px; top:45px;}
 
-.job_detail_con{ padding:20px 15px;}
+.job_detail_con{ padding:20px 15px 80px 15px;}
 .job_detail_con .title{font-size:16px; font-family:'microsoft yahei'; color:#595959; margin-bottom:3px;}
 .job_detail_con .detail_list{font-size:14px; font-family:'microsoft yahei'; color:#595959; margin-bottom:30px; margin-left:17px;}
 .job_detail_con .detail_list li{ list-style:disc; padding-left:0px; margin-bottom:3px;}
@@ -77,7 +77,7 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 .search_address .sel_search{ display:block; height:45px; width:75px; background:#2a5eab; position:absolute; right:-1px; top:1px; overflow:hidden;}
 .search_address .sel_key{ font-size:16px; font-family:'microsoft yahei'; color:#fff; position:absolute; left:14px; top:10px;}
 .search_address .icon_arrow{ display:block; height:7px; width:13px; background:url(../images/global/search_arrow.png) no-repeat 0 0; background-size:contain; position:absolute; right:10px; top:20px;}
-.search_wrap .key_list{ display:block; width:75px; border:1px solid #d5d5d5; position:absolute; right:-2px; top:47px;}
+.search_wrap .key_list{ display:none; width:75px; border:1px solid #d5d5d5; position:absolute; right:-2px; top:47px;}
 .search_wrap .key_list li a{ display:block; height:36px; line-height:36px; text-align:center; font-size:16px; font-family:'microsoft yahei'; width:100%; border-bottom:1px solid #d5d5d5; color:#5a5a5a; background:rgba(255,255,255,0.95);}
 .search_wrap .key_list li.last a{ border:none;}
 .search_addition_floating{ box-shadow:0px 1px 3px rgba(0,0,0,0.15); position:fixed;}
@@ -162,8 +162,8 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 .info_list{ padding-left:10px;}
 .info_list li{ height:48px; border-bottom:1px solid #bdbdbd;}
 .info_list li.last{border: none;}
-.info_list li .ipt{ height:48px; line-height:48px; font-size:16px; font-family:'microsoft yahei'; border:none; width:70%; padding:0px 10px; color:#cdcdcd;}
-.info_list li .ipt:focus{ color:#6f6f6f;}
+.info_list li .ipt{ height:48px; line-height:48px; font-size:16px; font-family:'microsoft yahei'; border:none; width:70%; padding:0px 10px; color:#333;}
+.info_list li .ipt:focus{ color:#333;}
 .info_list .icon{ display:inline-block; vertical-align:middle; height:16px; width:16px; background:url(../images/user_center/icon_name.png) no-repeat 0 0; background-size:contain;}
 .info_list .icon_name{ background-image:url(../images/user_center/icon_name.png);}
 .info_list .icon_phone{ background-image:url(../images/user_center/icon_phone.png);}
@@ -233,7 +233,16 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 
 /*简历投递成功*/
 
-/*简历投递成功 弹层*/
+/*简历投递成功*/
+
+.summit_success_wrap{}
+.summit_success_wrap .celebrate_penguin .penguin_area{ position: relative; left:0px; top:0px; margin:50px auto 10px;}
+.summit_success_wrap .success_title{ text-align:center; margin:0px auto 20px; font-size:18px; font-family:"microsoft yahei"; font-weight:normal;}
+.btn_summit_success_wrap{ text-align:center; margin-bottom:50px;}
+.btn_summit_success_wrap .btn_find_more{ background:#2a5eab; border:1px solid #1b4e9a; border-radius:3px; color:#fff; display:inline-block; font-family: "microsoft yahei"; font-size:16px; height:45px; line-height:45px; width:188px; text-align:center; transition: background 0.2s linear;}
+.hr_qr_code_wrap{ display:block; text-align:center;}
+.hr_qr_code_wrap .img_qr_code{ display:inline-block; height:96px; width:96px; margin-bottom:10px;}
+.hr_qr_code_wrap .txt{ text-align:center; font-family: "microsoft yahei"; font-size:12px;}
 
 .pop_wrap{ display:block; width:270px; background:#e6e6e6; border-radius:5px; position:fixed; left:50%; margin-left:-135px; top:80px; z-index:100; box-shadow:0px 0px 3px rgba(0,0,0,0.4);}
 .pop_wrap .celebrate_penguin{ display:block; width:90px; height:95px; margin:15px auto 10px; position:relative; }
@@ -277,7 +286,7 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 }
 
 
-/*简历投递成功 弹层*/
+/*简历投递成功*/
 
 /*简历投递提示 弹层*/
 

@@ -30,6 +30,7 @@ button {cursor:pointer;}
 .pop_wrap .pop_con .btn_wrap{ clear:both; text-align:center; margin-bottom:0px;}
 .pop_wrap .pop_con .btn_wrap .btn{ height:38px; line-height:38px; width:120px;}
 .pop_wrap .pop_con .btn_cancel{ background:#f2f2f2; border:1px solid #d8d8d8; color:#2c2c2c; margin-right:10px;}
+.pop_wrap .pop_con .btn_cancel:hover{ background:#f2f2f2;}
 
 
 

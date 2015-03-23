@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url("global.css");
+@import url("pop_style.css");
 
 .banner{ display: block; height:560px; width:100%; background:#244a94 url(../images/index/banner.jpg) no-repeat center 0; position:relative;/* overflow:hidden;*/}
 /*.banner .bg_1{display: block; height:560px; width:100%; background:#244a94 url(../images/index/banner.jpg) no-repeat center 0; position:relative; -webkit-animation:a_banner_bg 2s linear infinite; -webkit-transform-origin:50% 80%; position:absolute; left:0px; top:0px; z-index:2;}
@@ -65,7 +66,7 @@
 
 .job_con .job_list .job_item .a_link:hover{ text-decoration:none;}
 .job_con .job_list .job_item_1 .a_link:hover{ background:#2a5eab; border:1px solid #2a5eab;}
-.job_con .job_list .job_item_2 .a_link:hover{ background:#1997d8; border:1px solid #1997d8;}
+.job_con .job_list .job_item_2 .a_link:hover{ background:#1ca5ec; border:1px solid #1ca5ec;}
 .job_con .job_list .job_item_3 .a_link:hover{ background:#29c7be; border:1px solid #29c7be;}
 .job_con .job_list .job_item_4 .a_link:hover{ background:#ebb615; border:1px solid #ebb615;}
 .job_con .job_list .job_item_5 .a_link:hover{ background:#ea7332; border:1px solid #ea7332;}
@@ -139,6 +140,7 @@
 .btn_wrap{ margin-bottom:100px; text-align:left;}
 .btn_wrap .btn{ display:inline-block; height:45px; width:140px;  background:#448af2; border:1px solid #3479df; color:#fff; text-align:center; line-height:45px; font-size:16px; font-family:'microsoft yahei'; border-radius:3px; -webkit-transition:background 0.2s linear; transition:background 0.2s linear; }
 .btn_wrap .btn:hover{ text-decoration:none; background:#4891fc;}
+.btn_wrap .btn.disabled, .btn_wrap .btn.disabled:hover {background: #b2b2b2; border: 1px solid #a5a5a5; }
 
 /*详情页*/
 
@@ -150,14 +152,15 @@
 .job_list_table td{ border-bottom:1px solid #d6d6d6; height:50px; line-height:50px; padding-left:15px;}
 .job_list_table .job_name{ width:550px;}
 .job_list_table .job_name p{ width:550px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.job_list_table .job_name a { color: #2a5eab;}
 
-.job_list_info{ width:800px; margin:0px auto; overflow:hidden; position:absolute; left:0px; bottom:0px;}
+.job_list_info{ width:800px; margin:0px auto; overflow:hidden;/*position:absolute; left:0px; bottom:0px;*/}
 .job_list_info .total_data{ width:200px; float:left; color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; margin-left:15px;}
 .job_list_info .total_data .num{ margin:0px 3px;}
 .job_list_info .pager_wrap{ float:right; width:550px;}
 .pager_wrap{ font-size:14px; text-align:right; padding-right:12px;}
-.pager_wrap .link_pre{ display:inline; font-family:'microsoft yahei'; padding:2px 8px;}
-.pager_wrap .link_next{ display:inline; font-family:'microsoft yahei'; padding:2px 8px;}
+.pager_wrap .link_pre{ display:inline; font-family:'microsoft yahei'; padding:2px 8px; color:#2a5eab;}
+.pager_wrap .link_next{ display:inline; font-family:'microsoft yahei'; padding:2px 8px; color:#2a5eab;}
 .pager_wrap .link_pre_disable{ color:#bfbfbf;}
 .pager_wrap .link_next_disable{ color:#bfbfbf;}
 .pager_wrap .list_page{ display:inline;}
@@ -374,7 +377,7 @@
 .form_area .form_item .ipt:focus{ color:#2c2c2c; border:1px solid #999;}
 .form_area .form_item .i_star{ color:#d01b25; font-size:16px; font-family:'microsoft yahei'; position:absolute; left:-12px; top:16px;}
 .form_area .form_item .ipt_error{ color:#d01b25; border:1px solid #d01b25;}
-.form_area .form_item .tips_error{ color:#d01b25; font-size:12px; font-family:'microsoft yahei'; position:absolute; left:0px; bottom:-20px;}
+.form_area .form_item .tips_error{ display: none; color:#d01b25; font-size:12px; font-family:'microsoft yahei'; position:absolute; left:0px; bottom:-20px;}
 .form_area .form_item .tips_error .icon_error{ display:inline-block; height:14px; width:14px; background:url(../images/resume/icon_error.png) no-repeat 0 0; margin-right:3px; text-indent:-9999px; overflow:hidden; vertical-align:middle; position:relative; top:-2px;}
 .form_area .form_item .icon_calendar{ display:block; height:16px; width:16px; background:url(../images/resume/icon_calendar.png) no-repeat 0 0; position:absolute; right:15px; top:17px;}
 .form_area .form_item .icon_arrow{ display:block; height:5px; width:9px; background:url(../images/resume/icon_arrow.png) no-repeat 0 0; position:absolute; right:15px; top:23px;}
@@ -430,27 +433,28 @@
 .form_area .form_item .ipt_fam_position{ width:113px;}
 
 
-.form_area .form_item .ta{ display:block; width:778px; height:92px; border:1px solid #d6d6d6; background:#fff; font-size:14px; font-family:'microsoft yahei'; padding:13px; color:#d6d6d6; -webkit-transition:border 0.2s linear,color 0.2s linear; transition:border 0.2s linear,color 0.2s linear;}
+.form_area .form_item .ta{ display:block; width:778px; height:92px; border:1px solid #d6d6d6; background:#fff; font-size:14px; font-family:'microsoft yahei'; padding:13px; color:#2d2d2d; -webkit-transition:border 0.2s linear,color 0.2s linear; transition:border 0.2s linear,color 0.2s linear;}
+.form_area .form_item .ta.ipt_error {border: 1px solid #d01b25;}
 .form_area .form_item .ta:focus{ color:#2c2c2c; border:1px solid #999;}
 
 .link_add_info{ display:block; height:28px; width:98px; line-height:28px; border:1px solid #d6d6d6; color:#2c2c2c; border-radius:3px; text-align:center; font-size:14px; font-family:'microsoft yahei';}
 .link_add_info .icon_add{ display:inline-block; vertical-align:middle; font-size:26px; font-family:"Arial"; color:#d6d6d6; margin-right:5px; margin-top:-3px; -webkit-transition: -webkit-transform 0.3s linear; transition: transform 0.3s linear; }
 .link_add_info:hover{ text-decoration:none;}
 .link_add_info:hover .icon_add{ -webkit-transform:rotate(180deg); transform:rotate(180deg);}
-.link_delete_info{ position: absolute; right:0px; top:4px; font-size:14px; font-family:'microsoft yahei'; color:#448af2; text-decoration:underline;}
+.link_delete_info{ display: none; position: absolute; right:0px; top:4px; font-size:14px; font-family:'microsoft yahei'; color:#448af2; text-decoration:underline;}
 
 .resume_upload .upload_tips{ color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; margin-bottom:20px; *position:relative;}
 .resume_upload .upload_area{ margin-bottom:20px; height:30px; position:relative;}
 .resume_upload .upload_area .ipt_file{ display:block; height:35px; width:200px; position:absolute; left:0px; top:0px; opacity:0; opacity:1\9;}
 .resume_upload .upload_area .ipt_file_btn{ display:block; height:34px; width:88px; border:1px solid #d6d6d6; color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; background:none; float:left; border-radius:3px; display:none\9;}
-.resume_upload .upload_area .ipt_file_text{ border:none; color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; margin-top:5px; display:none\9;}
+.resume_upload .upload_area .ipt_file_text{ min-width: 500px; border:none; color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; margin-top:5px; display:none\9;}
 .resume_upload .tips_file_limit{ color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; margin-bottom:20px; *position:relative;}
 .resume_upload .upload_area .link_clear_img{ font-size:14px; font-family:'microsoft yahei'; color:#448af2; text-decoration:underline; position:relative; top:5px; position:absolute\9; left:220px\9; }
 
 .photo_wrap{ margin-bottom:60px; position:relative;}
-.photo_wrap .photo_area{ display:block; height:118px; width:98px; background:url(../images/resume/upload_img.png) no-repeat center 20px; position:relative; border:1px solid #d6d6d6;}
+.photo_wrap .photo_area{ display:block; height:118px; width:98px; /*background:url(../images/resume/upload_img.png) no-repeat center 20px;*/ position:relative; border:1px solid #d6d6d6;}
 .photo_wrap .photo_area .photo_user{ display:block; height:118px; width:98px; position:absolute; left:0px; top:0px;}
-.photo_wrap .photo_area .tips_photo{ display:block; height:25px; line-height:25px; width:100px; position:absolute; left:-1px; bottom:-1px; background:rgba(0,0,0,0.5); background:#000\9; color:#fff; text-align:center; font-size:12px; font-family:'microsoft yahei';}
+.photo_wrap .photo_area .tips_photo{ display:block; height:25px; line-height:25px; width:100px; position:absolute; left:-1px; bottom:-1px; background:rgba(0,0,0,0.5); background:#000\9; color:#fff; text-align:center; font-size:12px; font-family:'microsoft yahei'; z-index: 100;}
 .photo_wrap .ipt_file{ display:block; height:120px; width:100px; position:absolute; left:0px; top:0px; opacity:0; display:none\9;}
 
 .btn_wrap_create_resume{ display:block; height:48px; width:800px; margin:0px auto 100px; text-align:center; position:relative; clear:both;}
@@ -471,7 +475,7 @@
 .select_list li a{ display:block; height:35px; line-height:35px; text-align:center; color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; border:1px solid #d6d6d6; margin-top:-1px;}
 .select_list li a:hover{ text-decoration:none; background:#fbfbfb;}
 
-.select_current{ z-index:2;}
+.select_row_current{ z-index:2;}
 .select_current .pop_select{ display:block;}
 .form_area .select_current .icon_arrow{ background-image:url(../images/index/icon_arrow_hover.png);}
 
