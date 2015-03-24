@@ -227,7 +227,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 .iceberg_wrap_2 .ice_block_3{ display:block; height:18px; width:53px; background:url(../../images/promote_images/page_1/ice_block_3.png) no-repeat 0 0; background-size:contain; position:absolute; left:50px; bottom:0px; }
 .iceberg_wrap_2 .ice_block_4{ display:block; height:48px; width:127px; background:url(../../images/promote_images/page_1/ice_block_4.png) no-repeat 0 0; background-size:contain; position:absolute; right:0; bottom:0px; }
 
-.qr_code_wrap{ display:block; height:230px; width:173px; /*position:absolute; left:50%; margin-left:-86px; top:50%; margin-top:-115px; z-index:2;*/}
+.qr_code_wrap{ display:block; height:230px; width:173px; position:absolute; left:50%; margin-left:-86px; top:50%; margin-top:-115px; z-index:2;}
 .qr_code_wrap .link_qr_code{ display:block; height:173px; width:173px;}
 .qr_code_wrap .qr_img{ display:block; height:173px; width:173px;}
 .qr_code_wrap .qr_code_tips{ display:block; height:41px; width:125px; background:url(../../images/promote_images/page_1/qr_code_tips.png) no-repeat center 0; background-size:contain; position:absolute; left:24px; top:190px; text-indent:-9999px; overflow:hidden; }
