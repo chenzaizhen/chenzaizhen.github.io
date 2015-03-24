@@ -69,6 +69,7 @@ $(document).ready(function(){
 				$(".back_page").removeClass("animate_show");
 			},300);
 			
+			$(".qr_img_hook").hide();
 			page_index=1;	
 		}
 		else{
@@ -84,6 +85,10 @@ $(document).ready(function(){
 			var timer=setTimeout(function(){
 				$(".cover_page").removeClass("animate_show");
 			},300);
+			
+			var timer=setTimeout(function(){
+				$(".qr_img_hook").show();
+			},550);
 		
 			page_index=2;	
 		}
