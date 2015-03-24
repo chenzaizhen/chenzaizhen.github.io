@@ -72,7 +72,6 @@ $(document).ready(function(){
 					moving=0;
 				},300);
 				
-				$(".qr_img_hook").hide();
 				
 				moving=1;
 				page_index=1;	
@@ -91,12 +90,9 @@ $(document).ready(function(){
 				
 				var timer=setTimeout(function(){
 					$(".cover_page").removeClass("animate_show");
+					moving=0;
 				},300);
 				
-				var timer=setTimeout(function(){
-					$(".qr_img_hook").show();
-					moving=0;
-				},650);
 			
 				moving=1;
 				page_index=2;	

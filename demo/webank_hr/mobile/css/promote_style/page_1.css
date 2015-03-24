@@ -229,9 +229,9 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 
 .qr_code_wrap{ display:block; height:230px; width:173px; position:absolute; left:50%; margin-left:-86px; top:50%; margin-top:-115px; z-index:2;}
 .qr_code_wrap .link_qr_code{ display:block; height:173px; width:173px;}
-.qr_code_wrap .link_qr_code .qr_img{ position:absolute; left:0px; top:0px; z-index:3;}
+.qr_code_wrap .link_qr_code .qr_img{ display:block; height:173px; width:173px; }
 .qr_code_wrap .qr_code_tips{ display:block; height:41px; width:125px; background:url(../../images/promote_images/page_1/qr_code_tips.png) no-repeat center 0; background-size:contain; position:absolute; left:24px; top:190px; text-indent:-9999px; overflow:hidden; }
-.webank_link .link{ display:block; height:13px; width:106px; background:url(../../images/promote_images/page_1/webank_link.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-54px; top:263px; text-indent:-9999px; overflow:hidden;}
+.webank_link .link{ display:block; height:13px; width:107px; background:url(../../images/promote_images/page_1/webank_link.png) no-repeat 1px 0; background-size:contain; position:absolute; left:50%; margin-left:-54px; top:263px; text-indent:-9999px; overflow:hidden;}
 
 .animate_show .iceberg_wrap_2 .ice_block_1{ -webkit-animation:a_ice_block 3s 0.3s linear infinite;}
 .animate_show .iceberg_wrap_2 .ice_block_2{ -webkit-animation:a_ice_block_2 4s 0.5s linear infinite;}
@@ -272,10 +272,6 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 	.slogan_wrap .title .link{ bottom:220px;}
 	.slogan_wrap .txt{ height:90px; bottom:311px;}
 }
-
-.qr_img_hook{ position:absolute; left:50%; top:50%; margin-left:-86px; margin-top:-115px; z-index:3; display:none;}
-
-
 
 
 
