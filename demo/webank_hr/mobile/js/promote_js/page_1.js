@@ -61,7 +61,7 @@ $(document).ready(function(){
 	});
 	
 	function wipe_up(){
-		if(moving!=1){
+		if(moving!=1){//当页面在切换时候，禁止滑屏
 			if(page_index==2){
 				
 				$(".cover_page").addClass("animate_show").removeClass("page_up");
