@@ -219,7 +219,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 
 
 /*封底*/
-.back_page{position:absolute; left:0px; top:100%;}
+.back_page{position:absolute; left:0px; top:100%; z-index:2;}
 .iceberg_wrap_2{ display:block;  height:100%; width:100%; position:absolute; left:0; top:0; overflow:hidden; }
 .iceberg_wrap_2 .iceberg{ display:block; height:131px; width:100%; background:url(../../images/promote_images/page_1/iceberg.png) no-repeat center 0; background-size:100% 100%; position:absolute; left:0; top:-83px; }
 .iceberg_wrap_2 .ice_block_1{ display:block; height:39px; width:53px; background:url(../../images/promote_images/page_1/ice_block_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:-20px; }
