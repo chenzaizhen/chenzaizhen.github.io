@@ -4,6 +4,7 @@ $(document).ready(function(){
 	
 	/*翻页标识*/
 	var page_index=1;//当前在哪个页面
+	var moving=0;
 	
 	
 	//触摸触发事件
@@ -60,40 +61,49 @@ $(document).ready(function(){
 	});
 	
 	function wipe_up(){
-		if(page_index==2){
-			
-			$(".cover_page").addClass("animate_show").removeClass("page_up");
-			$(".back_page").removeClass("page_current");
-			
-			var timer=setTimeout(function(){
-				$(".back_page").removeClass("animate_show");
-			},300);
-			
-			$(".qr_img_hook").hide();
-			page_index=1;	
-		}
-		else{
-			
+		if(moving!=1){
+			if(page_index==2){
+				
+				$(".cover_page").addClass("animate_show").removeClass("page_up");
+				$(".back_page").removeClass("page_current");
+				
+				var timer=setTimeout(function(){
+					$(".back_page").removeClass("animate_show");
+					moving=0;
+				},300);
+				
+				$(".qr_img_hook").hide();
+				
+				moving=1;
+				page_index=1;	
+			}
+			else{
+				
+			}
 		}
 	}
 	
 	function wipe_down(){
-		if(page_index==1){
-			$(".cover_page").addClass("page_up");
-			$(".back_page").addClass("page_current").addClass("animate_show");
+		if(moving!=1){
+			if(page_index==1){
+				$(".cover_page").addClass("page_up");
+				$(".back_page").addClass("page_current").addClass("animate_show");
+				
+				var timer=setTimeout(function(){
+					$(".cover_page").removeClass("animate_show");
+				},300);
+				
+				var timer=setTimeout(function(){
+					$(".qr_img_hook").show();
+					moving=0;
+				},650);
 			
-			var timer=setTimeout(function(){
-				$(".cover_page").removeClass("animate_show");
-			},300);
-			
-			var timer=setTimeout(function(){
-				$(".qr_img_hook").show();
-			},550);
-		
-			page_index=2;	
-		}
-		else{
-			
+				moving=1;
+				page_index=2;	
+			}
+			else{
+				
+			}
 		}
 	}
 	
