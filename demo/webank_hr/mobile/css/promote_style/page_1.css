@@ -229,7 +229,6 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 
 .qr_code_wrap{ display:block; height:230px; width:173px; position:absolute; left:50%; margin-left:-86px; top:50%; margin-top:-115px; z-index:2;}
 .qr_code_wrap .link_qr_code{ display:block; height:173px; width:173px;}
-.qr_code_wrap .qr_img{ display:block; height:173px; width:173px;}
 .qr_code_wrap .qr_code_tips{ display:block; height:41px; width:125px; background:url(../../images/promote_images/page_1/qr_code_tips.png) no-repeat center 0; background-size:contain; position:absolute; left:24px; top:190px; text-indent:-9999px; overflow:hidden; }
 .webank_link .link{ display:block; height:13px; width:106px; background:url(../../images/promote_images/page_1/webank_link.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-54px; top:263px; text-indent:-9999px; overflow:hidden;}
 
