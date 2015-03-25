@@ -273,7 +273,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 	.slogan_wrap .txt{ height:90px; bottom:311px;}
 }
 
-.qr_img_hook{ position:absolute; left:50%; top:50%; margin-left:-173px; margin-top:-213px; z-index:10; opacity:0;}
+.qr_img_hook{ position:absolute; left:50%; top:50%; margin-left:-173px; margin-top:-213px; z-index:10;}
 
 
 
