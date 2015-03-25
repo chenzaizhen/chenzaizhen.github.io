@@ -44,7 +44,7 @@
 
 .search_wrap .btn_search{ display:block; height:57px; width:80px; background:#2dcc4f; float:left; position:relative; text-indent:-9999px; overflow:hidden; -webkit-transition:background 0.2s linear; transition:background 0.2s linear;}
 .search_wrap .btn_search .icon_search{ display:block; height:32px; width:32px; background:url(../images/index/icon_search.png) no-repeat 0 0; position:absolute; left:50%; margin-left:-16px; top:12px;}
-.search_wrap .btn_search:hover{ background:#30d160;}
+.search_wrap .btn_search:hover{ background:#1fd345;}
 
 .banner_penguin{ display:block; height:181px; width:151px; background:url(../images/index/banner_penguin.png) no-repeat 0 0; z-index:2; position:absolute; left:50%; margin-left:-75px; bottom:-23px; z-index:4; }
 
