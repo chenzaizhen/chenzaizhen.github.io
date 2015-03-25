@@ -34,8 +34,8 @@
 .search_wrap .key_list_show .sel_search .icon_arrow{ background-image:url(../images/index/icon_arrow_hover.png);}
 
 .key_list{ display:none; margin-top:1px; border-radius:3px;}
-.key_list li a{ display:block; background:rgba(255, 255, 255, 0.85); background:#fff\9; height:45px; width:93px; padding:0px 20px; text-align: left; font-size:16px; font-family:'microsoft yahei'; line-height:45px; border-bottom:1px solid #d6d6d6; color:#2c2c2c;  -webkit-transition:background 0.3s linear; transition:background 0.3s linear;}
-.key_list li a:hover{ text-decoration:none; background:rgba(255, 255, 255, 0.9);}
+.key_list li a{ display:block; background:#fff; height:45px; width:93px; padding:0px 20px; text-align: left; font-size:16px; font-family:'microsoft yahei'; line-height:45px; border-bottom:1px solid #d6d6d6; color:#2c2c2c;  -webkit-transition:background 0.3s linear; transition:background 0.3s linear;}
+.key_list li a:hover{ text-decoration:none;}
 
 .search_wrap .ipt_area{ display:block; height:57px; width:421px; float:left; background:#fff;}
 .search_wrap .ipt_area .ipt_job{ display:block; height:57px; line-height:normal; line-height:57px\9; width:381px; background:none; border:none; padding:0 20px; font-size:16px; font-family:'microsoft yahei'; color:#bfbfbf; -webkit-transition:color 0.2s linear; transition:color 0.2s linear;}
@@ -113,11 +113,11 @@
 .detail_con .search_wrap .search_area .sel_search:hover{ text-decoration:none;}
 .detail_con .search_wrap .search_area .sel_search .icon_arrow{ top:20px;}
 .detail_con .key_list{ margin-left:-1px; margin-top:1px; display:none;}
-.detail_con .key_list li a{ height:44px; line-height:44px; border:1px solid #e4e4e4; border-top:none; width:95px;}
+.detail_con .key_list li a{ height:44px; line-height:44px; border:1px solid #e4e4e4; border-top:none; width:95px; background:#fff;}
 .detail_con .search_wrap .ipt_area{ border:1px solid #e4e4e4; width:382px; height:44px; margin-right:10px;}
 .detail_con .search_wrap .ipt_area .ipt_job{ width:342px; height:44px; line-height:44px;}
 .detail_con .search_wrap .btn_search{ height:44px; width:77px; border:1px solid #20b540; border-radius:3px;  -webkit-transition:background 0.2s linear; transition:background 0.2s linear;}
-.detail_con .search_wrap .btn_search .icon_search{ top:10px; background:url(../images/index/icon_search_2.png) no-repeat 0 0; width:26px; height:24px; margin-left:-11px;}
+.detail_con .search_wrap .btn_search .icon_search{ top:10px; background:url(../images/index/icon_search_2.png) no-repeat 0 0; width:26px; height:24px; margin-left:-13px;}
 .detail_con .search_wrap .btn_search:hover{background:#30d160;}
 
 .detail_con .search_wrap .search_area_2{ width:168px;}
@@ -261,7 +261,7 @@
 
 .resume_detail_table{ width:800px; font-size:14px; font-family:'microsoft yahei';}
 .resume_detail_table td{ padding:5px 0 5px 15px;}
-.resume_detail_table .user_head{ border:1px solid #d8d8d8;}
+.resume_detail_table .user_head{ border:1px solid #d8d8d8; height:158px; width:108px;}
 .resume_detail_table .td_img{ width:115px;}
 .resume_detail_table .td_1{ width:225px;}
 .resume_detail_table .td_2{ width:220px;}
@@ -334,6 +334,13 @@
 
 .resume_detail_wrap .ipt_radio_1{ width:27px;}
 .resume_detail_wrap .ipt_radio_2{ width:41px;}
+
+.resume_detail_wrap .ipt_start_time{ width:60px; margin-right:5px;}
+.resume_detail_wrap .ipt_end_time{ width:60px; margin-left:5px;}
+
+.resume_detail_table td .form_row{ margin-bottom:30px; clear:both; float:left; width:800px; min-height:28px; position:relative;}
+.resume_detail_table td .form_row .link_add_info{ position:absolute; top:0px; right:60px;}
+.resume_detail_table td .form_row .link_delete_info{ right:15px; display:block;}
 
 .resume_delivery_table{ margin-top:-20px;}
 .resume_delivery_table td{ padding:5px 0 5px 15px; border-bottom:1px solid #e6e6e6; font-size:14px; font-family:'microsoft yahei'; height:44px; line-height:44px;}
@@ -443,16 +450,16 @@
 .link_add_info:hover .icon_add{ -webkit-transform:rotate(180deg); transform:rotate(180deg);}
 .link_delete_info{ display: none; position: absolute; right:0px; top:4px; font-size:14px; font-family:'microsoft yahei'; color:#448af2; text-decoration:underline;}
 
-.resume_upload .upload_tips{ color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; margin-bottom:20px; *position:relative;}
-.resume_upload .upload_area{ margin-bottom:20px; height:30px; position:relative;}
+.resume_upload .upload_tips{ color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; margin-bottom:15px; *position:relative;}
+.resume_upload .upload_area{ margin-bottom:18px; height:30px; position:relative;}
 .resume_upload .upload_area .ipt_file{ display:block; height:35px; width:200px; position:absolute; left:0px; top:0px; opacity:0; opacity:1\9;}
 .resume_upload .upload_area .ipt_file_btn{ display:block; height:34px; width:88px; border:1px solid #d6d6d6; color:#2c2c2c; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; background:none; float:left; border-radius:3px; display:none\9;}
-.resume_upload .upload_area .ipt_file_text{ min-width: 500px; border:none; color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; margin-top:5px; display:none\9;}
-.resume_upload .tips_file_limit{ color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; margin-bottom:20px; *position:relative;}
+.resume_upload .upload_area .ipt_file_text{ min-width: 200px; border:none; color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; padding:0 10px; margin-top:5px; display:none\9;}
+.resume_upload .tips_file_limit{ color:#bfbfbf; font-size:14px; font-family:'microsoft yahei'; margin-bottom:35px; *position:relative;}
 .resume_upload .upload_area .link_clear_img{ font-size:14px; font-family:'microsoft yahei'; color:#448af2; text-decoration:underline; position:relative; top:5px; position:absolute\9; left:220px\9; }
 
-.photo_wrap{ margin-bottom:60px; position:relative;}
-.photo_wrap .photo_area{ display:block; height:118px; width:98px; /*background:url(../images/resume/upload_img.png) no-repeat center 20px;*/ position:relative; border:1px solid #d6d6d6;}
+.photo_wrap{ margin-bottom:60px; position:relative; clear:both;}
+.photo_wrap .photo_area{ display:block; height:118px; width:98px; background:url(../images/resume/user_head_bg.jpg) no-repeat center center; position:relative; border:1px solid #d6d6d6;}
 .photo_wrap .photo_area .photo_user{ display:block; height:118px; width:98px; position:absolute; left:0px; top:0px;}
 .photo_wrap .photo_area .tips_photo{ display:block; height:25px; line-height:25px; width:100px; position:absolute; left:-1px; bottom:-1px; background:rgba(0,0,0,0.5); background:#000\9; color:#fff; text-align:center; font-size:12px; font-family:'microsoft yahei'; z-index: 100;}
 .photo_wrap .ipt_file{ display:block; height:120px; width:100px; position:absolute; left:0px; top:0px; opacity:0; display:none\9;}

@@ -31,7 +31,7 @@ body{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .menu_list li a:hover{ text-decoration:none; color:#fff;}
 .menu_list li.current a{ color:#fff; border-bottom:2px solid #fff;}
 
-.link_login{ display:block; height:30px; width:84px; border:1px solid #a0c6ff; text-align:center; line-height:30px; font-size:16px; font-family:"microsoft yahei"; color:#a0c6ff; position:absolute; right:0px; top:20px; border-radius:3px; -webkit-transition:color 0.3s linear,border 0.3s linear; transition:color 0.3s linear,border 0.3s linear;}
+.link_login{ display:block; height:30px; width:84px; border:1px solid #a0c6ff; text-align:center; line-height:30px; font-size:14px; font-family:"microsoft yahei"; color:#a0c6ff; position:absolute; right:0px; top:20px; border-radius:3px; -webkit-transition:color 0.3s linear,border 0.3s linear; transition:color 0.3s linear,border 0.3s linear;}
 .link_login:hover{ text-decoration:none; color:#fff; border-color:#fff;}
 .user_area{ display:block; height:30px; width:140px; position:absolute; right:0px; top:20px;}
 .link_name{ display:block; height:30px; width:140px; text-align:right; line-height:30px; font-size:14px; font-family:"microsoft yahei"; color:#a0c6ff; position:absolute; right:0px; top:0px; -webkit-transition:color 0.3s linear; transition:color 0.3s linear;}
@@ -40,8 +40,8 @@ body{ display:block; height:100%; width:100%; overflow-x: hidden;}
 .link_name .icon_arrow{ display:block; height:4px; width:7px; background:url(../images/index/icon_arrow_2.png) no-repeat 0 0; position:absolute; right:0px; top:13px;}
 .user_area .pop_user{ display:none; width:112px; position:absolute; right:0px; top:37px;}
 .user_area .user_list{ border:1px solid #d3d3d3; border-radius:3px;}
-.user_area .user_list li a{ display:block; height:33px; width:90px; padding:0 10px; background:rgba(255, 255, 255, 0.85); background:#fff\9; text-align: left; line-height:33px; font-size:14px; font-family:"microsoft yahei"; color:#2c2c2c; border-bottom:1px solid #d3d3d3; -webkit-transition:background 0.3s linear; transition:background 0.3s linear;}
-.user_area .user_list li a:hover{ text-decoration:none; background:rgba(255, 255, 255, 0.9);}
+.user_area .user_list li a{ display:block; height:33px; width:90px; padding:0 10px; background:#fff; text-align: left; line-height:33px; font-size:14px; font-family:"microsoft yahei"; color:#2c2c2c; border-bottom:1px solid #d3d3d3; -webkit-transition:background 0.3s linear; transition:background 0.3s linear;}
+.user_area .user_list li a:hover{ text-decoration:none;}
 .user_area .user_list li .log_out{ border:none;}
 .pop_user_show .pop_user{ display:block;}
 .pop_user_show .link_name .icon_arrow{ background-image:url(../images/index/icon_arrow_2_hover.png);}
