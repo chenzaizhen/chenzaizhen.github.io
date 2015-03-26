@@ -65,10 +65,10 @@ $(document).ready(function(){
 			if(page_index==2){
 				
 				$(".cover_page").addClass("animate_show").removeClass("page_up");
-				$(".back_page").removeClass("page_current");
+				$(".main_page").removeClass("page_current");
 				
 				var timer=setTimeout(function(){
-					$(".back_page").removeClass("animate_show");
+					$(".main_page").removeClass("animate_show");
 					moving=0;
 				},300);
 				
@@ -86,7 +86,7 @@ $(document).ready(function(){
 		if(moving!=1){
 			if(page_index==1){
 				$(".cover_page").addClass("page_up");
-				$(".back_page").addClass("page_current").addClass("animate_show");
+				$(".main_page").addClass("page_current").addClass("animate_show");
 				
 				var timer=setTimeout(function(){
 					$(".cover_page").removeClass("animate_show");
