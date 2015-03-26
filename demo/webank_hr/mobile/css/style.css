@@ -20,15 +20,15 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 
 /*社招首页*/
 
-.banner_wrap{ display:block; height:175px; width:100%; background:url(../images/global/banner_bg.png) repeat right top; background-size:10px 10px; margin-bottom:35px;}
-.banner_wrap .penguin_bg{ display:block; height:175px; width:150px; background:url(../images/index/banner_penguin.png) no-repeat 0 0; background-size:contain; position:absolute; right:0; top:0px;}
+.banner_wrap{ display:block; height:175px; width:100%; background:url(../images/global/banner_bg.png) repeat right top; background-size:10px 10px; margin-bottom:35px; position:relative;}
+.banner_wrap .penguin_bg{ display:block; height:175px; width:150px; background:url(../images/index/banner_penguin.png) no-repeat 0 0; background-size:contain; position:absolute; right:0; bottom:0px;}
 .banner_wrap .title{ display:block; height:55px; width:145px; background:url(../images/index/banner_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:22px; top:60px; text-indent:-9999px; overflow:hidden; z-index:2;}
 .banner_wrap .title_en{ display:none;}
 
 .search_wrap{width:290px; margin:0 auto 35px; position:relative;}
 .search_wrap .ipt_area{ display:block; width:100%; height:45px; border:1px solid #1b4e9a; border-radius:3px;}
-.search_wrap .ipt_area .ipt_job{display:block; width:230px; padding-left:14px; padding-right:11px; height:45px; line-height:45px; font-size:16px; font-family:'microsoft yahei'; color:#333; border:none;}
-.search_wrap .ipt_area .ipt_job:focus{ color:#333;}
+.search_wrap .ipt_area .ipt_job{display:block; width:230px; padding-left:14px; padding-right:11px; height:45px; line-height:45px; font-size:16px; font-family:'microsoft yahei'; color:#333333; border:none;}
+.search_wrap .ipt_area .ipt_job:focus{ color:#333333;}
 .search_wrap .btn_search{ display:block; height:45px; width:50px; background:#2a5eab; position:absolute; right:-1px; top:1px; text-indent:-9999px; overflow:hidden;}
 .search_wrap .btn_search .icon_search{ display:block; height:20px; width:21px; background:url(../images/global/icon_search.png) no-repeat 0 0; background-size:contain; position:absolute; left:15px; top:12px; pointer-events:none;}
 
@@ -52,7 +52,7 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 /*岗位详情页*/
 
 .job_title_wrap{ display:block; width:100%; border-bottom:1px solid #bdbdbd; padding:20px 15px 17px;}
-.job_title_wrap .title{ font-size:16px; font-family:'microsoft yahei'; color:#595959; margin-bottom:2px;}
+.job_title_wrap .title{ font-size:16px; font-family:'microsoft yahei'; color:#595959; margin-bottom:2px; font-weight:normal;}
 .job_title_wrap .number{ color:#bfbfbf;  font-family:'microsoft yahei'; font-size:14px;}
 .job_title_wrap .date{ color:#bfbfbf;  font-family:'Arial'; font-size:14px; position:absolute; right:15px; top:45px;}
 
@@ -444,6 +444,15 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 .hook_right{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; right:0px; top:50%; z-index:9; text-indent:-9999px; overflow:hidden; margin-top:-20px;}
 
 
+/*ip6 首页兼容*/
+
+@media all and (min-width:375px){
+	.banner_wrap{ height:245px; margin-bottom:40px;}
+	.banner_wrap .title{ top:87px;}
+	.banner_wrap .penguin_bg{ height:205px; width:176px;}
+	.search_wrap{ margin-bottom:40px;}
+	.job_classify_list li a{ height:50px; line-height:50px; margin-bottom:15px;}
+}
 
 
 
