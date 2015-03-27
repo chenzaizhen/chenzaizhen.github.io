@@ -318,6 +318,69 @@ $(document).ready(function(){
 	/*声音脚本 结束*/
 	
 	
+	/*loading 加载*/
+	
+	var img_list={
+		"cover":{
+			"img_1":"bg.jpg",
+			"img_2":"cover_bg.png",
+			"img_3":"cover_sprite.png",
+			"img_4":"earth_bg.png"
+		},
+		"detail":{
+			"img_1":"share_we_guide.png",
+			"img_2":"sprite_ice_land.png",
+			"img_3":"sprite_lake.png",
+			"img_4":"sprite_penguin.png",
+			"img_5":"sprite_title.png"
+		},
+		"notice":{
+			"img_1":"icon_pdf.png",
+			"img_2":"notice_bg.png"
+		},
+		"page_1":{
+			"img_1":"page_1_man.png",
+			"img_2":"page_1_sprite.png"
+		},
+		"page_2":{
+			"img_1":"page_2_man.png",
+			"img_2":"sprite_8.png",
+			"img_3":"sprite_scene.png"
+		},
+		"page_3":{
+			"img_1":"page_3_man.png",
+			"img_2":"sprite_scene.png"
+		},
+		"page_4":{
+			"img_1":"page_4_man.png",
+			"img_2":"penguin.png",
+			"img_3":"sprite_scene.png"
+		},
+		"page_5":{
+			"img_1":"page_5_man.png",
+			"img_2":"sprite_scene.png"
+		},
+		"page_6":{
+			"img_1":"lamp_light.png",
+			"img_2":"sprite_man.png",
+			"img_3":"sprite_scene.png"
+		},
+		"page_7":{
+			"img_1":"dot_line.png",
+			"img_2":"ice_land.png",
+			"img_3":"page_7_man.png",
+			"img_4":"sprite_scene.png"
+		}
+	};
+	
+	counter = 0;
+	$("img").each(function(){
+	  if (this.readyState==loaded || this.readyState==complete) counter++;
+	});
+	if (counter >= 10) alert("所有图片装载完毕！");
+	
+	/*loading 加载*/
+	
 	
 	/*微信转发图片*/
 	
