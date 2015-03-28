@@ -258,7 +258,8 @@ $(document).ready(function(){
 	}
 	
 	/*声音脚本 开始*/
-	
+	function sound(){
+		
 	var logo_slide=$(".logo_slide")[0];
 	var slogan_slide=$(".slogan_slide")[0];
 	var n_change=$(".n_change")[0];
@@ -315,6 +316,7 @@ $(document).ready(function(){
 		},1100);
 	});
 	
+	}
 	/*声音脚本 结束*/
 	
 	
@@ -373,11 +375,46 @@ $(document).ready(function(){
 		}
 	};
 	
-	counter = 0;
+	//console.log(img_list.cover);
+	var img_array=[];
+	
+	//获得json中图片的地址
+	for(var i in img_list){
+		if(typeof(img_list[i])=="object"){
+			for(var j in img_list[i])
+			img_array.push("../mobile/images/"+i+"/"+img_list[i][j]);
+		}
+	}
+	
+	var img_num=img_array.length;
+	var img_loaded=0;
+	
+	for(var i=0;i<img_num;i++){
+		var img=new Image();
+		img.src=img_array[i];
+		img.onload=function(){
+			console.log(img_loaded);
+			img_loaded++;
+			if(img_num==img_loaded){
+				
+				pageStart();
+				
+			}
+		}
+	}
+	
+	function pageStart(){
+		$(".con_wrap_1").addClass("wrap_show");	
+		sound();
+		
+		
+	}
+	
+/*	counter = 0;
 	$("img").each(function(){
-	  if (this.readyState==loaded || this.readyState==complete) counter++;
+	  if (this.readyState=="loaded" || this.readyState=="complete") counter++;
 	});
-	if (counter >= 10) alert("所有图片装载完毕！");
+	if (counter >= 10) alert("所有图片装载完毕！");*/
 	
 	/*loading 加载*/
 	
