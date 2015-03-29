@@ -404,10 +404,10 @@ $(document).ready(function(){
 	}
 	
 	function pageStart(){
+		
+		$(".loading_wrap").addClass("loading_hide");
 		$(".con_wrap_1").addClass("wrap_show");	
 		sound();
-		
-		
 	}
 	
 /*	counter = 0;
