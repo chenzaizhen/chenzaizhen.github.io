@@ -260,6 +260,12 @@ $(document).ready(function(){
 	/*声音脚本 开始*/
 	function sound(){
 		
+	var audio = document.createElement("audio");  
+	   audio.src = "audio/sample.mp3";  
+	   audio.addEventListener("canplaythrough", function () {  
+	   alert('The file is loaded and ready to play!');  
+	}, false);
+		
 	var logo_slide=$(".logo_slide")[0];
 	var slogan_slide=$(".slogan_slide")[0];
 	var n_change=$(".n_change")[0];
@@ -283,11 +289,11 @@ $(document).ready(function(){
 	logo_slide.src="sound/p1/logo_slide.mp3";
 	
 	logo_slide.addEventListener("canplaythrough", function(){
-		console.log(logo_slide.duration);
+		//console.log(logo_slide.duration);
 		var timer=setTimeout(function(){
 			logo_slide.play();
 		},500);
-	});
+	},false);
 	
 	slogan_slide.src="sound/p1/slogan_slide.mp3";
 	
@@ -296,7 +302,7 @@ $(document).ready(function(){
 		var timer=setTimeout(function(){
 			slogan_slide.play();
 		},700);
-	});
+	},false);
 	
 	n_change.src="sound/p1/n_change.mp3";
 	
@@ -305,7 +311,7 @@ $(document).ready(function(){
 		var timer=setTimeout(function(){
 			n_change.play();
 		},2800);
-	});
+	},false);
 	
 	penguin_clip.src="sound/p1/penguin_clip.mp3";
 	
@@ -314,7 +320,7 @@ $(document).ready(function(){
 		var timer=setTimeout(function(){
 			penguin_clip.play();
 		},1100);
-	});
+	},false);
 	
 	}
 	/*声音脚本 结束*/
