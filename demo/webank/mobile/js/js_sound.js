@@ -257,74 +257,6 @@ $(document).ready(function(){
 		}
 	}
 	
-	/*声音脚本 开始*/
-	function sound(){
-		
-	var audio = document.createElement("audio");  
-	   audio.src = "audio/sample.mp3";  
-	   audio.addEventListener("canplaythrough", function () {  
-	   alert('The file is loaded and ready to play!');  
-	}, false);
-		
-	var logo_slide=$(".logo_slide")[0];
-	var slogan_slide=$(".slogan_slide")[0];
-	var n_change=$(".n_change")[0];
-	var penguin_clip=$(".penguin_clip")[0];
-	
-	sound_src={
-		"p1": {
-			"logo_slide" : "logo_slide.mp3",
-			"n_change" : "n_change.mp3",
-			"penguin_click" : "penguin_click.mp3",
-			"slogan_slide" : "slogan_slide.mp3"
-		},
-		"p2": {
-			"logo_slide" : "logo_slide.mp3",
-			"n_change" : "n_change.mp3",
-			"penguin_click" : "penguin_click.mp3",
-			"slogan_slide" : "slogan_slide.mp3"
-		}
-	}
-	
-	logo_slide.src="sound/p1/logo_slide.mp3";
-	
-	logo_slide.addEventListener("canplaythrough", function(){
-		//console.log(logo_slide.duration);
-		var timer=setTimeout(function(){
-			logo_slide.play();
-		},500);
-	},false);
-	
-	slogan_slide.src="sound/p1/slogan_slide.mp3";
-	
-	slogan_slide.addEventListener("canplaythrough", function(){
-		console.log(slogan_slide.duration);
-		var timer=setTimeout(function(){
-			slogan_slide.play();
-		},700);
-	},false);
-	
-	n_change.src="sound/p1/n_change.mp3";
-	
-	n_change.addEventListener("canplaythrough", function(){
-		console.log(n_change.duration);
-		var timer=setTimeout(function(){
-			n_change.play();
-		},2800);
-	},false);
-	
-	penguin_clip.src="sound/p1/penguin_clip.mp3";
-	
-	penguin_clip.addEventListener("canplaythrough", function(){
-		console.log(penguin_clip.duration);
-		var timer=setTimeout(function(){
-			penguin_clip.play();
-		},1100);
-	},false);
-	
-	}
-	/*声音脚本 结束*/
-	
 	
 	/*loading 加载*/
 	
@@ -387,8 +319,9 @@ $(document).ready(function(){
 	//获得json中图片的地址
 	for(var i in img_list){
 		if(typeof(img_list[i])=="object"){
-			for(var j in img_list[i])
-			img_array.push("../mobile/images/"+i+"/"+img_list[i][j]);
+			for(var j in img_list[i]){
+				img_array.push("../mobile/images/"+i+"/"+img_list[i][j]);
+			}
 		}
 	}
 	
@@ -399,7 +332,7 @@ $(document).ready(function(){
 		var img=new Image();
 		img.src=img_array[i];
 		img.onload=function(){
-			console.log(img_loaded);
+			//console.log(img_loaded);
 			img_loaded++;
 			if(img_num==img_loaded){
 				
@@ -415,6 +348,160 @@ $(document).ready(function(){
 		$(".con_wrap_1").addClass("wrap_show");	
 		sound();
 	}
+	
+	/*声音脚本 开始*/
+	function sound(){
+	
+	audio_list={
+		"p1": {
+			"audio_1" : {
+				"name" : "logo_slide.mp3",
+				"tag" : ""
+			},
+			"audio_2" : {
+				"name" : "n_change.mp3",
+				"tag" : ""
+			},
+			"audio_3" : {
+				"name" : "penguin_clip.mp3",
+				"tag" : ""
+			},
+			"audio_4" : {
+				"name" : "slogan_slide.mp3",
+				"tag" : ""
+			}
+		},
+		"p2": {
+			"audio_1" : "building.mp3",
+			"audio_2" : "human.mp3",
+			"audio_3" : "thunder.mp3"
+		},
+		"p3": {
+			"audio_1" : "icon.mp3",
+			"audio_2" : "penguin.mp3"
+		},
+		"p4": {
+			"audio_1" : "motor_beep.mp3",
+			"audio_2" : "motor_horn.mp3"
+		},
+		"p5": {
+			"audio_1" : "cup_clink.mp3",
+			"audio_2" : "food.mp3"
+		},
+		"p6": {
+			"audio_1" : "icon.mp3",
+			"audio_2" : "snowball.mp3"
+		},
+		"p7": {
+			"audio_1" : "decoration.mp3",
+			"audio_2" : "love_bubble.mp3",
+			"audio_3" : "penguin.mp3"
+		},
+		"p8": {
+			"audio_1" : "icon.mp3",
+			"audio_2" : "walking_1.mp3",
+			"audio_3" : "walking_2.mp3",
+			"audio_4" : "walking_3.mp3"
+		},
+		"p9": {
+			"audio_1" : "clap.mp3",
+			"audio_2" : "penguin.mp3"
+		},
+		"p12": {
+			"audio_1" : "penguin.mp3"
+		},
+		"global": {
+			"audio_1" : "slide.mp3"
+		}
+	}
+		
+	var audio_array=[];
+	
+	//获得json中图片的地址
+	for(var i in audio_list){
+		if(typeof(audio_list[i])=="object"){
+			for(var j in audio_list[i]){
+				//audio_array.push("sound/"+i+"/"+audio_list[i][j]);
+				
+				if(typeof(audio_list[i][j])=="object"){
+					for(var k in audio_list[i][j]){
+						if(k=='name'){
+							audio_array.push("sound/"+i+"/"+audio_list[i][j].name);
+						}
+					}
+				}
+				
+			}
+		}
+	}
+	console.log(audio_array);
+		
+/*	var audio = document.createElement("audio");  
+	audio.src = "sound/p1/slogan_slide.mp3";  
+	audio.addEventListener("canplaythrough", function () {  
+		console.log('The file is loaded and ready to play!');  
+	}, false);*/
+	
+	var audio_num=audio_array.length;
+	var audio_loaded=0;
+	
+	for(var i=0;i<audio_num;i++){
+		var audio=document.createElement("audio");
+		audio.src=audio_array[i];
+		audio.addEventListener("canplaythrough", function () {
+			audio_loaded++;
+			//console.log(audio_loaded);
+			if(audio_num==audio_loaded){
+				//console.log("page start");
+			} 
+		}, false);
+		
+	}
+		
+	var logo_slide=$(".logo_slide")[0];
+	var slogan_slide=$(".slogan_slide")[0];
+	var n_change=$(".n_change")[0];
+	var penguin_clip=$(".penguin_clip")[0];
+	
+	logo_slide.src="sound/p1/logo_slide.mp3";
+	
+	logo_slide.addEventListener("canplaythrough", function(){
+		//console.log(logo_slide.duration);
+		var timer=setTimeout(function(){
+			logo_slide.play();
+		},500);
+	},false);
+	
+	slogan_slide.src="sound/p1/slogan_slide.mp3";
+	
+	slogan_slide.addEventListener("canplaythrough", function(){
+		//console.log(slogan_slide.duration);
+		var timer=setTimeout(function(){
+			slogan_slide.play();
+		},700);
+	},false);
+	
+	n_change.src="sound/p1/n_change.mp3";
+	
+	n_change.addEventListener("canplaythrough", function(){
+		//console.log(n_change.duration);
+		var timer=setTimeout(function(){
+			n_change.play();
+		},2800);
+	},false);
+	
+	penguin_clip.src="sound/p1/penguin_clip.mp3";
+	
+	penguin_clip.addEventListener("canplaythrough", function(){
+		//console.log(penguin_clip.duration);
+		var timer=setTimeout(function(){
+			penguin_clip.play();
+		},1100);
+	},false);
+	
+	}
+	/*声音脚本 结束*/
+	
 	
 /*	counter = 0;
 	$("img").each(function(){
