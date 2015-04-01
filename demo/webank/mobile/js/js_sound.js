@@ -354,22 +354,10 @@ $(document).ready(function(){
 	
 	audio_list={
 		"p1": {
-			"audio_1" : {
-				"name" : "logo_slide.mp3",
-				"tag" : ""
-			},
-			"audio_2" : {
-				"name" : "n_change.mp3",
-				"tag" : ""
-			},
-			"audio_3" : {
-				"name" : "penguin_clip.mp3",
-				"tag" : ""
-			},
-			"audio_4" : {
-				"name" : "slogan_slide.mp3",
-				"tag" : ""
-			}
+			"audio_1" : "logo_slide.mp3",
+			"audio_2" : "n_change.mp3",
+			"audio_3" : "penguin_clip.mp3",
+			"audio_4" : "slogan_slide.mp3"
 		},
 		"p2": {
 			"audio_1" : "building.mp3",
@@ -416,25 +404,48 @@ $(document).ready(function(){
 	}
 		
 	var audio_array=[];
+	var audio_num=0;
 	
 	//获得json中图片的地址
 	for(var i in audio_list){
 		if(typeof(audio_list[i])=="object"){
 			for(var j in audio_list[i]){
-				//audio_array.push("sound/"+i+"/"+audio_list[i][j]);
 				
-				if(typeof(audio_list[i][j])=="object"){
-					for(var k in audio_list[i][j]){
-						if(k=='name'){
-							audio_array.push("sound/"+i+"/"+audio_list[i][j].name);
-						}
+				audio_num++;
+				
+				var audio = document.createElement("audio");
+				audio.addEventListener("canplaythrough", function(){
+					audio_num--;
+					if (audio_num==0){
+						musicPlay();
 					}
-				}
+				}, false);
 				
+				audio.src = "sound/"+i+"/"+audio_list[i][j];
+				audio_array.push(audio);
 			}
 		}
 	}
-	console.log(audio_array);
+	//console.log(audio_array);
+	
+	function musicPlay(){
+	/*	for(var i=0;i<audio_array.length;i++){
+			audio_array[i].play();
+		}*/
+		
+		var timer_logo_slide=setTimeout(function(){
+			audio_array[0].play();
+		},500);
+		var timer_slogan_slide=setTimeout(function(){
+			audio_array[1].play();
+		},700);
+		var timer_penguin_clip=setTimeout(function(){
+			audio_array[2].play();
+		},1100);
+		var timer_n_change=setTimeout(function(){
+			audio_array[3].play();
+		},2800);
+	}
 		
 /*	var audio = document.createElement("audio");  
 	audio.src = "sound/p1/slogan_slide.mp3";  
@@ -442,7 +453,7 @@ $(document).ready(function(){
 		console.log('The file is loaded and ready to play!');  
 	}, false);*/
 	
-	var audio_num=audio_array.length;
+	/*var audio_num=audio_array.length;
 	var audio_loaded=0;
 	
 	for(var i=0;i<audio_num;i++){
@@ -456,8 +467,9 @@ $(document).ready(function(){
 			} 
 		}, false);
 		
-	}
+	}*/
 		
+	/*
 	var logo_slide=$(".logo_slide")[0];
 	var slogan_slide=$(".slogan_slide")[0];
 	var n_change=$(".n_change")[0];
@@ -498,8 +510,11 @@ $(document).ready(function(){
 			penguin_clip.play();
 		},1100);
 	},false);
-	
+	*/
 	}
+	
+	
+	
 	/*声音脚本 结束*/
 	
 	
