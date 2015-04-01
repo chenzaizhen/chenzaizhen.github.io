@@ -418,6 +418,7 @@ $(document).ready(function(){
 					audio_num--;
 					if (audio_num==0){
 						musicPlay();
+						alert("fuck you");
 					}
 				}, false);
 				
