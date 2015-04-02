@@ -134,7 +134,7 @@ $(document).ready(function(){
 					//console.log(page_index+" "+subpage_index);
 					
 					console.log("当前页面: "+page_index);
-					musicPlay(page_index);
+					musicPlay(page_index,subpage_index);
 					
 				},300);
 				
@@ -158,7 +158,7 @@ $(document).ready(function(){
 			setMainListItem(page_index);
 		}
 		console.log("当前页面: "+page_index);
-		musicPlay(page_index);
+		musicPlay(page_index,subpage_index);
 	}
 	
 	function wipe_up(){
@@ -173,6 +173,7 @@ $(document).ready(function(){
 					$($(".details_con")[subpage_index-1]).removeClass("current").addClass("wrap_after");
 					
 					subpage_index--;
+					musicPlay(page_index,subpage_index);
 				}
 			}
 		}
@@ -190,6 +191,7 @@ $(document).ready(function(){
 					$($(".details_con")[subpage_index]).addClass("current").removeClass("wrap_after");
 					
 					subpage_index++;
+					musicPlay(page_index,subpage_index);
 				}
 			}
 		}
@@ -429,7 +431,7 @@ $(document).ready(function(){
 					audio.addEventListener("canplaythrough", function(){
 						audio_num--;
 						if (audio_num==0){
-							musicPlay(page_index);
+							musicPlay(page_index,subpage_index);
 							pageStart();
 						}
 					}, false);
@@ -458,14 +460,19 @@ $(document).ready(function(){
 		"p4_motor_horn" : 1
 	}
 	
-	function musicPlay(page_index){
+	var timer_loop_list={
+		"p6_snowball" : 1,
+		"p7_love_bubble" : 1
+	}
+	
+	function musicPlay(page_index,subpage_index){
 		/*	for(var i=0;i<audio_array.length;i++){
 			audio_array[i].play();
 		}*/
 		musicStop();
 		
 		//首页
-		if(page_index==1){
+		if(page_index==1&&subpage_index==1){
 			timer_list.p1_logo_slide=setTimeout(function(){
 				audio_array[0].play();
 			},500);
@@ -480,7 +487,7 @@ $(document).ready(function(){
 			},2800);
 		}
 		
-		if(page_index==2){
+		if(page_index==2&&subpage_index==1){
 			timer_list.p2_building=setTimeout(function(){
 				//第一个建筑出现
 				audio_array[4].play();
@@ -502,7 +509,7 @@ $(document).ready(function(){
 			},1400);
 		}
 		
-		if(page_index==3){
+		if(page_index==3&&subpage_index==1){
 			timer_list.p3_icon=setTimeout(function(){
 				audio_array[7].play();
 			},300);
@@ -517,7 +524,7 @@ $(document).ready(function(){
 			},800);
 		}
 		
-		if(page_index==4){
+		if(page_index==4&&subpage_index==1){
 			timer_list.p4_motor_beep=setTimeout(function(){
 				audio_array[9].play();
 			},300);
@@ -527,7 +534,7 @@ $(document).ready(function(){
 			},900);
 		}
 		
-		if(page_index==5){
+		if(page_index==5&&subpage_index==1){
 			timer_list.p5_food=setTimeout(function(){
 				audio_array[12].play();
 				audio_array[12].loop=true;
@@ -541,7 +548,7 @@ $(document).ready(function(){
 			},1500);
 		}
 		
-		if(page_index==6){
+		if(page_index==6&&subpage_index==1){
 			timer_list.p6_icon=setTimeout(function(){
 				audio_array[13].play();
 				audio_array[13].loop=true;
@@ -552,37 +559,92 @@ $(document).ready(function(){
 			},2500);
 			timer_list.p6_snowball=setTimeout(function(){
 				audio_array[14].play();
-				var timer=setInterval(function(){
+				timer_loop_list.p6_snowball=setInterval(function(){
 					audio_array[14].play();
-				},2600); //内循环没切断
-			},1900);
+				},2650); 
+			},1950);
 		}
 		
-		if(page_index==7){
+		if(page_index==7&&subpage_index==1){
 			timer_list.p7_decoration=setTimeout(function(){
 				audio_array[15].play();
+				audio_array[15].loop=true;
+				var timer=setTimeout(function(){
+					audio_array[15].currentTime=0;
+					audio_array[15].pause();
+				},700);
 			},300);
 			timer_list.p7_love_bubble=setTimeout(function(){
 				audio_array[16].play();
-			},900);
+				timer_loop_list.p7_love_bubble=setInterval(function(){
+					audio_array[16].play();
+				},5000); 
+			},2900);
 			timer_list.p7_penguin=setTimeout(function(){
 				audio_array[17].play();
-			},1100);
+				audio_array[17].volume=0.4;
+				timer_loop_list.p7_penguin=setInterval(function(){
+					audio_array[17].play();
+					audio_array[17].volume=0.4;
+				},5000); 
+			},2800);
 		}
 		
-		if(page_index==8){
+		if(page_index==8&&subpage_index==1){
 			timer_list.p8_icon=setTimeout(function(){
 				audio_array[18].play();
-			},300);
+				audio_array[18].loop=true;
+				var timer=setTimeout(function(){
+					audio_array[18].currentTime=0;
+					audio_array[18].pause();
+				},800);
+			},4000);
 			timer_list.p8_walking_1=setTimeout(function(){
 				audio_array[19].play();
-			},900);
+				audio_array[19].loop=true;
+				var timer=setTimeout(function(){
+					audio_array[19].currentTime=0;
+					audio_array[19].pause();
+				},4000);
+			},300);
 			timer_list.p8_walking_2=setTimeout(function(){
 				audio_array[20].play();
-			},1100);
+				audio_array[20].loop=true;
+				audio_array[20].volume=0.4;
+			},300);
 			timer_list.p8_walking_3=setTimeout(function(){
 				audio_array[21].play();
-			},1300);
+				audio_array[21].loop=true;
+			},4150);
+		}
+		
+		
+		if(page_index==8&&subpage_index==2){
+			timer_list.p9_penguin=setTimeout(function(){
+				audio_array[23].play();
+				timer_loop_list.p7_penguin=setInterval(function(){
+					audio_array[23].play();
+				},4000); 
+			},1000);
+			timer_list.p8_clap=setTimeout(function(){
+				audio_array[22].play();
+				timer_loop_list.p8_clap=setInterval(function(){
+					audio_array[22].play();
+				},4500); 
+			},1500);
+		}
+		
+		if(page_index==8&&subpage_index==5){
+			timer_list.p12_penguin=setTimeout(function(){
+				audio_array[24].play();
+			},500);
+			
+			timer_list.p3_icon=setTimeout(function(){
+				audio_array[7].play();
+				timer_loop_list.p8_clap=setInterval(function(){
+					audio_array[7].play();
+				},1600);
+			},1550);
 		}
 		
 		//
@@ -591,9 +653,8 @@ $(document).ready(function(){
 	
 	function musicStop(){
 		
-		for(var num in timer_list){
-			clearTimeout(timer_list[num]);
-		}
+		clearTimer();
+		
 		for(var i=0;i<audio_array.length;i++){
 			//audio_array[i].pause();
 			//audio_array[i].paused=false;
@@ -605,6 +666,16 @@ $(document).ready(function(){
 		}
 	}
 	
+	function clearTimer(){
+		
+		for(var num_1 in timer_list){
+			clearTimeout(timer_list[num_1]);
+		}
+		
+		for(var num_2 in timer_loop_list){
+			clearTimeout(timer_loop_list[num_2]);
+		}
+	}
 
 	
 	/*声音脚本 结束*/
