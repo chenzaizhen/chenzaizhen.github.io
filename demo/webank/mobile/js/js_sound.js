@@ -392,7 +392,8 @@ $(document).ready(function(){
 			},
 			"p6": {
 				"audio_1" : "icon.mp3",
-				"audio_2" : "snowball.mp3"
+				"audio_2" : "snowball.mp3",
+				"audio_3" : "snowball_2.mp3"
 			},
 			"p7": {
 				"audio_1" : "decoration.mp3",
@@ -457,12 +458,34 @@ $(document).ready(function(){
 		"p3_icon" : 1,
 		"p3_penguin" : 1,
 		"p4_motor_beep" : 1,
-		"p4_motor_horn" : 1
+		"p4_motor_horn" : 1,
+		"p5_food" : 1,
+		"p5_cup_clink" : 1,
+		"p6_icon" : 1,
+		"p6_snowball" : 1,
+		"p6_snowball_2" : 1,
+		"p7_decoration" : 1,
+		"p7_love_bubble" : 1,
+		"p7_penguin" : 1,
+		"p8_icon" : 1,
+		"p8_walking_1" : 1,
+		"p8_walking_2" : 1,
+		"p8_walking_3" : 1,
+		"p9_penguin" : 1,
+		"p9_clap" : 1,
+		"p12_penguin" : 1,
+		"p12_penguin_jump" : 1
 	}
 	
 	var timer_loop_list={
+		"p5_cup_clink" : 1,
 		"p6_snowball" : 1,
-		"p7_love_bubble" : 1
+		"p6_snowball_2" : 1,
+		"p7_love_bubble" : 1,
+		"p7_penguin" : 1,
+		"p9_penguin" : 1,
+		"p9_clap" : 1,
+		"p12_penguin_jump" : 1
 	}
 	
 	function musicPlay(page_index,subpage_index){
@@ -541,11 +564,26 @@ $(document).ready(function(){
 				var timer=setTimeout(function(){
 					audio_array[12].currentTime=0;
 					audio_array[12].pause();
-				},1100);
+				},800);
 			},300);
+			
+			//掉东西 音频复用
+			timer_list.p7_decoration=setTimeout(function(){
+				audio_array[16].play();
+				audio_array[16].loop=true;
+				var timer=setTimeout(function(){
+					audio_array[16].currentTime=0;
+					audio_array[16].pause();
+				},700);
+			},450);
+			
 			timer_list.p5_cup_clink=setTimeout(function(){
 				audio_array[11].play();
-			},1500);
+				timer_loop_list.p5_cup_clink=setInterval(function(){
+					audio_array[11].play();
+					audio_array[11].volume=0.4;
+				},3000);
+			},1000);
 		}
 		
 		if(page_index==6&&subpage_index==1){
@@ -561,87 +599,93 @@ $(document).ready(function(){
 				audio_array[14].play();
 				timer_loop_list.p6_snowball=setInterval(function(){
 					audio_array[14].play();
-				},2650); 
+				},2600); 
 			},1950);
+			timer_list.p6_snowball_2=setTimeout(function(){
+				audio_array[15].play();
+				timer_loop_list.p6_snowball_2=setInterval(function(){
+					audio_array[15].play();
+				},2600); 
+			},3050);
 		}
 		
 		if(page_index==7&&subpage_index==1){
 			timer_list.p7_decoration=setTimeout(function(){
-				audio_array[15].play();
-				audio_array[15].loop=true;
+				audio_array[16].play();
+				audio_array[16].loop=true;
 				var timer=setTimeout(function(){
-					audio_array[15].currentTime=0;
-					audio_array[15].pause();
+					audio_array[16].currentTime=0;
+					audio_array[16].pause();
 				},700);
 			},300);
 			timer_list.p7_love_bubble=setTimeout(function(){
-				audio_array[16].play();
+				audio_array[17].play();
 				timer_loop_list.p7_love_bubble=setInterval(function(){
-					audio_array[16].play();
+					audio_array[17].play();
 				},5000); 
 			},2900);
 			timer_list.p7_penguin=setTimeout(function(){
-				audio_array[17].play();
-				audio_array[17].volume=0.4;
+				audio_array[18].play();
+				audio_array[18].volume=0.4;
 				timer_loop_list.p7_penguin=setInterval(function(){
-					audio_array[17].play();
-					audio_array[17].volume=0.4;
+					audio_array[18].play();
+					audio_array[18].volume=0.4;
 				},5000); 
 			},2800);
 		}
 		
 		if(page_index==8&&subpage_index==1){
 			timer_list.p8_icon=setTimeout(function(){
-				audio_array[18].play();
-				audio_array[18].loop=true;
-				var timer=setTimeout(function(){
-					audio_array[18].currentTime=0;
-					audio_array[18].pause();
-				},800);
-			},4000);
-			timer_list.p8_walking_1=setTimeout(function(){
 				audio_array[19].play();
 				audio_array[19].loop=true;
 				var timer=setTimeout(function(){
 					audio_array[19].currentTime=0;
 					audio_array[19].pause();
+				},800);
+			},4000);
+			timer_list.p8_walking_1=setTimeout(function(){
+				audio_array[20].play();
+				audio_array[20].loop=true;
+				var timer=setTimeout(function(){
+					audio_array[20].currentTime=0;
+					audio_array[20].pause();
 				},4000);
 			},300);
 			timer_list.p8_walking_2=setTimeout(function(){
-				audio_array[20].play();
-				audio_array[20].loop=true;
-				audio_array[20].volume=0.4;
-			},300);
-			timer_list.p8_walking_3=setTimeout(function(){
 				audio_array[21].play();
 				audio_array[21].loop=true;
+				audio_array[21].volume=0.4;
+			},300);
+			timer_list.p8_walking_3=setTimeout(function(){
+				audio_array[22].play();
+				audio_array[22].loop=true;
 			},4150);
 		}
 		
 		
 		if(page_index==8&&subpage_index==2){
 			timer_list.p9_penguin=setTimeout(function(){
-				audio_array[23].play();
-				timer_loop_list.p7_penguin=setInterval(function(){
-					audio_array[23].play();
+				audio_array[24].play();
+				timer_loop_list.p9_penguin=setInterval(function(){
+					audio_array[24].play();
 				},4000); 
 			},1000);
-			timer_list.p8_clap=setTimeout(function(){
-				audio_array[22].play();
-				timer_loop_list.p8_clap=setInterval(function(){
-					audio_array[22].play();
+			timer_list.p9_clap=setTimeout(function(){
+				audio_array[23].play();
+				timer_loop_list.p9_clap=setInterval(function(){
+					audio_array[23].play();
 				},4500); 
 			},1500);
 		}
 		
 		if(page_index==8&&subpage_index==5){
 			timer_list.p12_penguin=setTimeout(function(){
-				audio_array[24].play();
+				audio_array[25].play();
 			},500);
 			
-			timer_list.p3_icon=setTimeout(function(){
+			timer_list.p12_penguin_jump=setTimeout(function(){
 				audio_array[7].play();
-				timer_loop_list.p8_clap=setInterval(function(){
+				timer_loop_list.p12_penguin_jump=setInterval(function(){
 					audio_array[7].play();
 				},1600);
 			},1550);
