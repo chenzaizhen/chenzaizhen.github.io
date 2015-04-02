@@ -605,7 +605,7 @@ $(document).ready(function(){
 		}
 	}
 	
-	fun
+
 	
 	/*声音脚本 结束*/
 	
