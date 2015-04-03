@@ -264,6 +264,7 @@ $(document).ready(function(){
 		}
 	}
 	
+	console.log(window.HTMLAudioElement);
 	
 	/*loading 加载*/
 	
