@@ -380,7 +380,7 @@ $(document).ready(function(){
 			"p3": {
 				"audio_1" : "icon.mp3",
 				"audio_2" : "penguin.mp3"
-			},
+			}/*,
 			"p4": {
 				"audio_1" : "motor_beep.mp3",
 				"audio_2" : "motor_horn.mp3"
@@ -414,7 +414,7 @@ $(document).ready(function(){
 			},
 			"global": {
 				"audio_1" : "slide.mp3"
-			}
+			}*/
 		}
 		
 		var audio_num=0;
