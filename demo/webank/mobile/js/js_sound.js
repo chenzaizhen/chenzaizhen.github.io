@@ -428,7 +428,7 @@ $(document).ready(function(){
 					audio_num++;
 					
 					var audio = document.createElement("audio");
-					/*audio.addEventListener("canplaythrough", function(){
+/*					audio.addEventListener("canplaythrough", function(){
 						audio_num--;
 						if (audio_num==0){
 							musicPlay(page_index,subpage_index);
@@ -448,25 +448,26 @@ $(document).ready(function(){
 					audio_array.push(audio);
 					$(".audio_wrap").append(audio);
 					
-					testaudio();
+					audioPrepare(audio_num);
 				}
 			}
 		}
-		pageStart();
 		//console.log(audio_array);
 		
 	}
 	
-	function testaudio(){
-		var p1_logo_slide=$(".p1_logo_slide")[0];
-		p1_logo_slide.load();
-		
-		p1_logo_slide.addEventListener("canplaythrough", function(){
-			var timer=setTimeout(function(){
-				p1_logo_slide.loop=true;
-				p1_logo_slide.play();
-			},500);
-		});
+	function audioPrepare(audio_num){
+		var audio_array=$("audio");
+		for(var i=0;i<audio_array.length;i++){
+			audio_array[i].load();
+			audio_array[i].addEventListener("canplaythrough", function(){
+				audio_num--;
+				if(audio_num==0){
+					musicPlay(page_index,subpage_index);
+					pageStart();
+				}
+			});
+		}
 	}
 	
 	
