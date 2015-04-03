@@ -440,8 +440,6 @@ $(document).ready(function(){
 					
 					audio.src = "sound/"+i+"/"+audio_list[i][j];
 					
-					audio.load();
-					
 					var reg=/.mp3$/gi;
 					var str=audio_list[i][j];
 					str=str.replace(reg,"");
@@ -450,11 +448,24 @@ $(document).ready(function(){
 					
 					audio_array.push(audio);
 					$(".audio_wrap").append(audio);
+					
+					testaudio();
 				}
 			}
 		}
 		//console.log(audio_array);
 		
+	}
+	
+	function testaudio(){
+		var p1_logo_slide=$(".p1_logo_slide")[0];
+		
+		p1_logo_slide.addEventListener("canplaythrough", function(){
+			var timer=setTimeout(function(){
+				p1_logo_slide.loop=true;
+				p1_logo_slide.play();
+			},500);
+		});
 	}
 	
 	
