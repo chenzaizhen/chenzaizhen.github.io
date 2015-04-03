@@ -437,6 +437,12 @@ $(document).ready(function(){
 					}, false);
 					
 					audio.src = "sound/"+i+"/"+audio_list[i][j];
+					
+					var reg=/.mp3$/gi;
+					var str=audio_list[i][j];
+					str=str.replace(reg,"");
+					audio.className=i+"_"+str;
+					
 					audio_array.push(audio);
 					$(".audio_wrap").append(audio);
 				}
