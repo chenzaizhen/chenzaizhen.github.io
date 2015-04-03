@@ -440,13 +440,13 @@ $(document).ready(function(){
 					
 					audio.src = "sound/"+i+"/"+audio_list[i][j];
 					
+					audio.load();
+					
 					var reg=/.mp3$/gi;
 					var str=audio_list[i][j];
 					str=str.replace(reg,"");
 					audio.className=i+"_"+str;
 					
-					
-					audio.onstalled=function(){ alert("fuck")};
 					
 					audio_array.push(audio);
 					$(".audio_wrap").append(audio);
