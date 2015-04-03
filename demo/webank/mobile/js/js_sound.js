@@ -434,10 +434,9 @@ $(document).ready(function(){
 							musicPlay(page_index,subpage_index);
 							pageStart();
 						}
-						alert(audio.readyState);
+						//alert(audio.readyState);
 					}, false);
 					//console.log(audio.readyState);
-					
 					
 					audio.src = "sound/"+i+"/"+audio_list[i][j];
 					
@@ -445,6 +444,9 @@ $(document).ready(function(){
 					var str=audio_list[i][j];
 					str=str.replace(reg,"");
 					audio.className=i+"_"+str;
+					
+					
+					audio.onstalled=function(){ alert("fuck")};
 					
 					audio_array.push(audio);
 					$(".audio_wrap").append(audio);
