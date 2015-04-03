@@ -264,8 +264,6 @@ $(document).ready(function(){
 		}
 	}
 	
-	console.log(window.HTMLAudioElement);
-	
 	/*loading 加载*/
 	
 	var img_list={
@@ -373,7 +371,7 @@ $(document).ready(function(){
 				"audio_2" : "slogan_slide.mp3",
 				"audio_3" : "penguin_clip.mp3",
 				"audio_4" : "n_change.mp3"
-			}/*,
+			},
 			"p2": {
 				"audio_1" : "building.mp3",
 				"audio_2" : "human.mp3",
@@ -416,7 +414,7 @@ $(document).ready(function(){
 			},
 			"global": {
 				"audio_1" : "slide.mp3"
-			}*/
+			}
 		}
 		
 		var audio_num=0;
@@ -440,6 +438,7 @@ $(document).ready(function(){
 					
 					audio.src = "sound/"+i+"/"+audio_list[i][j];
 					audio_array.push(audio);
+					$(".audio_wrap").append(audio);
 				}
 			}
 		}
