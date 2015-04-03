@@ -380,11 +380,11 @@ $(document).ready(function(){
 			"p3": {
 				"audio_1" : "icon.mp3",
 				"audio_2" : "penguin.mp3"
-			}/*,
+			},
 			"p4": {
 				"audio_1" : "motor_beep.mp3",
 				"audio_2" : "motor_horn.mp3"
-			},
+			}/*,
 			"p5": {
 				"audio_1" : "cup_clink.mp3",
 				"audio_2" : "food.mp3"
