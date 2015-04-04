@@ -436,13 +436,16 @@ $(document).ready(function(){
 		clearInterval(timer_volume_up);
 		clearInterval(timer_volume_down);
 		
+		
 		audio_array[0].currentTime=0;
 		audio_array[0].pause();
 		
 		//背景音乐
+		audio_array[0].load();//手机上面播完一遍后不能重播，需要手动load多一次，才能play
 		audio_array[0].play();
 		//audio_array[0].loop=true;
 		audio_array[0].volume=0.01;
+		//alert("音量："+audio_array[0].volume);
 		var audio_duration=audio_array[0].duration; //84s
 		
 		//入场音乐 音量小，慢慢变大，收尾的时候，音量慢慢变小，自然过渡
@@ -476,7 +479,6 @@ $(document).ready(function(){
 		},parseInt(audio_duration*1000-15000));//音乐播到倒数15秒时，开始减低音量
 		
 		audio_array[0].onended=function(){ //不能用addeventlistener
-			alert("test onended");
 			clearTimeout(timer_count);
 			clearInterval(timer_volume_up);
 			clearInterval(timer_volume_down);
@@ -493,7 +495,10 @@ $(document).ready(function(){
 		musicStop();
 		
 		//翻页声音
-		audio_array[1].play();
+		var global_slide=setTimeout(function(){
+			audio_array[1].play();
+		},0);
+		
 		
 		
 	}
