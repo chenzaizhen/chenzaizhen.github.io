@@ -443,6 +443,7 @@ $(document).ready(function(){
 		audio_array[0].play();
 		//audio_array[0].loop=true;
 		audio_array[0].volume=0.01;
+		alert(audio_array[0].volume);
 		var audio_duration=audio_array[0].duration; //84s
 		
 		//入场音乐 音量小，慢慢变大，收尾的时候，音量慢慢变小，自然过渡
