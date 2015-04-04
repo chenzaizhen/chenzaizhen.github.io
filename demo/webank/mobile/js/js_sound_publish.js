@@ -493,6 +493,10 @@ $(document).ready(function(){
 		/*	for(var i=0;i<audio_array.length;i++){
 			audio_array[i].play();
 		}*/
+		if($("body").hasClass("android_version")){
+			return false;
+		}
+		
 		musicStop();
 		
 		//翻页声音
