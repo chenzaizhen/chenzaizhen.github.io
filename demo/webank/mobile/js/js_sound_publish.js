@@ -133,7 +133,7 @@ $(document).ready(function(){
 					
 					//console.log(page_index+" "+subpage_index);
 					
-					console.log("当前页面: "+page_index);
+					//console.log("当前页面: "+page_index);
 					effectMusicPlay(page_index,subpage_index);
 					
 				},300);
@@ -341,8 +341,8 @@ $(document).ready(function(){
 			img_loaded++;
 			if(img_num==img_loaded){
 				
-				loadSound();
-				
+				//loadSound();
+				pageStart();
 			}
 		}
 	}
@@ -391,9 +391,9 @@ $(document).ready(function(){
 					audio.className=i+"_"+str;
 					
 					audio_array.push(audio);
-					$(".audio_wrap").append(audio);
+					//$(".audio_wrap").append(audio);
 					
-					audioPrepare(audio_num);
+					//audioPrepare(audio_num);
 				}
 			}
 		}
@@ -405,10 +405,12 @@ $(document).ready(function(){
 		var audio_array=$("audio");
 		for(var i=0;i<audio_array.length;i++){
 			audio_array[i].load();
+			alert("fuck");
 			audio_array[i].addEventListener("canplaythrough", function(){
 				audio_num--;
 				if(audio_num==0){
 					//effectMusicPlay(page_index,subpage_index); //第一次进入，不响翻页声音
+					
 					globalMusicPlay();
 					pageStart();
 				}
@@ -455,7 +457,7 @@ $(document).ready(function(){
 		timer_volume_up=setInterval(function(){
 			if(audio_array[0].volume<0.15){
 				audio_array[0].volume+=0.01;
-				console.log(audio_array[0].volume);
+				//console.log(audio_array[0].volume);
 			}
 			else{
 				audio_array[0].volume=0.15;
@@ -473,7 +475,7 @@ $(document).ready(function(){
 						audio_array[0].volume=0.01;
 						clearInterval(timer_volume_down);
 					}
-					console.log(audio_array[0].volume);
+					//console.log(audio_array[0].volume);
 				},1000);
 			}
 			else{
@@ -537,6 +539,13 @@ $(document).ready(function(){
 
 	
 	/*声音脚本 结束*/
+	
+	
+	//临时
+	$(".global_happy")[0].onended=function(){
+		$(".global_happy")[0].load();
+		$(".global_happy")[0].play();
+	}
 	
 	
 /*	counter = 0;
