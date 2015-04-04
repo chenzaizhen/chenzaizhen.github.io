@@ -476,7 +476,7 @@ $(document).ready(function(){
 		},parseInt(audio_duration*1000-15000));//音乐播到倒数15秒时，开始减低音量
 		
 		audio_array[0].onended=function(){ //不能用addeventlistener
-			
+			alert("test onended");
 			clearTimeout(timer_count);
 			clearInterval(timer_volume_up);
 			clearInterval(timer_volume_down);
