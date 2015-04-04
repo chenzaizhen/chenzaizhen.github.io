@@ -253,15 +253,16 @@ $(document).ready(function(){
     }
 	
 	var system=brower.versions();
-	if(system.type=="Android"){
-		if(system.version==4.4){
-			$("body").addClass("android_version_4_4");
-		}
-		else{
-			$("body").addClass("android_version");
+	if(system){
+		if(system.type=="Android"){
+			if(system.version==4.4){
+				$("body").addClass("android_version_4_4");
+			}
+			else{
+				$("body").addClass("android_version");
+			}
 		}
 	}
-	
 	/*loading 加载*/
 	
 	var img_list={
