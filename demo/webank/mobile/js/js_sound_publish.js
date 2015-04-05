@@ -511,6 +511,9 @@ $(document).ready(function(){
 		alert(audio_array[0].onended);
 		*/
 		var timer_bg_music=setInterval(function(){
+			clearTimeout(timer_count);
+			clearInterval(timer_volume_up);
+			clearInterval(timer_volume_down);
 			audio_array[0].currentTime=0;
 			audio_array[0].play();
 		},4400);
