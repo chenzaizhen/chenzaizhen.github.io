@@ -466,7 +466,14 @@ $(document).ready(function(){
 		                      //而重新load会导致页面原有的音频不能正常获取属性，比如播放时长，为NAN导致不能根据时长 调节音频音量，因此注释 ‘84s’ 一句，与 ‘音乐播到倒数15秒时’的强赋值
 							  //load()会导致重新播放时候load延迟
 		audio_array[0].play();
-		audio_array[0].loop=true; //禁用loop手动循环
+		//audio_array[0].loop=true; //禁用loop手动循环
+		if($("body").hasClass("android_version")){
+			
+		}
+		else{
+			audio_array[0].loop=true; //禁用loop手动循环
+		}
+		
 /*		audio_array[0].volume=0.01;
 		
 		var audio_duration=audio_array[0].duration; //84s
@@ -518,7 +525,11 @@ $(document).ready(function(){
 			audio_array[0].currentTime=0;
 			audio_array[0].play();
 		},4400);*/
-		
+		if($("body").hasClass("android_version")){
+			audio_array[0].onended=function(){ //不能用addeventlistener
+				globalMusicPlay();
+			};
+		}
 	}
 
 	
