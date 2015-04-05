@@ -448,7 +448,7 @@ $(document).ready(function(){
 	var timeout_counter=0;
 	function globalMusicPlay(){
 		
-		//清空重置
+/*		//清空重置
 		var timer_volume_up=1;
 		var timer_volume_down=1;
 		var timer_count=1;
@@ -458,7 +458,7 @@ $(document).ready(function(){
 		
 		
 		audio_array[0].currentTime=0;
-		audio_array[0].pause();
+		audio_array[0].pause();*/
 		
 		//背景音乐
 		
@@ -466,8 +466,8 @@ $(document).ready(function(){
 		                      //而重新load会导致页面原有的音频不能正常获取属性，比如播放时长，为NAN导致不能根据时长 调节音频音量，因此注释 ‘84s’ 一句，与 ‘音乐播到倒数15秒时’的强赋值
 							  //load()会导致重新播放时候load延迟
 		audio_array[0].play();
-		//audio_array[0].loop=true; //禁用loop手动循环
-		audio_array[0].volume=0.01;
+		audio_array[0].loop=true; //禁用loop手动循环
+/*		audio_array[0].volume=0.01;
 		
 		var audio_duration=audio_array[0].duration; //84s
 		
@@ -500,23 +500,17 @@ $(document).ready(function(){
 				timeout_counter=1;
 			}
 		},parseInt(audio_duration*1000-15000));//音乐播到倒数15秒时，开始减低音量 parseInt(audio_duration*1000-15000)
-
-		audio_array[0].onended=function(){ //不能用addeventlistener
+*/
+		/*audio_array[0].onended=function(){ //不能用addeventlistener
 		
 			clearTimeout(timer_count);
 			clearInterval(timer_volume_up);
 			clearInterval(timer_volume_down);
 			globalMusicPlay();
-		};
+			
+		};*/
 		
-		if(act_num==0){
-			$(".active_operation_wrap").html(act_num);
-			act_num=1;
-		}
-		else{
-			$(".active_operation_wrap").html(act_num);
-			act_num=0;
-		}
+		
 		/*var timer_bg_music=setInterval(function(){
 			clearTimeout(timer_count);
 			clearInterval(timer_volume_up);
@@ -526,7 +520,7 @@ $(document).ready(function(){
 		},4400);*/
 		
 	}
-	var act_num=0;
+
 	
 	function effectMusicPlay(page_index,subpage_index){
 		/*	for(var i=0;i<audio_array.length;i++){
