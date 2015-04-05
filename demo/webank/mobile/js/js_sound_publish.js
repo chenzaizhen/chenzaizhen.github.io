@@ -449,7 +449,7 @@ $(document).ready(function(){
 							  //load()会导致重新播放时候load延迟
 							  
 		audio_array[0].play();
-		//audio_array[0].loop=true;
+		audio_array[0].loop=true;
 		audio_array[0].volume=0.01;
 		
 		//var audio_duration=audio_array[0].duration; //84s
