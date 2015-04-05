@@ -140,9 +140,11 @@ $(document).ready(function(){
 				
 			}
 		}
-		if(1==1){}
+		if(iphone_safari&&firstload==1){
+			globalMusicPlay();
+			firstload=0;
+		}
 	}
-	alert(window.navigator.userAgent);
 	
 	function wipe_left(){
 		if(no_wipe==1){
@@ -255,6 +257,7 @@ $(document).ready(function(){
     }
 	
 	var system=brower.versions();
+	
 	if(system){
 		if(system.type=="Android"){
 			if(system.version==4.4){
@@ -265,6 +268,14 @@ $(document).ready(function(){
 			}
 		}
 	}
+	
+	//iphone手机上safari判断
+	var iphone_safari=false;
+	var wnu=window.navigator.userAgent;
+	if(wnu.indexOf('iPhone') > -1&&wnu.indexOf('Safari') > -1){
+		iphone_safari=true;
+	}
+	
 	/*loading 加载*/
 	
 	var img_list={
