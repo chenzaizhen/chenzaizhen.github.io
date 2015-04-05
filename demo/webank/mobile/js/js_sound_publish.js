@@ -508,7 +508,7 @@ $(document).ready(function(){
 			clearInterval(timer_volume_down);
 			globalMusicPlay();
 		};
-		
+		console.log("active onended");
 		/*var timer_bg_music=setInterval(function(){
 			clearTimeout(timer_count);
 			clearInterval(timer_volume_up);
