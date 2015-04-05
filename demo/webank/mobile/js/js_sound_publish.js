@@ -448,7 +448,7 @@ $(document).ready(function(){
 	var timeout_counter=0;
 	function globalMusicPlay(){
 		
-/*		//清空重置
+		//清空重置
 		var timer_volume_up=1;
 		var timer_volume_down=1;
 		var timer_count=1;
@@ -458,7 +458,7 @@ $(document).ready(function(){
 		
 		
 		audio_array[0].currentTime=0;
-		audio_array[0].pause();*/
+		audio_array[0].pause();
 		
 		//背景音乐
 		
@@ -474,7 +474,7 @@ $(document).ready(function(){
 			audio_array[0].loop=true; //禁用loop手动循环
 		}
 		
-/*		audio_array[0].volume=0.01;
+		audio_array[0].volume=0.01;
 		
 		var audio_duration=audio_array[0].duration; //84s
 		
@@ -507,15 +507,15 @@ $(document).ready(function(){
 				timeout_counter=1;
 			}
 		},parseInt(audio_duration*1000-15000));//音乐播到倒数15秒时，开始减低音量 parseInt(audio_duration*1000-15000)
-*/
-		/*audio_array[0].onended=function(){ //不能用addeventlistener
+
+		audio_array[0].onended=function(){ //不能用addeventlistener
 		
 			clearTimeout(timer_count);
 			clearInterval(timer_volume_up);
 			clearInterval(timer_volume_down);
 			globalMusicPlay();
 			
-		};*/
+		};
 		
 		
 		/*var timer_bg_music=setInterval(function(){
@@ -525,12 +525,15 @@ $(document).ready(function(){
 			audio_array[0].currentTime=0;
 			audio_array[0].play();
 		},4400);*/
-		if($("body").hasClass("android_version")){
-			audio_array[0].onended=function(){ //不能用addeventlistener
-				globalMusicPlay();
-			};
-		}
+		
 	}
+
+/*	function globalMusicPlay(){
+
+		audio_array[0].play();
+		audio_array[0].loop=true;
+		
+	}*/
 
 	
 	function effectMusicPlay(page_index,subpage_index){
