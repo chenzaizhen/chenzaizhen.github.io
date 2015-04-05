@@ -140,7 +140,9 @@ $(document).ready(function(){
 				
 			}
 		}
+		if(1==1){}
 	}
+	alert(window.navigator.userAgent);
 	
 	function wipe_left(){
 		if(no_wipe==1){
@@ -404,7 +406,9 @@ $(document).ready(function(){
 	function audioPrepare(audio_num){
 		var audio_array=$("audio");
 		for(var i=0;i<audio_array.length;i++){
-			audio_array[i].load();
+			try{
+				audio_array[i].load();
+			}catch(e){} //桌面safari不支持
 			audio_array[i].addEventListener("canplaythrough", function(){
 				audio_num--;
 				if(audio_num==0){
