@@ -508,7 +508,15 @@ $(document).ready(function(){
 			clearInterval(timer_volume_down);
 			globalMusicPlay();
 		};
-		console.log("active onended");
+		
+		if(act_num==0){
+			$(".active_operation_wrap").html(act_num);
+			act_num=1;
+		}
+		else{
+			$(".active_operation_wrap").html(act_num);
+			act_num=0;
+		}
 		/*var timer_bg_music=setInterval(function(){
 			clearTimeout(timer_count);
 			clearInterval(timer_volume_up);
@@ -518,6 +526,7 @@ $(document).ready(function(){
 		},4400);*/
 		
 	}
+	var act_num=0;
 	
 	function effectMusicPlay(page_index,subpage_index){
 		/*	for(var i=0;i<audio_array.length;i++){
