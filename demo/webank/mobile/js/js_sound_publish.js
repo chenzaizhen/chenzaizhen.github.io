@@ -501,13 +501,19 @@ $(document).ready(function(){
 			}
 		},parseInt(audio_duration*1000-15000));//音乐播到倒数15秒时，开始减低音量 parseInt(audio_duration*1000-15000)
 
-		audio_array[0].onended=function(){ //不能用addeventlistener
+/*		audio_array[0].onended=function(){ //不能用addeventlistener
 		
 			clearTimeout(timer_count);
 			clearInterval(timer_volume_up);
 			clearInterval(timer_volume_down);
 			globalMusicPlay();
 		};
+		alert(audio_array[0].onended);
+		*/
+		var timer_bg_music=setInterval(function(){
+			audio_array[0].currentTime=0;
+			audio_array[0].play();
+		},4400);
 		
 	}
 	
