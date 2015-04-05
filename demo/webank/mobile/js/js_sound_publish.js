@@ -445,7 +445,7 @@ $(document).ready(function(){
 		
 	}
 	
-	var timeout_counter=0;
+/*	var timeout_counter=0;
 	function globalMusicPlay(){
 		
 		//清空重置
@@ -526,14 +526,14 @@ $(document).ready(function(){
 			audio_array[0].play();
 		},4400);*/
 		
-	}
-
-/*	function globalMusicPlay(){
+	/*}
+*/
+	function globalMusicPlay(){
 
 		audio_array[0].play();
 		audio_array[0].loop=true;
 		
-	}*/
+	}
 
 	
 	function effectMusicPlay(page_index,subpage_index){
