@@ -341,7 +341,7 @@ $(document).ready(function(){
 			img_loaded++;
 			if(img_num==img_loaded){
 				
-				//loadSound();
+				loadSound();
 				pageStart();
 			}
 		}
@@ -391,9 +391,9 @@ $(document).ready(function(){
 					audio.className=i+"_"+str;
 					
 					audio_array.push(audio);
-					//$(".audio_wrap").append(audio);
+					$(".audio_wrap").append(audio);
 					
-					//audioPrepare(audio_num);
+					audioPrepare(audio_num);
 				}
 			}
 		}
@@ -405,7 +405,6 @@ $(document).ready(function(){
 		var audio_array=$("audio");
 		for(var i=0;i<audio_array.length;i++){
 			audio_array[i].load();
-			alert("fuck");
 			audio_array[i].addEventListener("canplaythrough", function(){
 				audio_num--;
 				if(audio_num==0){
@@ -420,8 +419,8 @@ $(document).ready(function(){
 	
 	
 	var timer_list={
-		"global_slide" : 1,
-		"global_happy" : 1
+		"global_happy" : 1,
+		"global_slide" : 1
 	}
 	
 	var timer_loop_list={
@@ -542,10 +541,12 @@ $(document).ready(function(){
 	
 	
 	//临时
-	$(".global_happy")[0].onended=function(){
-		$(".global_happy")[0].load();
+/*	var timer_bg_music=setInterval(function(){
 		$(".global_happy")[0].play();
-	}
+	},4300);*/
+/*	$(".global_happy")[0].onended=function(){
+		$(".global_happy")[0].play();
+	};*/
 	
 	
 /*	counter = 0;
