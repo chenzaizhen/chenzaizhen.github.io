@@ -275,6 +275,7 @@ $(document).ready(function(){
 	if(wnu.indexOf('iPhone') > -1&&wnu.indexOf('Safari') > -1){
 		iphone_safari=true;
 	}
+	var firstload=1;
 	
 	/*loading 加载*/
 	
