@@ -444,8 +444,10 @@ $(document).ready(function(){
 		
 		//背景音乐
 		
-		audio_array[0].load();//手机上面播完一遍后不能重播，需要手动load多一次，才能play
+		//audio_array[0].load();//手机上面播完一遍后不能重播，需要手动load多一次，才能play
 		                      //而重新load会导致页面原有的音频不能正常获取属性，比如播放时长，为NAN导致不能根据时长 调节音频音量，因此注释 ‘84s’ 一句，与 ‘音乐播到倒数15秒时’的强赋值
+							  //load()会导致重新播放时候load延迟
+							  
 		audio_array[0].play();
 		//audio_array[0].loop=true;
 		audio_array[0].volume=0.01;
@@ -480,7 +482,7 @@ $(document).ready(function(){
 			else{
 				timeout_counter=1;
 			}
-		},68435);//音乐播到倒数15秒时，开始减低音量 parseInt(audio_duration*1000-15000)
+		},parseInt(audio_duration*1000-15000));//音乐播到倒数15秒时，开始减低音量 parseInt(audio_duration*1000-15000)
 		
 		audio_array[0].onended=function(){ //不能用addeventlistener
 			clearTimeout(timer_count);
