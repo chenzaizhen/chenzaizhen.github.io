@@ -356,7 +356,7 @@ $(document).ready(function(){
 			if(img_num==img_loaded){
 				
 				loadSound();
-				pageStart();
+				//pageStart(); //载完图片，直接进入首页，音频自己慢慢载，载完自动播放
 			}
 		}
 	}
