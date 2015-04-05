@@ -418,22 +418,24 @@ $(document).ready(function(){
 	function audioPrepare(audio_num){
 		var audio_array=$("audio");
 		for(var i=0;i<audio_array.length;i++){
-			try{
+			//try{
 				audio_array[i].load();
-			}catch(e){} //桌面safari不支持
+			//}catch(e){} //桌面safari不支持
 			audio_array[i].addEventListener("canplaythrough", function(){
 				audio_num--;
-				if(audio_num==0){
+				if(audio_num==0&&mark==1){
 					//effectMusicPlay(page_index,subpage_index); //第一次进入，不响翻页声音
-					
+
 					globalMusicPlay();
 					pageStart();
+					mark=0;
+					
 				}
 			});
 		}
 	}
 	
-	
+	var mark=1;
 	var timer_list={
 		"global_happy" : 1,
 		"global_slide" : 1
@@ -463,12 +465,11 @@ $(document).ready(function(){
 		//audio_array[0].load();//手机上面播完一遍后不能重播，需要手动load多一次，才能play
 		                      //而重新load会导致页面原有的音频不能正常获取属性，比如播放时长，为NAN导致不能根据时长 调节音频音量，因此注释 ‘84s’ 一句，与 ‘音乐播到倒数15秒时’的强赋值
 							  //load()会导致重新播放时候load延迟
-							  
 		audio_array[0].play();
-		audio_array[0].loop=true;
+		//audio_array[0].loop=true; //禁用loop手动循环
 		audio_array[0].volume=0.01;
 		
-		//var audio_duration=audio_array[0].duration; //84s
+		var audio_duration=audio_array[0].duration; //84s
 		
 		//入场音乐 音量小，慢慢变大，收尾的时候，音量慢慢变小，自然过渡
 		timer_volume_up=setInterval(function(){
@@ -499,8 +500,9 @@ $(document).ready(function(){
 				timeout_counter=1;
 			}
 		},parseInt(audio_duration*1000-15000));//音乐播到倒数15秒时，开始减低音量 parseInt(audio_duration*1000-15000)
-		
+
 		audio_array[0].onended=function(){ //不能用addeventlistener
+		
 			clearTimeout(timer_count);
 			clearInterval(timer_volume_up);
 			clearInterval(timer_volume_down);
