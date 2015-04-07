@@ -133,16 +133,9 @@ $(document).ready(function(){
 					
 					//console.log(page_index+" "+subpage_index);
 					
-					//console.log("当前页面: "+page_index);
-					effectMusicPlay(page_index,subpage_index);
-					
 				},300);
 				
 			}
-		}
-		if(firstload==1){/*iphone_safari&&*/
-			globalMusicPlay();
-			firstload=0;
 		}
 	}
 	
@@ -156,7 +149,7 @@ $(document).ready(function(){
 				$($(".con_wrap")[page_index-1]).removeClass("wrap_show").addClass("wrap_prepare");
 				
 				page_index--;
-				effectMusicPlay(page_index,subpage_index);
+				
 			}
 			
 			setMainListItem(page_index);
@@ -175,7 +168,6 @@ $(document).ready(function(){
 					$($(".details_con")[subpage_index-1]).removeClass("current").addClass("wrap_after");
 					
 					subpage_index--;
-					effectMusicPlay(page_index,subpage_index);
 				}
 			}
 		}
@@ -193,7 +185,6 @@ $(document).ready(function(){
 					$($(".details_con")[subpage_index]).addClass("current").removeClass("wrap_after");
 					
 					subpage_index++;
-					effectMusicPlay(page_index,subpage_index);
 				}
 			}
 		}
@@ -257,351 +248,14 @@ $(document).ready(function(){
     }
 	
 	var system=brower.versions();
-	
-	if(system){
-		if(system.type=="Android"){
-			if(system.version==4.4){
-				$("body").addClass("android_version_4_4");
-			}
-			else{
-				$("body").addClass("android_version");
-			}
-		}
-	}
-	
-	//iphone手机上safari判断 手机原生浏览器不会自动播放背景音乐，需要用户触发，所以在翻页的时候，第二屏才出现背景音乐
-/*	var iphone_safari=false;
-	var wnu=window.navigator.userAgent;
-	if(wnu.indexOf('iPhone') > -1&&wnu.indexOf('Safari') > -1){
-		iphone_safari=true;
-	}*/
-	var firstload=1;
-	
-	/*loading 加载*/
-	
-	var img_list={
-		"cover":{
-			"img_1":"bg.jpg",
-			"img_2":"cover_bg.png",
-			"img_3":"cover_sprite.png",
-			"img_4":"earth_bg.png"
-		},
-		"detail":{
-			"img_1":"share_we_guide.png",
-			"img_2":"sprite_ice_land.png",
-			"img_3":"sprite_lake.png",
-			"img_4":"sprite_penguin.png",
-			"img_5":"sprite_title.png"
-		},
-		"notice":{
-			"img_1":"icon_pdf.png",
-			"img_2":"notice_bg.png"
-		},
-		"page_1":{
-			"img_1":"page_1_man.png",
-			"img_2":"page_1_sprite.png"
-		},
-		"page_2":{
-			"img_1":"page_2_man.png",
-			"img_2":"sprite_8.png",
-			"img_3":"sprite_scene.png"
-		},
-		"page_3":{
-			"img_1":"page_3_man.png",
-			"img_2":"sprite_scene.png"
-		},
-		"page_4":{
-			"img_1":"page_4_man.png",
-			"img_2":"penguin.png",
-			"img_3":"sprite_scene.png"
-		},
-		"page_5":{
-			"img_1":"page_5_man.png",
-			"img_2":"sprite_scene.png"
-		},
-		"page_6":{
-			"img_1":"lamp_light.png",
-			"img_2":"sprite_man.png",
-			"img_3":"sprite_scene.png"
-		},
-		"page_7":{
-			"img_1":"dot_line.png",
-			"img_2":"ice_land.png",
-			"img_3":"page_7_man.png",
-			"img_4":"sprite_scene.png"
-		}
-	};
-	
-	//console.log(img_list.cover);
-	var img_array=[];
-	
-	//获得json中图片的地址
-	for(var i in img_list){
-		if(typeof(img_list[i])=="object"){
-			for(var j in img_list[i]){
-				img_array.push("../mobile/images/"+i+"/"+img_list[i][j]);
-			}
-		}
-	}
-	
-	var img_num=img_array.length;
-	var img_loaded=0;
-	
-	for(var i=0;i<img_num;i++){
-		var img=new Image();
-		img.src=img_array[i];
-		img.onload=function(){
-			//console.log(img_loaded);
-			img_loaded++;
-			if(img_num==img_loaded){
-				
-				loadSound();
-				//pageStart(); //载完图片，直接进入首页，音频自己慢慢载，载完自动播放
-			}
-		}
-	}
-	
-	function pageStart(){
-		
-		$(".loading_wrap").addClass("loading_hide");
-		$(".con_wrap_1").addClass("wrap_show");
-		var timer=setTimeout(function(){
-			$(".loading_wrap").hide();
-		},300);
-		
-	}
-	
-	/*声音脚本 开始*/
-		
-	//音频标签存放数组
-	var audio_array=[];
-	
-	function loadSound(){
-	
-		audio_list={
-			"global": {
-				"audio_1" : "happy.mp3",
-				"audio_2" : "slide.mp3"
-			}
-		}
-		
-		var audio_num=0;
-		
-		//获得json中图片的地址
-							
-		for(var i in audio_list){
-			if(typeof(audio_list[i])=="object"){
-				for(var j in audio_list[i]){
-					
-					audio_num++;
-					
-					var audio = document.createElement("audio");
-					
-					audio.src = "sound/"+i+"/"+audio_list[i][j];
-					
-					var reg=/.mp3$/gi;
-					var str=audio_list[i][j];
-					str=str.replace(reg,"");
-					audio.className=i+"_"+str;
-					
-					audio_array.push(audio);
-					$(".audio_wrap").append(audio);
-					
-					audioPrepare(audio_num);
-				}
-			}
-		}
-		//console.log(audio_array);
-		
-	}
-	
-	function audioPrepare(audio_num){
-		var audio_array=$("audio");
-		for(var i=0;i<audio_array.length;i++){
-			//try{
-				audio_array[i].load();
-			//}catch(e){} //桌面safari不支持
-			audio_array[i].addEventListener("canplaythrough", function(){
-				audio_num--;
-				if(audio_num==0&&mark==1){
-					//effectMusicPlay(page_index,subpage_index); //第一次进入，不响翻页声音
-
-					globalMusicPlay();
-					pageStart();
-					mark=0;
-					
-				}
-			});
-		}
-	}
-	
-	var mark=1;
-	var timer_list={
-		"global_happy" : 1,
-		"global_slide" : 1
-	}
-	
-	var timer_loop_list={
-		
-	}
-	
-/*	var timeout_counter=0;
-	function globalMusicPlay(){
-		
-		//清空重置
-		var timer_volume_up=1;
-		var timer_volume_down=1;
-		var timer_count=1;
-		clearTimeout(timer_count);
-		clearInterval(timer_volume_up);
-		clearInterval(timer_volume_down);
-		
-		
-		audio_array[0].currentTime=0;
-		audio_array[0].pause();
-		
-		//背景音乐
-		
-		//audio_array[0].load();//手机上面播完一遍后不能重播，需要手动load多一次，才能play
-		                      //而重新load会导致页面原有的音频不能正常获取属性，比如播放时长，为NAN导致不能根据时长 调节音频音量，因此注释 ‘84s’ 一句，与 ‘音乐播到倒数15秒时’的强赋值
-							  //load()会导致重新播放时候load延迟
-		audio_array[0].play();
-		//audio_array[0].loop=true; //禁用loop手动循环
-		if($("body").hasClass("android_version")){
-			
+	if(system.type=="Android"){
+		if(system.version==4.4){
+			$("body").addClass("android_version_4_4");
 		}
 		else{
-			audio_array[0].loop=true; //禁用loop手动循环
-		}
-		
-		audio_array[0].volume=0.01;
-		
-		var audio_duration=audio_array[0].duration; //84s
-		
-		//入场音乐 音量小，慢慢变大，收尾的时候，音量慢慢变小，自然过渡
-		timer_volume_up=setInterval(function(){
-			if(audio_array[0].volume<0.15){
-				audio_array[0].volume+=0.01;
-				//console.log(audio_array[0].volume);
-			}
-			else{
-				audio_array[0].volume=0.15;
-				clearInterval(timer_volume_up);
-			}
-		},1000);
-		
-		timer_count=setTimeout(function(){
-			if(timeout_counter==1){//设置 计数器，避免timeout进入双循环，导致音量双重减小
-				timer_volume_down=setInterval(function(){
-					if(audio_array[0].volume>0.01){
-						audio_array[0].volume-=0.01;
-					}
-					else{
-						audio_array[0].volume=0.01;
-						clearInterval(timer_volume_down);
-					}
-					//console.log(audio_array[0].volume);
-				},1000);
-			}
-			else{
-				timeout_counter=1;
-			}
-		},parseInt(audio_duration*1000-15000));//音乐播到倒数15秒时，开始减低音量 parseInt(audio_duration*1000-15000)
-
-		audio_array[0].onended=function(){ //不能用addeventlistener
-		
-			clearTimeout(timer_count);
-			clearInterval(timer_volume_up);
-			clearInterval(timer_volume_down);
-			globalMusicPlay();
-			
-		};
-		
-		
-		/*var timer_bg_music=setInterval(function(){
-			clearTimeout(timer_count);
-			clearInterval(timer_volume_up);
-			clearInterval(timer_volume_down);
-			audio_array[0].currentTime=0;
-			audio_array[0].play();
-		},4400);*/
-		
-	/*}
-*/
-	function globalMusicPlay(){
-
-		audio_array[0].play();
-		audio_array[0].loop=true;
-		
-	}
-
-	
-	function effectMusicPlay(page_index,subpage_index){
-		/*	for(var i=0;i<audio_array.length;i++){
-			audio_array[i].play();
-		}*/
-		if($("body").hasClass("android_version")||$("body").hasClass("android_version_4_4")){
-			return false;
-		}
-		
-		musicStop();
-		
-		//翻页声音
-		var global_slide=setTimeout(function(){
-			audio_array[1].play();
-		},0);
-		
-		
-		
-	}
-	
-	function musicStop(){
-		
-		clearTimer();
-		
-		for(var i=1;i<audio_array.length;i++){
-			//audio_array[i].pause();
-			//audio_array[i].paused=false;
-			audio_array[i].currentTime=0;
-			audio_array[i].pause();
-			
-			//console.log(i+" "+audio_array[i].currentTime);
-			//console.log(audio_array[i].defaultMuted);
+			$("body").addClass("android_version");
 		}
 	}
-	
-	function clearTimer(){
-		
-		for(var num_1 in timer_list){
-			clearTimeout(timer_list[num_1]);
-		}
-		
-		for(var num_2 in timer_loop_list){
-			clearTimeout(timer_loop_list[num_2]);
-		}
-	}
-
-	
-	/*声音脚本 结束*/
-	
-	
-	//临时
-/*	var timer_bg_music=setInterval(function(){
-		$(".global_happy")[0].play();
-	},4300);*/
-/*	$(".global_happy")[0].onended=function(){
-		$(".global_happy")[0].play();
-	};*/
-	
-	
-/*	counter = 0;
-	$("img").each(function(){
-	  if (this.readyState=="loaded" || this.readyState=="complete") counter++;
-	});
-	if (counter >= 10) alert("所有图片装载完毕！");*/
-	
-	/*loading 加载*/
-	
 	
 	/*微信转发图片*/
 	
