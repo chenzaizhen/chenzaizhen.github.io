@@ -407,10 +407,11 @@ $(document).ready(function(){
 					audio_array.push(audio);
 					$(".audio_wrap").append(audio);
 					
-					audioPrepare(audio_num);
 				}
 			}
 		}
+		
+		audioPrepare(audio_num);
 		//console.log(audio_array);
 		
 	}
