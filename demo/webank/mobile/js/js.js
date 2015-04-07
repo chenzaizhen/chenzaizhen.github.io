@@ -6,7 +6,7 @@ $(document).ready(function(){
 	var page_index=1;//当前在哪个页面
 	var page_total=8;//总共有多少页面
 	var subpage_index=1;//当前在哪个子页
-	var no_wipe=0;
+	var no_wipe=1;
 	var main_list=$("#tab_list_1");
 	
 	function setMainList(num){
@@ -368,7 +368,7 @@ $(document).ready(function(){
 		var timer=setTimeout(function(){
 			$(".loading_wrap").hide();
 		},300);
-		
+		no_wipe=0;
 	}
 	
 	/*声音脚本 开始*/
