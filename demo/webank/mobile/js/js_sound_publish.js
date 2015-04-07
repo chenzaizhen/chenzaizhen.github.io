@@ -140,7 +140,7 @@ $(document).ready(function(){
 				
 			}
 		}
-		if(iphone_safari&&firstload==1){
+		if(firstload==1){/*iphone_safari&&*/
 			globalMusicPlay();
 			firstload=0;
 		}
@@ -270,11 +270,11 @@ $(document).ready(function(){
 	}
 	
 	//iphone手机上safari判断 手机原生浏览器不会自动播放背景音乐，需要用户触发，所以在翻页的时候，第二屏才出现背景音乐
-	var iphone_safari=false;
+/*	var iphone_safari=false;
 	var wnu=window.navigator.userAgent;
 	if(wnu.indexOf('iPhone') > -1&&wnu.indexOf('Safari') > -1){
 		iphone_safari=true;
-	}
+	}*/
 	var firstload=1;
 	
 	/*loading 加载*/
