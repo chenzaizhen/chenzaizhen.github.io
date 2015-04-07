@@ -138,11 +138,12 @@ $(document).ready(function(){
 					
 				},300);
 				
+				if(firstload==1){/*iphone_safari&&*/
+					globalMusicPlay();
+					firstload=0;
+				}
+				
 			}
-		}
-		if(firstload==1){/*iphone_safari&&*/
-			globalMusicPlay();
-			firstload=0;
 		}
 	}
 	
