@@ -540,7 +540,7 @@ $(document).ready(function(){
 		/*	for(var i=0;i<audio_array.length;i++){
 			audio_array[i].play();
 		}*/
-		if($("body").hasClass("android_version")){
+		if($("body").hasClass("android_version")||$("body").hasClass("android_version_4_4")){
 			return false;
 		}
 		
