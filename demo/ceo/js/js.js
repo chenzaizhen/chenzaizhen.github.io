@@ -41,7 +41,7 @@ $(document).ready(function(){
     // add render view to DOM
     document.body.appendChild(renderer.view);
 
-    displacementTexture = PIXI.Texture.fromImage("displacement_map.jpg");
+    displacementTexture = PIXI.Texture.fromImage("images/displacement_map.jpg");
     displacementFilter = new PIXI.DisplacementFilter(displacementTexture);
 
 
@@ -54,7 +54,7 @@ $(document).ready(function(){
 
     stage.interactive = true;
     
-    bg = PIXI.Sprite.fromImage("displacement_BG.jpg");
+    bg = PIXI.Sprite.fromImage("images/displacement_BG.jpg");
     pondContainer.addChild(bg);
     
     displacementFilter.scale.x = 12;
