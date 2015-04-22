@@ -46,7 +46,7 @@ $(document).ready(function(){
 
 
     // create an new instance of a pixi stage
-    stage = new PIXI.Stage(0xffffff, true);
+    stage = new PIXI.Stage(0x151e45, true);
     
     pondContainer = new PIXI.DisplayObjectContainer();
     stage.addChild(pondContainer);
@@ -56,124 +56,6 @@ $(document).ready(function(){
     
     bg = PIXI.Sprite.fromImage("images/displacement_BG.jpg");
     pondContainer.addChild(bg);
-	bg.alpha=0;
-	
-	
-    var img_list=["images/drop_1.png","images/drop_2.png","images/drop_3.png","images/drop_4.png"];
-	var drop_list=[];
-	var x=320;
-	var y=504;
-   
-    for(var i=0;i<img_list.length;i++){
-		drop_list.push(PIXI.Sprite.fromImage(img_list[i]));
-		pondContainer.addChild(drop_list[i]);
-		drop_list[i].position.x=x;
-		drop_list[i].position.y=y;
-		drop_list[i].pivot.x=504;
-		drop_list[i].pivot.y=504;
-		
-		drop_list[i].scale.x=0.01;
-		drop_list[i].scale.y=0.01;
-		drop_list[i].alpha=0;
-		
-		if(i==0){
-			drop_list[i].alpha=1;
-		}
-	}
-	
-	var scale_counter=1;
-	
-	var timer_scale=setInterval(function(){
-		scale_counter++;
-		/*if(scale_counter==50){
-			drop_list[number].alpha=0;
-			drop_list[number].alpha=1;
-			
-			drop_list[number].scale.x=drop_list[number].scale.x;
-			drop_list[number].scale.y=drop_list[number].scale.x;
-			drop_list[number].alpha=drop_list[number].scale.x;
-			
-			drop_list[number]=drop_list[number];
-			
-		}*/
-		
-		if(scale_counter>=30){
-			drop_list[0].alpha-=0.03;
-			if(drop_list[0].alpha<=0){
-				drop_list[0].alpha=0;
-			}
-			
-			drop_list[1].alpha+=0.04;
-			if(drop_list[1].alpha>=1){
-				drop_list[1].alpha=1;
-			}
-		}
-		if(scale_counter>=100){
-			drop_list[1].alpha-=0.02;
-			if(drop_list[1].alpha<=0){
-				drop_list[1].alpha=0;
-			}
-			
-			drop_list[2].alpha+=0.02;
-			if(drop_list[2].alpha>=1){
-				drop_list[2].alpha=1;
-			}
-		}
-		if(scale_counter>=180){
-			drop_list[2].alpha-=0.02;
-			if(drop_list[2].alpha<=0){
-				drop_list[2].alpha=0;
-			}
-			
-			drop_list[3].alpha+=0.02;
-			if(drop_list[3].alpha>=1){
-				drop_list[3].alpha=1;
-			}
-		}
-		
-		for(var number=0;number<drop_list.length;number++){
-			if(drop_list[number].scale.x/*<1&&drop.scale.x>0*/){
-				drop_list[number].scale.x+=0.007*(1-scale_counter/600);
-				drop_list[number].scale.y+=0.007*(1-scale_counter/600);
-				//drop_list[number].alpha=1-scale_counter/3200;
-				drop_list[number].rotation+=0.0014;
-			}
-			else{
-				drop_list[number].scale.x=1;
-				drop_list[number].scale.y=1;
-				drop_list[number].alpha=0;
-			}
-		}
-		
-		if(scale_counter>=250){
-			clearInterval(timer_scale);
-			coverFadeIn();
-		}
-		
-	},20);
-	
-	function coverFadeIn(){
-		drop_list[0].alpha=0;
-		drop_list[1].alpha=0;
-		drop_list[2].alpha=0;
-		bg.alpha=1;
-		
-		var cover_timer=setInterval(function(){
-			//console.log(drop_list[3].alpha);
-			drop_list[3].alpha-=0.015;
-			drop_list[3].alpha=Math.round(drop_list[3].alpha*1000)/1000;
-			//bg.alpha+=0.03;
-			//bg.alpha=Math.round(bg.alpha*100)/100;
-
-			if(drop_list[3].alpha<=0){
-				clearInterval(cover_timer);
-				drop_list[3].alpha=0;
-				//bg.alpha=1;
-			}
-		},20);
-	}
-	
-	
     
     displacementFilter.scale.x = 12;
     displacementFilter.scale.y = 12;
@@ -223,7 +105,7 @@ $(document).ready(function(){
 					//波纹 减速至停止
 					if(param_range>=0){
 						
-						//console.log(param_vector+" "+param_range);
+						console.log(param_vector+" "+param_range);
 						
 						if(param_vector==0){
 							param_range-=0.01;
