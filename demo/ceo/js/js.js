@@ -59,7 +59,7 @@ $(document).ready(function(){
 	bg.alpha=0;
 	
 	
-    var img_list=["images/drop_1.png","images/drop_2.png","images/drop_3.png","images/drop_4.png"];
+    var img_list=["images/drop_1.jpg","images/drop_2.jpg","images/drop_3.jpg","images/drop_4.jpg"];
 	var drop_list=[];
 	var x=320;
 	var y=504;
@@ -97,7 +97,7 @@ $(document).ready(function(){
 			
 		}*/
 		
-		if(scale_counter>=30){
+		if(scale_counter>=40){
 			drop_list[0].alpha-=0.03;
 			if(drop_list[0].alpha<=0){
 				drop_list[0].alpha=0;
