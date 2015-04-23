@@ -32,7 +32,7 @@ $(document).ready(function(){
 	
 	function canvas_create(){
 	
-	renderer = PIXI.autoDetectRenderer(640, 1008);
+	renderer = PIXI.autoDetectRenderer(750, 1334);
     renderer.view.style.position = "absolute"
     renderer.view.style.width = window.innerWidth + "px";
     renderer.view.style.height = window.innerHeight + "px";
@@ -61,8 +61,8 @@ $(document).ready(function(){
 	
     var img_list=["images/drop_1.jpg","images/drop_2.jpg","images/drop_3.jpg","images/drop_4.jpg"];
 	var drop_list=[];
-	var x=320;
-	var y=504;
+	var x=375;
+	var y=667;
    
     for(var i=0;i<img_list.length;i++){
 		drop_list.push(PIXI.Sprite.fromImage(img_list[i]));
@@ -108,7 +108,7 @@ $(document).ready(function(){
 				drop_list[1].alpha=1;
 			}
 		}
-		if(scale_counter>=100){
+		if(scale_counter>=90){
 			drop_list[1].alpha-=0.02;
 			if(drop_list[1].alpha<=0){
 				drop_list[1].alpha=0;
@@ -119,7 +119,7 @@ $(document).ready(function(){
 				drop_list[2].alpha=1;
 			}
 		}
-		if(scale_counter>=180){
+		if(scale_counter>=160){
 			drop_list[2].alpha-=0.02;
 			if(drop_list[2].alpha<=0){
 				drop_list[2].alpha=0;
@@ -133,8 +133,8 @@ $(document).ready(function(){
 		
 		for(var number=0;number<drop_list.length;number++){
 			if(drop_list[number].scale.x/*<1&&drop.scale.x>0*/){
-				drop_list[number].scale.x+=0.007*(1-scale_counter/600);
-				drop_list[number].scale.y+=0.007*(1-scale_counter/600);
+				drop_list[number].scale.x+=0.009*(1-scale_counter/600);
+				drop_list[number].scale.y+=0.009*(1-scale_counter/600);
 				//drop_list[number].alpha=1-scale_counter/3200;
 				drop_list[number].rotation+=0.0014;
 			}
@@ -145,7 +145,7 @@ $(document).ready(function(){
 			}
 		}
 		
-		if(scale_counter>=250){
+		if(scale_counter>=230){
 			clearInterval(timer_scale);
 			coverFadeIn();
 		}

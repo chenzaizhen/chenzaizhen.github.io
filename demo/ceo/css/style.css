@@ -23,6 +23,15 @@ html,body{ height:100%; width:100%; overflow:hidden; position: relative;}
 
 .page_arrow{ display:block; height:19px; width:25px; background:url(../images/page_arrow.png) no-repeat 0 0; position:absolute; left:50%; margin-left:-12px; bottom:20px; z-index:10; background-size:contain; text-indent:-9999px; overflow:hidden; opacity:0;}
 
+.wrap_show .main_title{ -webkit-animation:a_main_title 0.3s 5.9s linear both;}
+.wrap_show .sub_title{ -webkit-animation:a_main_title 0.3s 6.2s linear both;}
+
+@-webkit-keyframes a_main_title{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+
 .con_wrap .page_title{ display:block; color:#f4f1e7; font-size:18px; font-weight:bold; font-family:'Arial','microsoft yahei'; position:absolute; left:50px; top:50px;}
 .con_wrap .foreword{ display:block; color:#f4f1e7; font-size:16px; font-weight:normal; font-family:'Arial','microsoft yahei'; position:absolute; left:50px; top:50%; margin-top:-105px; line-height:1.7;}
 
