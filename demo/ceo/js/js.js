@@ -26,6 +26,7 @@ $(document).ready(function(){
 	var param_vector=0;
 	
 	var num=1;
+	var animation_time=10;
 	
 	//波纹pixi
 	//var flag_stopAnimation=0;
@@ -46,7 +47,7 @@ $(document).ready(function(){
 
 
     // create an new instance of a pixi stage
-    stage = new PIXI.Stage(0xffffff, true);
+    stage = new PIXI.Stage(0xf4f1e7, true);
     
     pondContainer = new PIXI.DisplayObjectContainer();
     stage.addChild(pondContainer);
@@ -57,7 +58,6 @@ $(document).ready(function(){
     bg = PIXI.Sprite.fromImage("images/displacement_BG.jpg");
     pondContainer.addChild(bg);
 	bg.alpha=0;
-	
 	
     var img_list=["images/drop_1.jpg","images/drop_2.jpg","images/drop_3.jpg","images/drop_4.jpg"];
 	var drop_list=[];
@@ -85,17 +85,6 @@ $(document).ready(function(){
 	
 	var timer_scale=setInterval(function(){
 		scale_counter++;
-		/*if(scale_counter==50){
-			drop_list[number].alpha=0;
-			drop_list[number].alpha=1;
-			
-			drop_list[number].scale.x=drop_list[number].scale.x;
-			drop_list[number].scale.y=drop_list[number].scale.x;
-			drop_list[number].alpha=drop_list[number].scale.x;
-			
-			drop_list[number]=drop_list[number];
-			
-		}*/
 		
 		if(scale_counter>=40){
 			drop_list[0].alpha-=0.03;
@@ -135,14 +124,8 @@ $(document).ready(function(){
 			if(drop_list[number].scale.x/*<1&&drop.scale.x>0*/){
 				drop_list[number].scale.x+=0.009*(1-scale_counter/600);
 				drop_list[number].scale.y+=0.009*(1-scale_counter/600);
-				//drop_list[number].alpha=1-scale_counter/3200;
 				drop_list[number].rotation+=0.0014;
 			}
-			/*else{
-				drop_list[number].scale.x=1;
-				drop_list[number].scale.y=1;
-				drop_list[number].alpha=0;
-			}*/
 		}
 		
 		if(scale_counter>=210){
@@ -167,8 +150,14 @@ $(document).ready(function(){
 
 			if(drop_list[3].alpha<=0){
 				clearInterval(cover_timer);
+				clearInterval(timer_scale);
 				drop_list[3].alpha=0;
-				//bg.alpha=1;
+				
+				pondContainer.removeChild(drop_list[0]);
+				pondContainer.removeChild(drop_list[1]);
+				pondContainer.removeChild(drop_list[2]);
+				pondContainer.removeChild(drop_list[3]);
+				
 			}
 		},15);
 	}
@@ -209,7 +198,7 @@ $(document).ready(function(){
 		
 		if(animation_stop==0){
 		
-			var param_count=1000*10/time_duration;
+			var param_count=1000*animation_time/time_duration;
 			
 			render_timer=setTimeout(function(){
 				
@@ -269,6 +258,11 @@ $(document).ready(function(){
 	$(o_canvas).addClass("canvas");
 	$(o_canvas).attr("id","o_canvas");
 	
+	var timer_cover_first=setTimeout(function(){
+		$(".con_wrap_1").addClass("wrap_show");
+		clearTimeout(timer_cover_first);
+	},4900);
+	
 	
 	//触摸触发事件
 	$("body").touchwipe({
@@ -299,11 +293,38 @@ $(document).ready(function(){
 	
 	function wipe_up(){
 		
+		activeWave();
+		
+		//滑屏
+		$(".con_wrap_2").addClass("wrap_prepare");
+		
+		var timer=setTimeout(function(){
+			$(".con_wrap_1").addClass("wrap_show");
+			$(".con_wrap_1").removeClass("wrap_hide");
+			$(".con_wrap_2").removeClass("wrap_show");
+		},300);
+		
 	}
 	
 	function wipe_down(){
-		//console.log(param_range);
 		
+		activeWave();
+		
+		//滑屏
+		$(".con_wrap_1").addClass("wrap_hide");
+		
+		var timer=setTimeout(function(){
+			$(".con_wrap_2").addClass("wrap_show");
+			$(".con_wrap_2").removeClass("wrap_prepare");
+			$(".con_wrap_1").removeClass("wrap_show");
+		},300);
+		
+		
+		
+	}
+	
+	function activeWave(){
+		//触发波纹
 		if(animation_stop==1){
 			animation_stop=0;
 			
@@ -312,7 +333,6 @@ $(document).ready(function(){
 			time_count=-250;
 			animate();
 		}
-		//$(".num").html(num++);
 	}
 	
 });
