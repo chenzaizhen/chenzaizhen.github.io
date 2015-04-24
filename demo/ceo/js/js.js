@@ -143,7 +143,7 @@ $(document).ready(function(){
 		
 		var cover_timer=setInterval(function(){
 			//console.log(drop_list[3].alpha);
-			drop_list[3].alpha-=0.005;
+			drop_list[3].alpha-=0.004;
 			drop_list[3].alpha=Math.round(drop_list[3].alpha*1000)/1000;
 			//bg.alpha+=0.03;
 			//bg.alpha=Math.round(bg.alpha*100)/100;
@@ -159,7 +159,7 @@ $(document).ready(function(){
 				pondContainer.removeChild(drop_list[3]);
 				
 			}
-		},15);
+		},20);
 	}
 	
 	
@@ -252,7 +252,7 @@ $(document).ready(function(){
 		
     }
 	
-	canvas_create();
+	//canvas_create();
 	
 	var o_canvas=$("canvas")[0];
 	$(o_canvas).addClass("canvas");
@@ -262,6 +262,7 @@ $(document).ready(function(){
 		$(".con_wrap_1").addClass("wrap_show");
 		clearTimeout(timer_cover_first);
 	},4900);
+	
 	
 	
 	//触摸触发事件
@@ -293,32 +294,51 @@ $(document).ready(function(){
 	
 	function wipe_up(){
 		
-		activeWave();
+		if(page_index==1||page_index==2||page_index==3){
+			activeWave();
+			if(page_index==3){
+				$(".canvas").css({
+					"opacity":1	
+				});
+			}
+		} 
 		
 		//滑屏
-		$(".con_wrap_2").addClass("wrap_prepare");
+		$(".con_wrap_"+page_index).addClass("wrap_prepare");
+		$(".con_wrap_"+(page_index-1)).addClass("wrap_show");
 		
 		var timer=setTimeout(function(){
-			$(".con_wrap_1").addClass("wrap_show");
-			$(".con_wrap_1").removeClass("wrap_hide");
-			$(".con_wrap_2").removeClass("wrap_show");
+			
+			$(".con_wrap_"+(page_index-1)).removeClass("wrap_hide");
+			$(".con_wrap_"+page_index).removeClass("wrap_show");
+			page_index--;
+			
 		},300);
 		
 	}
 	
 	function wipe_down(){
 		
-		activeWave();
+		if(page_index==1){
+			activeWave();
+		}
+		else if(page_index==2){
+			$(".canvas").css({
+				"opacity":0	
+			});
+		}
 		
 		//滑屏
-		$(".con_wrap_1").addClass("wrap_hide");
+		$(".con_wrap_"+page_index).addClass("wrap_hide");
+		$(".con_wrap_"+(page_index+1)).addClass("wrap_show");
 		
 		var timer=setTimeout(function(){
-			$(".con_wrap_2").addClass("wrap_show");
-			$(".con_wrap_2").removeClass("wrap_prepare");
-			$(".con_wrap_1").removeClass("wrap_show");
+			
+			$(".con_wrap_"+(page_index+1)).removeClass("wrap_prepare");
+			$(".con_wrap_"+page_index).removeClass("wrap_show");
+			page_index++;
+			
 		},300);
-		
 		
 		
 	}
@@ -334,6 +354,35 @@ $(document).ready(function(){
 			animate();
 		}
 	}
+	
+	var pop_wrap_open=0;
+	$(".date_list li").click(function(e){
+		if(pop_wrap_open==0){
+			$(".date_list li").removeClass("details_show");
+			$(this).addClass("details_show").addClass("zindex_hook");
+			pop_wrap_open=1;
+		}
+		else{
+			$(this).removeClass("details_show");
+			var timer=setTimeout(function(){
+				$(".date_list li").removeClass("zindex_hook");
+			},200);
+			pop_wrap_open=0;
+		}
+		
+		e.preventDefault();
+		e.stopPropagation(); 
+	});
+	
+	
+	$(".con_wrap_4").click(function(){
+		$(".date_list li").removeClass("details_show");
+		var timer=setTimeout(function(){
+			$(".date_list li").removeClass("zindex_hook");
+		},200);
+		pop_wrap_open=0;
+	});
+	
 	
 });
 
