@@ -4,7 +4,7 @@ $(document).ready(function(){
 	
 	/*翻页标识*/
 	var page_index=1;//当前在哪个页面
-	var moving=0;
+	var no_wipe=1;
 	var render_timer=1;
 	var o_canvas;
 	
@@ -260,6 +260,7 @@ $(document).ready(function(){
 	
 	var timer_cover_first=setTimeout(function(){
 		$(".con_wrap_1").addClass("wrap_show");
+		no_wipe=0;
 		clearTimeout(timer_cover_first);
 	},4900);
 	
@@ -293,73 +294,87 @@ $(document).ready(function(){
 	}
 	
 	function wipe_up(){
-		if(page_index<=1){
-			return ;
+		//console.log(page_index+" "+no_wipe);
+		if(no_wipe==1){
+				
 		}
-		
-		if(page_index==1||page_index==2||page_index==3){
-			activeWave();
-			if(page_index==3){
-				$(".canvas").css({
-					"opacity":1	
-				});
-			}
-		} 
-		
-		if(page_index==4){
-			resetDateItem();
-		}
-		else if(page_index==5){
-			resetGuideItem();
-		}
-		
-		//滑屏
-		$(".con_wrap_"+page_index).addClass("wrap_prepare").removeClass("wrap_show");
-		$(".con_wrap_"+(page_index-1)).addClass("wrap_show").removeClass("wrap_hide");
-		page_index--;
-/*		var timer=setTimeout(function(){
+		else{
 			
-			$(".con_wrap_"+(page_index-1)).removeClass("wrap_hide");
-			$(".con_wrap_"+page_index).removeClass("wrap_show");
+			if(page_index<=1){
+				return ;
+			}
+			no_wipe=1;
+			
+			if(page_index==1||page_index==2||page_index==3){
+				activeWave();
+				if(page_index==3){
+					$(".canvas").css({
+						"opacity":1	
+					});
+				}
+			} 
+			
+			if(page_index==4){
+				resetDateItem();
+			}
+			else if(page_index==5){
+				resetGuideItem();
+			}
+			
+			//滑屏
+			$(".con_wrap_"+page_index).addClass("wrap_prepare").removeClass("wrap_show");
+			$(".con_wrap_"+(page_index-1)).addClass("wrap_show").removeClass("wrap_hide");
 			page_index--;
 			
-		},300);*/
-		
+			var timer=setTimeout(function(){
+				
+				no_wipe=0;
+				//console.log(page_index+" "+no_wipe);
+			},300);
+		}
 	}
 	
 	function wipe_down(){
-		if(page_index>=7){
-			return ;
+		//console.log(page_index+" "+no_wipe);
+		if(no_wipe==1){
+				
 		}
+		else{
 		
-		if(page_index==1){
-			activeWave();
-		}
-		else if(page_index==2){
-			$(".canvas").css({
-				"opacity":0	
-			});
-		}
-		if(page_index==4){
-			resetDateItem();
-		}
-		else if(page_index==5){
-			resetGuideItem();
-		}
-		
-		//滑屏
-		$(".con_wrap_"+page_index).addClass("wrap_hide");
-		$(".con_wrap_"+(page_index+1)).addClass("wrap_show");
-		
-		var timer=setTimeout(function(){
+			if(page_index>=7){
+				return ;
+			}
+			no_wipe=1;
 			
-			$(".con_wrap_"+(page_index+1)).removeClass("wrap_prepare");
-			$(".con_wrap_"+page_index).removeClass("wrap_show");
-			page_index++;
+			if(page_index==1){
+				activeWave();
+			}
+			else if(page_index==2){
+				$(".canvas").css({
+					"opacity":0	
+				});
+			}
+			if(page_index==4){
+				resetDateItem();
+			}
+			else if(page_index==5){
+				resetGuideItem();
+			}
 			
-		},300);
-		
-		
+			//滑屏
+			$(".con_wrap_"+page_index).addClass("wrap_hide");
+			$(".con_wrap_"+(page_index+1)).addClass("wrap_show");
+			
+			var timer=setTimeout(function(){
+				
+				$(".con_wrap_"+(page_index+1)).removeClass("wrap_prepare");
+				$(".con_wrap_"+page_index).removeClass("wrap_show");
+				page_index++;
+				no_wipe=0;
+				//console.log(page_index+" "+no_wipe);
+				
+			},300);
+		}
 	}
 	
 	function activeWave(){
