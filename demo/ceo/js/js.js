@@ -252,7 +252,7 @@ $(document).ready(function(){
 		
     }
 	
-	//canvas_create();
+	canvas_create();
 	
 	var o_canvas=$("canvas")[0];
 	$(o_canvas).addClass("canvas");
@@ -293,6 +293,9 @@ $(document).ready(function(){
 	}
 	
 	function wipe_up(){
+		if(page_index<=1){
+			return ;
+		}
 		
 		if(page_index==1||page_index==2||page_index==3){
 			activeWave();
@@ -304,20 +307,23 @@ $(document).ready(function(){
 		} 
 		
 		//滑屏
-		$(".con_wrap_"+page_index).addClass("wrap_prepare");
-		$(".con_wrap_"+(page_index-1)).addClass("wrap_show");
-		
-		var timer=setTimeout(function(){
+		$(".con_wrap_"+page_index).addClass("wrap_prepare").removeClass("wrap_show");
+		$(".con_wrap_"+(page_index-1)).addClass("wrap_show").removeClass("wrap_hide");
+		page_index--;
+/*		var timer=setTimeout(function(){
 			
 			$(".con_wrap_"+(page_index-1)).removeClass("wrap_hide");
 			$(".con_wrap_"+page_index).removeClass("wrap_show");
 			page_index--;
 			
-		},300);
+		},300);*/
 		
 	}
 	
 	function wipe_down(){
+		if(page_index>=7){
+			return ;
+		}
 		
 		if(page_index==1){
 			activeWave();
