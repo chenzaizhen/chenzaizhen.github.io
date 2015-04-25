@@ -149,7 +149,6 @@ body{ background:#f4f1e7;}
 .wrap_show .info_2{ -webkit-animation:a_main_title 0.3s 0.5s linear both;}
 .wrap_show .info_3{ -webkit-animation:a_main_title 0.3s 0.8s linear both;}
 
-.con_wrap_7{ background:#172d5d;}
 .con_wrap_7 .logo_area{ display:block; height:162px; width:96px; background:url(../images/back_cover_logo.png) no-repeat 0 0;  background-size:contain; position:absolute; left:50px; top:110px;}
 .con_wrap_7 .logo_area .txt{ display:none;}
 .con_wrap_7 .logistics_area{ display:block; height:36px; width:249px; background:url(../images/back_cover_txt_1.png) no-repeat 0 0;  background-size:contain; position:absolute; left:50px; bottom:105px;}
