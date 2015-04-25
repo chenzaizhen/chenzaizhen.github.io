@@ -306,6 +306,13 @@ $(document).ready(function(){
 			}
 		} 
 		
+		if(page_index==4){
+			resetDateItem();
+		}
+		else if(page_index==5){
+			resetGuideItem();
+		}
+		
 		//滑屏
 		$(".con_wrap_"+page_index).addClass("wrap_prepare").removeClass("wrap_show");
 		$(".con_wrap_"+(page_index-1)).addClass("wrap_show").removeClass("wrap_hide");
@@ -332,6 +339,12 @@ $(document).ready(function(){
 			$(".canvas").css({
 				"opacity":0	
 			});
+		}
+		if(page_index==4){
+			resetDateItem();
+		}
+		else if(page_index==5){
+			resetGuideItem();
 		}
 		
 		//滑屏
@@ -382,11 +395,56 @@ $(document).ready(function(){
 	
 	
 	$(".con_wrap_4").click(function(){
+		resetDateItem();
+	});
+	
+	function resetDateItem(){
 		$(".date_list li").removeClass("details_show");
 		var timer=setTimeout(function(){
 			$(".date_list li").removeClass("zindex_hook");
 		},200);
 		pop_wrap_open=0;
+	}
+	
+	$(".guide_list li").click(function(e){
+		if(pop_wrap_open==0){
+			$(".guide_list li").removeClass("details_show");
+			$(this).addClass("details_show").addClass("zindex_hook");
+			pop_wrap_open=1;
+		}
+		else{
+			$(this).removeClass("details_show");
+			var timer=setTimeout(function(){
+				$(".guide_list li").removeClass("zindex_hook");
+			},200);
+			pop_wrap_open=0;
+		}
+		
+		e.preventDefault();
+		e.stopPropagation(); 
+	});
+	
+	$(".con_wrap_5").click(function(){
+		resetGuideItem();
+	});
+	
+	function resetGuideItem(){
+		$(".guide_list li").removeClass("details_show");
+		var timer=setTimeout(function(){
+			$(".guide_list li").removeClass("zindex_hook");
+		},200);
+		pop_wrap_open=0;
+	}
+	
+	$(".link_map").css({
+		"width": window.innerWidth+"px",
+		"height": Math.round(window.innerWidth*390/375)+"px",
+		"margin-left": window.innerWidth/2*-1+"px"
+	});
+	
+	$(".link_map .img_map").css({
+		"width": window.innerWidth+"px",
+		"height": Math.round(window.innerWidth*390/375)+"px"
 	});
 	
 	
