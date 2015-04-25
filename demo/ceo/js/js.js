@@ -26,7 +26,7 @@ $(document).ready(function(){
 	var param_vector=0;
 	
 	var num=1;
-	var animation_time=10;
+	var animation_time=30;
 	
 	//波纹pixi
 	//var flag_stopAnimation=0;
@@ -194,7 +194,7 @@ $(document).ready(function(){
 		
 		renderer.render(stage);*/
 		//requestAnimFrame(animate);
-		$(".num").html(num++);
+		//$(".num").html(num++);
 		
 		if(animation_stop==0){
 		
@@ -215,16 +215,16 @@ $(document).ready(function(){
 						//console.log(param_vector+" "+param_range);
 						
 						if(param_vector==0){
-							param_range-=0.01;
+							param_range-=0.01*10/animation_time;
 						}
 						else if(param_vector==1&&param_range<=5){
-							param_range+=0.02;
+							param_range+=0.03*10/animation_time;
 							if(param_range>=5){
 								param_vector=0;
 							}
 						}
 						
-						param_range=Math.round(param_range*100)/100;
+						param_range=Math.round(param_range*10000)/10000;
 					}
 					
 					//console.log(param_range+" "+time_count);
