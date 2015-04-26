@@ -84,6 +84,10 @@ $(document).ready(function(){
 		$(".loading_wrap").addClass("loading_hide");
 		canvas_create();
 		
+		o_canvas=$("canvas")[0];
+		$(o_canvas).addClass("canvas");
+		$(o_canvas).attr("id","o_canvas");
+		
 		var timer_cover_first=setTimeout(function(){
 			$(".con_wrap_1").addClass("wrap_show");
 			no_wipe=0;
@@ -249,7 +253,7 @@ $(document).ready(function(){
 	filtersToApply = [displacementFilter];
 	pondContainer.filters = filtersToApply;
 	
-	o_canvas=$("canvas")[0];
+	//o_canvas=$("canvas")[0];
 
     //console.log(stage);
     
@@ -328,10 +332,6 @@ $(document).ready(function(){
 		
     }
 	
-	
-	var o_canvas=$("canvas")[0];
-	$(o_canvas).addClass("canvas");
-	$(o_canvas).attr("id","o_canvas");
 	
 	//触摸触发事件
 	$("body").touchwipe({
