@@ -28,6 +28,82 @@ $(document).ready(function(){
 	var num=1;
 	var animation_time=30;
 	
+	
+	/*loading*/
+	
+	var img_list={
+		"images":{
+			"img_1":"back_cover_logo.jpg",
+			"img_2":"displacement_bg.jpg",
+			"img_3":"displacement_map.jpg",
+			"img_4":"drop_1.jpg",
+			"img_5":"drop_2.jpg",
+			"img_6":"drop_3.jpg",
+			"img_7":"drop_4.jpg",
+			"img_8":"golf_bg.jpg",
+			"img_9":"img_map.jpg",
+			"img_10":"sprite.png"
+		}
+	};
+	
+	//console.log(img_list.cover);
+	var img_array=[];
+	
+	//获得图片的地址
+	for(var i in img_list){
+		if(typeof(img_list[i])=="object"){
+			for(var j in img_list[i]){
+				img_array.push("../ceo/"+i+"/"+img_list[i][j]);
+			}
+		}
+	}
+	
+	var img_num=img_array.length;
+	var img_loaded=0;
+	
+	for(var i=0;i<img_num;i++){
+		var img=new Image();
+		img.src=img_array[i];
+		img.onload=function(){
+			
+			img_loaded++;
+			if(img_num==img_loaded){
+				
+				
+				pageStart(); //载完图片，直接进入首页，音频自己慢慢载，载完自动播放
+				
+				/*var timer_su=setTimeout(function(){
+					pageStart();
+				},3000);*/
+			}
+		}
+	}
+	
+	function pageStart(){
+		
+		$(".loading_wrap").addClass("loading_hide");
+		canvas_create();
+		
+		var timer_cover_first=setTimeout(function(){
+			$(".con_wrap_1").addClass("wrap_show");
+			no_wipe=0;
+			clearTimeout(timer_cover_first);
+		},4900);
+		
+		var timer=setTimeout(function(){
+			$(".loading_wrap").hide();
+		},300);
+		
+	}
+	
+	
+	/*loading*/
+	
+	
+	
+	
+	
+	
 	//波纹pixi
 	//var flag_stopAnimation=0;
 	
@@ -55,7 +131,7 @@ $(document).ready(function(){
 
     stage.interactive = true;
     
-    bg = PIXI.Sprite.fromImage("images/displacement_BG.jpg");
+    bg = PIXI.Sprite.fromImage("images/displacement_bg.jpg");
     pondContainer.addChild(bg);
 	bg.alpha=0;
 	
@@ -252,19 +328,10 @@ $(document).ready(function(){
 		
     }
 	
-	canvas_create();
 	
 	var o_canvas=$("canvas")[0];
 	$(o_canvas).addClass("canvas");
 	$(o_canvas).attr("id","o_canvas");
-	
-	var timer_cover_first=setTimeout(function(){
-		$(".con_wrap_1").addClass("wrap_show");
-		no_wipe=0;
-		clearTimeout(timer_cover_first);
-	},4900);
-	
-	
 	
 	//触摸触发事件
 	$("body").touchwipe({
