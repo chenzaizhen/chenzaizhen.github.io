@@ -46,11 +46,15 @@ body{ background:#f4f1e7;}
 
 
 .con_wrap .page_title{ display:block; color:#f4f1e7; font-size:18px; font-weight:bold; font-family:'Arial','microsoft yahei'; position:absolute; left:50px; top:50px;}
-.con_wrap .foreword{ display:block; color:#f4f1e7; font-size:16px; font-weight:normal; font-family:'Arial','microsoft yahei'; position:absolute; left:50px; top:110px; line-height:2.2;}
+.con_wrap .foreword{ display:block; color:#f4f1e7; font-size:16px; font-weight:normal; font-family:'Arial','microsoft yahei'; position:absolute; left:50px; top:105px; line-height:2.4;}
 
 .wrap_show .page_title{ -webkit-animation:a_main_title 0.3s 0.3s linear both;}
-.wrap_show .foreword{ -webkit-animation:a_main_title 0.3s 0.6s linear both;}
+.wrap_show .foreword{ -webkit-animation:a_foreword 0.3s 0.6s linear both;}
 
+@-webkit-keyframes a_foreword{
+	0%{ -webkit-transform:translate(0,80px); opacity:0;}
+	100%{ -webkit-transform:translate(0,0); opacity:1;}
+}
 
 .icon_phone{ display:inline-block; width:12px; height:17px; background:url(../images/sprite.png) no-repeat -136px -93px;  background-size:249px 162px; margin-right:5px; vertical-align:middle; position:relative; top:-2px;}
 .link_map{ display:block; width:375px; height:390px; position:absolute; left:50%; margin-left:-187px; bottom:0px; box-shadow: 0px -3px 6px rgba(0,0,0,0.15); overflow:hidden; opacity:0;}
