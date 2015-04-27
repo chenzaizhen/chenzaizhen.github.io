@@ -46,7 +46,7 @@ body{ background:#f4f1e7;}
 
 
 .con_wrap .page_title{ display:block; color:#f4f1e7; font-size:18px; font-weight:bold; font-family:'Arial','microsoft yahei'; position:absolute; left:50px; top:50px;}
-.con_wrap .foreword{ display:block; color:#f4f1e7; font-size:16px; font-weight:normal; font-family:'Arial','microsoft yahei'; position:absolute; left:50px; top:110px; line-height:1.7;}
+.con_wrap .foreword{ display:block; color:#f4f1e7; font-size:16px; font-weight:normal; font-family:'Arial','microsoft yahei'; position:absolute; left:50px; top:110px; line-height:2.2;}
 
 .wrap_show .page_title{ -webkit-animation:a_main_title 0.3s 0.3s linear both;}
 .wrap_show .foreword{ -webkit-animation:a_main_title 0.3s 0.6s linear both;}
