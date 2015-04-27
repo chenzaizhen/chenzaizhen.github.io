@@ -518,16 +518,31 @@ $(document).ready(function(){
 		pop_wrap_open=0;
 	}
 	
-	$(".link_map").css({
-		"width": window.innerWidth+"px",
-		"height": Math.round(window.innerWidth*390/375)+"px",
-		"margin-left": window.innerWidth/2*-1+"px"
-	});
-	
-	$(".link_map .img_map").css({
-		"width": window.innerWidth+"px",
-		"height": Math.round(window.innerWidth*390/375)+"px"
-	});
+	function setImgMap(){
+		
+		var img_height=Math.round(window.innerWidth*390/375);
+		var img_top=0;
+		
+		if(img_height>460){
+			img_height=460;
+			img_top=Math.round(window.innerWidth*390/375)-460;
+			//var Math.round(window.innerWidth*390/375)-460
+		}
+		
+		$(".link_map").css({
+			"width": window.innerWidth+"px",
+			"height": img_height+"px",
+			"margin-left": window.innerWidth/2*-1+"px"
+		});
+		
+		
+		$(".link_map .img_map").css({
+			"width": window.innerWidth+"px",
+			"height": Math.round(window.innerWidth*390/375)+"px",
+			"margin-top": img_top*-1+"px"
+		});
+	}
+	setImgMap();
 	
 	
 });

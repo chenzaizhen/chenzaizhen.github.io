@@ -53,7 +53,7 @@ body{ background:#f4f1e7;}
 
 
 .icon_phone{ display:inline-block; width:12px; height:17px; background:url(../images/sprite.png) no-repeat -136px -93px;  background-size:249px 162px; margin-right:5px; vertical-align:middle; position:relative; top:-2px;}
-.link_map{ display:block; width:375px; height:390px; position:absolute; left:50%; margin-left:-187px; bottom:0px; box-shadow: 0px -3px 6px rgba(0,0,0,0.15); opacity:0;}
+.link_map{ display:block; width:375px; height:390px; position:absolute; left:50%; margin-left:-187px; bottom:0px; box-shadow: 0px -3px 6px rgba(0,0,0,0.15); overflow:hidden; opacity:0;}
 .img_map{ display:block; width:375px; height:390px; position:absolute; left:0; top:0;}
 
 .canvas{ -webkit-transition:opacity 0.3s linear;}
@@ -80,7 +80,7 @@ body{ background:#f4f1e7;}
 
 .con_wrap_4 .page_title{ color:#707171; }
 .con_wrap_4 .details_wrap{ display:block; opacity:0; -webkit-transition:opacity 0.2s 0.1s ease;}
-.date_list{ display:block; width:290px; height:290px; position:absolute; left:50%; margin-left:-139px; top:110px;}
+.date_list{ display:block; width:290px; height:290px; position:absolute; left:50px; top:110px;}
 .date_list li{ display:block; height:134px; width:134px; float:left; margin-right:11px; margin-bottom:11px; position:relative;-webkit-tap-highlight-color: transparent;}
 .date_list li .pop_wrap{ display:block; height:128px; width:128px; border:3px solid #172d5d; background:#f4f1e7; position: absolute; left:0px; top:0px; -webkit-transition:height 0.2s ease,width 0.2s ease,left 0.2s ease,top 0.2s ease; overflow:hidden;-webkit-tap-highlight-color: transparent;}
 .date_list li .item_small{ display:block; height:127px; width:128px; padding-top:1px; -webkit-tap-highlight-color: transparent;}
@@ -220,7 +220,7 @@ body{ background:#f4f1e7;}
 	.con_wrap_7 .thanks_area{ left:40px;}
 	
 	
-	.date_list{ top:95px; width:254px; margin-left:-119px;}
+	.date_list{ top:95px; width:254px; left:40px;}
 	.date_list li{ width:116px;}
 	.date_list li .pop_wrap{ width:110px;}
 	.date_list li .item_small{ width:110px;}
@@ -259,7 +259,7 @@ body{ background:#f4f1e7;}
 	.con_wrap_7 .thanks_area{ left:40px;}
 	
 	
-	.date_list{ top:85px; width:254px; margin-left:-119px;}
+	.date_list{ top:85px; width:254px; left:40px;}
 	.date_list li{ width:116px;}
 	.date_list li .pop_wrap{ width:110px;}
 	.date_list li .item_small{ width:110px;}
@@ -272,8 +272,6 @@ body{ background:#f4f1e7;}
 	.date_list .date_item_4.details_show .pop_wrap{ left:-127px;}
 	.details_img .image{ display:none;}
 	
-	.link_map{ bottom:-90px; overflow:hidden;}
-	.img_map{ top:-90px;}
 	.details_list dt{ margin-bottom:2px;}
 	.details_list dd{ margin-bottom:2px;}
 	
@@ -286,6 +284,43 @@ body{ background:#f4f1e7;}
 	.extra_tips{ display:none;}
 	.guide_list .details_show .pop_wrap{ height:265px;}
 }
+
+@media all and (min-width:414px) and (min-height:670px){
+
+	.date_list{ width:322px; height:322px;}
+	.date_list li{ width:150px; height:150px;}
+	.date_list li .pop_wrap{ width:144px; height:144px;}
+	.date_list li .item_small{ width:144px; height:143px;}
+	.date_list .details_show .pop_wrap{ width:305px; height:440px;}
+	.date_list li .item_small .day{ margin-top:21px;}
+	.details_img .image{ width:305px; height:197px;}
+	
+	.date_list .date_item_2.details_show .pop_wrap{ left:-161px;}
+	.date_list .date_item_3.details_show .pop_wrap{ top:-161px;}
+	.date_list .date_item_4.details_show .pop_wrap{ left:-161px; top:-161px;}
+	
+	.details_list{ font-size:14px; width:288px;}
+	.details_list dt{ width:47px;}
+	.details_list dd{width:215px;}
+	.date_item_1 .details_list dd{ width:230px;}
+	.activity_script{ font-size:14px;}
+	
+	.guide_list li .pop_wrap{ width:310px;}
+	.guide_list li .pop_wrap .info_title{ margin-bottom:10px;}
+	.guide_list .guide_item_1.details_show .pop_wrap .info_title{ left:-92px;}
+	.guide_list .guide_item_2.details_show .pop_wrap .info_title{ left:-92px;}
+	.guide_list .guide_item_3.details_show .pop_wrap .info_title{ left:-108px;}
+	.guide_list li .pop_wrap .info_txt{ font-size:14px;}
+	.guide_list li .pop_wrap .notice_list{ font-size:14px;}
+	.extra_tips{ffont-size:12px;}
+	.guide_list .details_show .pop_wrap{ height:300px;}
+	
+	.info_wrap .info_title{ font-size:15px;}
+	.info_wrap .contact_txt, .info_wrap .contact_txt a{ font-size:14px;}
+	.info_2{ top:205px;}
+	.info_3{ top:302px;}
+}
+
 
 
 
