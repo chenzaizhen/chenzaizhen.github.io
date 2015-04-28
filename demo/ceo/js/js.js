@@ -457,26 +457,31 @@ $(document).ready(function(){
 	}
 	
 	var pop_wrap_open=0;
-	$(".date_list li").click(function(e){
-		if(pop_wrap_open==0){
-			$(".date_list li").removeClass("details_show");
-			$(this).addClass("details_show").addClass("zindex_hook");
-			pop_wrap_open=1;
-		}
-		else{
-			$(this).removeClass("details_show");
-			var timer=setTimeout(function(){
-				$(".date_list li").removeClass("zindex_hook");
-			},200);
-			pop_wrap_open=0;
-		}
-		
-		e.preventDefault();
-		e.stopPropagation(); 
-	});
+	var date_list=$(".date_list li");
+	
+	for(var date_i=0;date_i<date_list.length;date_i++){
+		date_list[date_i].addEventListener('touchstart',function(e){
+			if(pop_wrap_open==0){
+				$(".date_list li").removeClass("details_show");
+				$(this).addClass("details_show").addClass("zindex_hook");
+				pop_wrap_open=1;
+			}
+			else{
+				$(this).removeClass("details_show");
+				var timer=setTimeout(function(){
+					$(".date_list li").removeClass("zindex_hook");
+				},200);
+				pop_wrap_open=0;
+			}
+			
+			e.preventDefault();
+			e.stopPropagation(); 
+		});
+	}
 	
 	
-	$(".con_wrap_4").click(function(){
+	
+	$(".con_wrap_4")[0].addEventListener('touchstart',function(){
 		resetDateItem();
 	});
 	
@@ -488,25 +493,30 @@ $(document).ready(function(){
 		pop_wrap_open=0;
 	}
 	
-	$(".guide_list li").click(function(e){
-		if(pop_wrap_open==0){
-			$(".guide_list li").removeClass("details_show");
-			$(this).addClass("details_show").addClass("zindex_hook");
-			pop_wrap_open=1;
-		}
-		else{
-			$(this).removeClass("details_show");
-			var timer=setTimeout(function(){
-				$(".guide_list li").removeClass("zindex_hook");
-			},200);
-			pop_wrap_open=0;
-		}
-		
-		e.preventDefault();
-		e.stopPropagation(); 
-	});
 	
-	$(".con_wrap_5").click(function(){
+	var guide_list=$(".guide_list li");
+	
+	for(var guide_i=0;guide_i<guide_list.length;guide_i++){
+		guide_list[guide_i].addEventListener('touchstart',function(e){
+			if(pop_wrap_open==0){
+				$(".guide_list li").removeClass("details_show");
+				$(this).addClass("details_show").addClass("zindex_hook");
+				pop_wrap_open=1;
+			}
+			else{
+				$(this).removeClass("details_show");
+				var timer=setTimeout(function(){
+					$(".guide_list li").removeClass("zindex_hook");
+				},200);
+				pop_wrap_open=0;
+			}
+			
+			e.preventDefault();
+			e.stopPropagation(); 
+		});
+	}
+	
+	$(".con_wrap_5")[0].addEventListener('touchstart',function(){
 		resetGuideItem();
 	});
 	
