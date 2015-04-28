@@ -12,16 +12,16 @@
                 nonceStr: data.nonceStr,
                 signature: data.signature,
                 jsApiList: [
-                    'onMenuShareTimeline',
-                    'onMenuShareAppMessage',
-                    //'hideAllNonBaseMenuItem'
+                    //'onMenuShareTimeline',
+                    //'onMenuShareAppMessage',
+                    'hideAllNonBaseMenuItem'
                 ]
             });
         });
 
         wx.ready(function(){
 
-              //分享到朋友圈
+/*              //分享到朋友圈
              wx.onMenuShareTimeline({
                  title: '互联网CEO分享会', // 分享标题
                  link: '', // 分享链接
@@ -48,7 +48,7 @@
                  cancel: function () {
                      // 用户取消分享后执行的回调函数
                  }
-             });
+             });*/
             
             wx.hideAllNonBaseMenuItem({
               success: function () {

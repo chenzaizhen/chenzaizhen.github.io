@@ -557,6 +557,8 @@ $(document).ready(function(){
 	}
 	setImgMap();
 	
+	weChatSDKInit();//微信sdk初始化
+	
 });
 
 
