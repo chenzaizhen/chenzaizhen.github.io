@@ -538,6 +538,9 @@ $(document).ready(function(){
 			img_top=Math.round(window.innerWidth*390/375)-460;
 			//var Math.round(window.innerWidth*390/375)-460
 		}
+		if(window.innerHeight<500){
+				img_height=260;
+			}
 		
 		$(".link_map").css({
 			"width": window.innerWidth+"px",

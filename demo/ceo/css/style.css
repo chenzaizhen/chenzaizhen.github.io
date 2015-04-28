@@ -227,19 +227,18 @@ body{ background:#f4f1e7 url(../images/con_wrap_bg.jpg) repeat 0 0; background-s
 	.con_wrap_7 .logistics_area{ left:40px;}
 	.con_wrap_7 .thanks_area{ left:40px;}
 	
+	.date_list{ left:40px;}
+	.date_list li .pop_wrap{ width:233px;}
+	.date_list li .item_small .time{ left:80px;}
+	.date_list li .item_small .day{ height:27px; width:54px; background-position:0 -78px; background-size:203px 137px; left:15px; top:15px;}
+	.date_list li .item_small .day_2{ background-position:-55px -79px;}
+	.activity_script{ left:124px;}
 	
-/*	.date_list{ top:95px; width:254px; left:40px;}
-	.date_list li{ width:116px;}
-	.date_list li .pop_wrap{ width:110px;}
-	.date_list li .item_small{ width:110px;}
-	.date_list .details_show .pop_wrap{ width:237px; height:340px;}
-	.date_list .details_show .item_small .day{ left:-5px;}
-	.date_list .details_show .item_small .time{ left:-21px;}
+	.date_list .details_show .pop_wrap{ width:233px; height:340px;}
+	.date_list .details_show .item_small .time{ left:15px;}
 	.details_list{ width:210px;}
 	.details_list dd{ width:170px;}
-	.date_list .date_item_2.details_show .pop_wrap{ left:-127px;}
-	.date_list .date_item_4.details_show .pop_wrap{ left:-127px;}
-	.details_img .image{ display:none;}*/
+	.details_img .image{ display:none;}
 	
 	.guide_list{ left:40px;}
 	.guide_list li .pop_wrap{ width:233px;}
@@ -254,7 +253,7 @@ body{ background:#f4f1e7 url(../images/con_wrap_bg.jpg) repeat 0 0; background-s
 	.con_wrap .main_title{ top:120px; margin-left:-129px;}
 	.con_wrap .sub_title{ margin-left:-129px; bottom:118px;}
 	.con_wrap .page_title{ left:40px; top:40px;}
-	.con_wrap .foreword{ font-size:14px; left:40px; top:100px;}
+	.con_wrap .foreword{ font-size:14px; left:40px; top:80px;}
 	.con_wrap_3 .hotel_wrap{ font-size:14px; top:85px; left:40px;}
 	.con_wrap_5 .info_traffic{ top:85px; left:40px;}
 	.con_wrap_5 .info_hotel{ top:189px; left:40px;}
@@ -266,52 +265,36 @@ body{ background:#f4f1e7 url(../images/con_wrap_bg.jpg) repeat 0 0; background-s
 	.con_wrap_7 .logistics_area{ left:40px;}
 	.con_wrap_7 .thanks_area{ left:40px;}
 	
+	.date_list{ left:40px; top:85px;}
+	.date_list li .pop_wrap{ width:233px;}
+	.date_list li .item_small .time{ left:80px;}
+	.date_list li .item_small .day{ height:27px; width:54px; background-position:0 -78px; background-size:203px 137px; left:15px; top:15px;}
+	.date_list li .item_small .day_2{ background-position:-55px -79px;}
+	.activity_script{ left:124px;}
 	
-	.date_list{ top:85px; width:254px; left:40px;}
-	.date_list li{ width:116px;}
-	.date_list li .pop_wrap{ width:110px;}
-	.date_list li .item_small{ width:110px;}
-	.date_list .details_show .pop_wrap{ width:237px; height:273px;}
-	.date_list .details_show .item_small .day{ left:-5px;}
-	.date_list .details_show .item_small .time{ left:-21px;}
+	.date_list .details_show .pop_wrap{ width:233px; height:275px;}
+	.date_list .details_show .item_small{ height:83px;}
+	.date_list .details_show .item_small .time{ left:15px;}
 	.details_list{ width:210px;}
 	.details_list dd{ width:170px;}
-	.date_list .date_item_2.details_show .pop_wrap{ left:-127px;}
-	.date_list .date_item_4.details_show .pop_wrap{ left:-127px;}
 	.details_img .image{ display:none;}
-	
-	.details_list dt{ margin-bottom:2px;}
-	.details_list dd{ margin-bottom:2px;}
 	
 	.guide_list{ left:40px; top:85px;}
 	.guide_list li .pop_wrap{ width:233px;}
-	.guide_list li .pop_wrap .info_title{ margin-bottom:10px;}
 	.guide_list .guide_item_1.details_show .pop_wrap .info_title{ left:-54px;}
 	.guide_list .guide_item_2.details_show .pop_wrap .info_title{ left:-54px;}
 	.guide_list .guide_item_3.details_show .pop_wrap .info_title{ left:-70px;}
 	.extra_tips{ display:none;}
-	.guide_list .details_show .pop_wrap{ height:265px;}
 }
 
 @media all and (min-width:414px) and (min-height:670px){
 
-	.date_list{ width:322px; height:322px;}
-	.date_list li{ width:150px; height:150px;}
-	.date_list li .pop_wrap{ width:144px; height:144px;}
-	.date_list li .item_small{ width:144px; height:143px;}
-	.date_list .details_show .pop_wrap{ width:305px; height:440px;}
-	.date_list li .item_small .day{ margin-top:21px;}
-	.details_img .image{ width:305px; height:197px;}
-	
-	.date_list .date_item_2.details_show .pop_wrap{ left:-161px;}
-	.date_list .date_item_3.details_show .pop_wrap{ top:-161px;}
-	.date_list .date_item_4.details_show .pop_wrap{ left:-161px; top:-161px;}
-	
-	.details_list{ font-size:14px; width:288px;}
-	.details_list dt{ width:47px;}
-	.details_list dd{width:215px;}
-	.date_item_1 .details_list dd{ width:230px;}
-	.activity_script{ font-size:14px;}
+	.date_list li{ width:315px;}
+	.date_list li .pop_wrap{ width:309px;}
+	.date_list li .item_small{ width:309px;}
+	.activity_script{ left:160px;}
+	.date_list .details_show .pop_wrap{ width:309px;}
+	.details_img .image{ height:200px; width:309px;}
 	
 	.guide_list li .pop_wrap{ width:310px;}
 	.guide_list li .pop_wrap .info_title{ margin-bottom:10px;}
@@ -320,7 +303,7 @@ body{ background:#f4f1e7 url(../images/con_wrap_bg.jpg) repeat 0 0; background-s
 	.guide_list .guide_item_3.details_show .pop_wrap .info_title{ left:-108px;}
 	.guide_list li .pop_wrap .info_txt{ font-size:14px;}
 	.guide_list li .pop_wrap .notice_list{ font-size:14px;}
-	.extra_tips{ffont-size:12px;}
+	.extra_tips{ font-size:12px;}
 	.guide_list .details_show .pop_wrap{ height:300px;}
 	
 	.info_wrap .info_title{ font-size:15px;}
