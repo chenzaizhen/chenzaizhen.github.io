@@ -177,6 +177,7 @@ body{ background:#f4f1e7 url(../images/con_wrap_bg.jpg) repeat 0 0; background-s
 .guide_list li .pop_wrap{ width:273px; height:56px; border:3px solid #172d5d; text-align:center; overflow:hidden; position:absolute; left:0px; top:0px;  background:#f4f1e7 url(../images/con_wrap_bg.jpg) repeat 0 0; background-size:105px 105px; -webkit-transition:height 0.2s ease,top 0.2s ease;}
 .guide_list li .pop_wrap .info_title{ margin-top:17px; font-size:16px; color:#092f57; font-family:'Arial','microsoft yahei'; margin-bottom:20px; position:relative; left:0px; -webkit-transition:left 0.2s ease;}
 .guide_list li .pop_wrap .info_txt{color:#092f57; font-size:12px; font-family:'Arial','microsoft yahei'; line-height:1.7; opacity:0; text-align:left; margin-left:15px;}
+.guide_list li .pop_wrap .info_txt .tit{ display:inline-block; width:45px;}
 .guide_list li .pop_wrap .notice_list{color:#092f57; font-size:12px; font-family:'Arial','microsoft yahei'; width:300px; line-height:1.7; margin-top:7px; text-align:left; opacity:0; margin-left:15px;}
 
 .guide_list .details_show .pop_wrap{ height:275px;}
@@ -292,8 +293,12 @@ body{ background:#f4f1e7 url(../images/con_wrap_bg.jpg) repeat 0 0; background-s
 	.date_list li{ width:315px;}
 	.date_list li .pop_wrap{ width:309px;}
 	.date_list li .item_small{ width:309px;}
-	.activity_script{ left:160px;}
+	.activity_script{ left:160px; top:18px; font-size:14px;}
 	.date_list .details_show .pop_wrap{ width:309px;}
+	
+	.details_list{ width:285px; font-size:14px;}
+	.details_list dt{ width:43px;}
+	.details_list dd{ width:240px;}
 	.details_img .image{ height:200px; width:309px;}
 	
 	.guide_list li .pop_wrap{ width:310px;}
