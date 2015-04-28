@@ -247,6 +247,8 @@ body{ background:#f4f1e7 url(../images/con_wrap_bg.jpg) repeat 0 0; background-s
 	.guide_list .guide_item_2.details_show .pop_wrap .info_title{ left:-54px;}
 	.guide_list .guide_item_3.details_show .pop_wrap .info_title{ left:-70px;}
 	.extra_tips{ display:none;}
+	.guide_list li.guide_item_2 .pop_wrap .info_txt{ margin-bottom:8px;}
+	.guide_list li.guide_item_2 .pop_wrap .info_txt .tit{ display:block;}
 }
 
 
@@ -286,6 +288,8 @@ body{ background:#f4f1e7 url(../images/con_wrap_bg.jpg) repeat 0 0; background-s
 	.guide_list .guide_item_2.details_show .pop_wrap .info_title{ left:-54px;}
 	.guide_list .guide_item_3.details_show .pop_wrap .info_title{ left:-70px;}
 	.extra_tips{ display:none;}
+	.guide_list li.guide_item_2 .pop_wrap .info_txt{ margin-bottom:8px;}
+	.guide_list li.guide_item_2 .pop_wrap .info_txt .tit{ display:block;}
 }
 
 @media all and (min-width:414px) and (min-height:670px){
