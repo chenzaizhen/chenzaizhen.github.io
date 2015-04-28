@@ -557,7 +557,6 @@ $(document).ready(function(){
 	}
 	setImgMap();
 	
-	
 });
 
 
