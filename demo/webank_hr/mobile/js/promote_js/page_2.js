@@ -4,6 +4,7 @@ $(document).ready(function(){
 	
 	/*翻页标识*/
 	var page_index=1;//当前在哪个页面
+	var page_total=7;
 	var moving=0;
 	
 	
@@ -26,27 +27,6 @@ $(document).ready(function(){
 		preventDefaultEvents: true
 	});
 	
-	/*pc test*/
-	
-	//wipeLeft
-	$(".hook_right").bind("click",function(){
-		wipe_right();
-	});
-	
-	//wipeRight
-	$(".hook_left").bind("click",function(){
-		wipe_left();
-	});
-	
-	//wipeUp
-	$(".hook_up").bind("click",function(){
-		wipe_up();
-	});
-	
-	//wipeDown
-	$(".hook_down").bind("click",function(){
-		wipe_down();
-	});
 	
 	function wipe_right(){
 		
@@ -56,50 +36,56 @@ $(document).ready(function(){
 		
 	}
 	
-	$(".arrow_area").bind("click",function(){
+	$(".page_arrow").bind("click",function(){
 		wipe_down();
 	});
 	
 	function wipe_up(){
 		if(moving!=1){//当页面在切换时候，禁止滑屏
-			if(page_index==2){
-				
-				$(".cover_page").addClass("animate_show").removeClass("page_up");
-				$(".back_page").removeClass("page_current");
-				
-				var timer=setTimeout(function(){
-					$(".back_page").removeClass("animate_show");
-					moving=0;
-				},300);
-				
-				
-				moving=1;
-				page_index=1;	
-			}
-			else{
-				
-			}
+			
+			if(page_index<=1){
+				return ;
+			};
+			
+			$(".con_wrap_"+page_index).addClass("wrap_hide");
+			$(".con_wrap_"+(page_index-1)).addClass("wrap_show").addClass("zindex_hook");
+			
+			var timer=setTimeout(function(){
+				$(".con_wrap_"+(page_index+1)).removeClass("wrap_show")
+				$(".con_wrap_"+page_index).removeClass("wrap_hide").removeClass("zindex_hook");
+
+				moving=0;
+			},300);
+			
+			
+			moving=1;
+			page_index--;	
+			console.log(page_index);
+
 		}
 	}
 	
 	function wipe_down(){
 		if(moving!=1){
-			if(page_index==1){
-				$(".cover_page").addClass("page_up");
-				$(".back_page").addClass("page_current").addClass("animate_show");
-				
-				var timer=setTimeout(function(){
-					$(".cover_page").removeClass("animate_show");
-					moving=0;
-				},300);
-				
 			
-				moving=1;
-				page_index=2;	
-			}
-			else{
+			if(page_index>=page_total){
+				return ;
+			};
+			
+			$(".con_wrap_"+page_index).addClass("wrap_hide");
+			$(".con_wrap_"+(page_index+1)).addClass("wrap_show").addClass("zindex_hook");
+			
+			var timer=setTimeout(function(){
+				$(".con_wrap_"+(page_index-1)).removeClass("wrap_show");
+				$(".con_wrap_"+page_index).removeClass("wrap_hide").removeClass("zindex_hook");
+				moving=0;
 				
-			}
+				console.log(page_index);
+			},300);
+			
+		
+			moving=1;
+			page_index++;	
 		}
 	}
 	
