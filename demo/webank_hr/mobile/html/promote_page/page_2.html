@@ -201,6 +201,22 @@
 <script language="javascript" type="text/javascript" src="../../js/promote_js/jquery-1.9.0.min.js"></script>
 <script language="javascript" type="text/javascript" src="../../js/promote_js/page_2.js"></script>
 
+
+<script language="javascript" type="text/javascript">
+
+	$(document).ready(function(e) {
+		var phone_h=504;
+		var phone_w=320;
+		var screen_w=window.screen.width;
+		var screen_h=document.body.clientHeight;
+		console.log(screen_w+" , "+screen_h);
+        $(".wrap").css({
+			"-webkit-transform":"scale("+Math.ceil(screen_w/phone_w*100)/100+","+Math.ceil(screen_h/phone_h*100)/100+")"
+		});
+    });
+
+</script>
+
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
 /*	var currUrl = window.location.href.replace(window.location.hash, '');
