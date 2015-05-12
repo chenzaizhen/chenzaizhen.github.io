@@ -32,8 +32,8 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 .camera_wrap .camera_2{ display:block; height:69px; width:54px; position:absolute; right:0; bottom:375px;}
 .camera_wrap .camera_2 .camera{ display:block; height:69px; width:54px; background:url(../../images/promote_images/page_2/page_1_camera_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;-webkit-transform-origin:100% 85%;}
 
-.con_wrap .con_tit{ display:block; text-align: left; color:#fff; font-size:22px; font-family:'arial','microsoft yahei'; font-weight:normal; margin-bottom:10px; line-height:1.3; position:absolute; left:20px; top:30px;}
-.con_wrap .con_txt{ display:block; text-align: left; color:#fff; font-size:14px; font-family:'arial','microsoft yahei'; font-weight:normal; line-height:1.4; position:absolute; left:20px; top:100px;}
+.con_wrap .con_tit{ display:block; text-align: left; color:#fff; font-size:22px; font-family:'arial','microsoft yahei'; font-weight:normal; margin-bottom:10px; line-height:1.3; position:absolute; left:30px; top:30px;}
+.con_wrap .con_txt{ display:block; text-align: left; color:#fff; font-size:14px; font-family:'arial','microsoft yahei'; font-weight:normal; line-height:1.4; position:absolute; left:30px; top:95px;}
 .con_wrap .page_arrow_hook{ display:block; height:9px; width:15px; position:absolute; left:50%; margin-left:-7px; bottom:10px; }
 .con_wrap .page_arrow{ display:block; height:9px; width:15px; background:url(../../images/promote_images/page_2/arrow_bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; text-indent:-9999px; overflow: hidden; }
 
