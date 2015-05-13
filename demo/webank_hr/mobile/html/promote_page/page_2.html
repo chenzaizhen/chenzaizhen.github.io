@@ -70,7 +70,9 @@
                 <div class="earth"></div>
             </div>
         </div>
-        <div class="cage"></div>
+        <div class="cage_hook">
+        	<div class="cage"></div>
+        </div>
         <div class="work_1"></div>
         <div class="work_2"></div>
         
@@ -190,7 +192,7 @@
     <div class="con_wrap con_wrap_7 wrap_hide">
     	<h3 class="con_tit">也许，这里<br/>就是你期待已久的归宿</h3>
         <span class="s_line"></span>
-        <p class="con_txt"><a href="http://hr.webank.com/m/" class="link" target="_blank">加入我们，为未来而来<br/><span class="logo_webank">WeBank</span><br/><span class="link_address">hr.webank.com</span></a></p>
+        <p class="con_txt"><a href="http://hr.webank.com/m/" class="link" target="_blank"><span class="logo_webank">WeBank</span><br/>加入我们，为未来而来<br/><span class="link_address">hr.webank.com</span></a></p>
         
     	<div class="cloud_wrap">
         	<div class="cloud_1"></div>
@@ -220,7 +222,7 @@
 		var phone_w=320;
 		var screen_w=document.body.clientWidth;
 		var screen_h=document.body.clientHeight;
-		console.log(screen_w+" , "+screen_h);
+		//console.log(screen_w+" , "+screen_h);
         $(".wrap").css({
 			"-webkit-transform":"scale("+Math.ceil(screen_w/phone_w*100)/100+","+Math.ceil(screen_h/phone_h*100)/100+")"
 		});

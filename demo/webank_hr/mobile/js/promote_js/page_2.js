@@ -60,7 +60,7 @@ $(document).ready(function(){
 			
 			moving=1;
 			page_index--;	
-			console.log(page_index);
+			//console.log(page_index);
 
 		}
 	}
@@ -80,7 +80,7 @@ $(document).ready(function(){
 				$(".con_wrap_"+page_index).removeClass("wrap_hide").removeClass("zindex_hook");
 				moving=0;
 				
-				console.log(page_index);
+				//console.log(page_index);
 			},300);
 			
 		
