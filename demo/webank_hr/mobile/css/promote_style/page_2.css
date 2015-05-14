@@ -616,9 +616,14 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 }
 
 
+.music_control{ display:block; height:50px; width:50px; position:absolute; right:0px; top:0px;}
+.btn_play{ display:block; height:16px; width:16px; position:absolute; left:17px; top:17px; background:url(../../images/promote_images/page_2/sound.png) no-repeat 0 0; background-size:contain; -webkit-animation:a_music_play 3s linear infinite;}
+.btn_stop{ display:none; height:16px; width:16px; position:absolute; left:17px; top:17px; background:url(../../images/promote_images/page_2/sound_muted.png) no-repeat 0 0; background-size:contain;}
 
-
-
+@-webkit-keyframes a_music_play{
+	0%{ -webkit-transform: rotate(0deg);}
+	100%{ -webkit-transform: rotate(360deg);}
+}
 
 
 

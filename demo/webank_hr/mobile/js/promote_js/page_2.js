@@ -5,7 +5,7 @@ $(document).ready(function(){
 	/*翻页标识*/
 	var page_index=1;//当前在哪个页面
 	var page_total=7;
-	var moving=0;
+	var moving=1;
 	
 	
 	//触摸触发事件
@@ -89,7 +89,134 @@ $(document).ready(function(){
 		}
 	}
 	
-	/*pc test*/
+	/*loading*/
+	
+	var img_list={
+		"images":{
+			"img_1":"bg_1.jpg",
+			"img_2":"bg_2.jpg",
+			"img_3":"bg_3.jpg",
+			"img_4":"bg_4.jpg",
+			"img_5":"bg_5.jpg",
+			"img_6":"bg_6.jpg",
+			"img_7":"bg_7.jpg",
+			"img_8":"page_1.png",
+			"img_9":"page_2.png",
+			"img_10":"page_3.png",
+			"img_11":"page_4.png",
+			"img_12":"page_5.png",
+			"img_13":"page_6.png",
+			"img_14":"page_7.png",
+			"img_15":"page_2_cage.png",
+			"img_16":"page_5_rain.png",
+			"img_17":"page_6_person.png",
+			"img_18":"page_7_person.png"
+		}
+	};
+	
+	//console.log(img_list.cover);
+	var img_array=[];
+	
+	//获得图片的地址
+	for(var i in img_list){
+		if(typeof(img_list[i])=="object"){
+			for(var j in img_list[i]){
+				img_array.push("../../"+i+"/promote_images/page_2/"+img_list[i][j]);
+			}
+		}
+	}
+	
+	var img_num=img_array.length;
+	var img_loaded=0;
+	
+	for(var i=0;i<img_num;i++){
+		var img=new Image();
+		img.src=img_array[i];
+		img.onload=function(){
+			
+			img_loaded++;
+			if(img_num==img_loaded){
+				
+				loadSound(); 
+				//pageStart(); //载完图片，直接进入首页，音频自己慢慢载，载完自动播放
+			}
+		}
+	}
+	
+	function pageStart(){
+		
+		$(".loading_wrap").addClass("loading_hide");
+		$(".con_wrap_1").addClass("wrap_show");
+		var timer=setTimeout(function(){
+			$(".loading_wrap").hide();
+			$(".con_wrap_1").removeClass("wrap_hide");
+			moving=0;
+		},300);
+	}
+	
+	function load_ready(){
+		$(".loading_wrap").addClass("load_ready");
+	}
+	
+	$(".load_ready_area").click(function(){
+		audio_array[0].play();
+		audio_array[0].loop=true;
+		pageStart();
+	});
+	
+	/*声音脚本 开始*/
+		
+	//音频标签存放数组
+	var audio_array=[];
+	
+	function loadSound(){
+		
+		var audio_num=0;
+		
+		//获得json中图片的地址
+							
+		var audio = document.createElement("audio");
+		audio.src = "../../media/promote_media/page_2/music.mp3";//地址
+		audio.className="bg_music";
+		
+		audio_array.push(audio);
+		$(".audio_wrap").append(audio);
+		
+		audio_array[0].load();
+		audio_array[0].addEventListener("canplaythrough", function(){
+
+			load_ready();
+
+		});
+		
+	}
+	
+	var play=1;
+	$(".music_control").click(function(){
+		if(play==1){
+			
+			$(".btn_play").hide();
+			$(".btn_stop").show();
+			audio_array[0].pause();
+			play=0;
+			
+		}else{
+			
+			$(".btn_stop").hide();
+			$(".btn_play").show();
+			audio_array[0].play()
+			play=1;
+			
+		}
+	});
+	
+	/*声音脚本 结束*/
+	
+	
+	
+	/*loading*/
+	
+	
 	
 	/* 安卓版本兼容 */
 	var brower = {
