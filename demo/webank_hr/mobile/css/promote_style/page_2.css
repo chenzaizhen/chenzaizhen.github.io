@@ -464,7 +464,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 }
 
 .con_wrap_6{ display:block; height:100%; width:100%; background:url(../../images/promote_images/page_2/bg_6.jpg) no-repeat center bottom; background-size:100% 100%;}
-.con_wrap_6 .con_txt{ top:70px;}
+.con_wrap_6 .con_txt{ top:59px;}
 .con_wrap_6 .person{ display:block; height:258px; width:138px; background:url(../../images/promote_images/page_2/page_6_person.png) no-repeat 0 0; background-size: contain; position:absolute; left:50%; margin-left:-115px; bottom:0px; opacity:1; z-index:2;}
 .con_wrap_6 .info_wrap{ display:block; height:181px; width:223px; position:absolute; left:50%; margin-left:-112px; bottom:165px; opacity:1; z-index:1;}
 .con_wrap_6 .info_hook{ display:block; height:181px; width:223px; background:url(../../images/promote_images/page_2/page_6.png) no-repeat 0 0; background-size:408px 181px; position:absolute; left:0; top:0;}
@@ -616,7 +616,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 }
 
 
-.music_control{ display:block; height:50px; width:50px; position:absolute; right:0px; top:0px;}
+.music_control{ display:block; height:50px; width:50px; position:absolute; right:0px; top:0px; -webkit-tap-highlight-color:rgba(0,0,0,0);}
 .btn_play{ display:block; height:16px; width:16px; position:absolute; left:17px; top:17px; background:url(../../images/promote_images/page_2/sound.png) no-repeat 0 0; background-size:contain; -webkit-animation:a_music_play 3s linear infinite;}
 .btn_stop{ display:none; height:16px; width:16px; position:absolute; left:17px; top:17px; background:url(../../images/promote_images/page_2/sound_muted.png) no-repeat 0 0; background-size:contain;}
 

@@ -71,6 +71,9 @@ $(document).ready(function(){
 			if(page_index>=page_total){
 				return ;
 			};
+			if(page_index==1){
+				audio_array[0].play();
+			}
 			
 			$(".con_wrap_"+page_index).addClass("wrap_hide");
 			$(".con_wrap_"+(page_index+1)).addClass("wrap_show").addClass("zindex_hook");
@@ -155,14 +158,17 @@ $(document).ready(function(){
 	}
 	
 	function load_ready(){
-		$(".loading_wrap").addClass("load_ready");
-	}
-	
-	$(".load_ready_area").click(function(){
+		//$(".loading_wrap").addClass("load_ready");
 		audio_array[0].play();
 		audio_array[0].loop=true;
 		pageStart();
-	});
+	}
+	
+/*	$(".load_ready_area").click(function(){
+		audio_array[0].play();
+		audio_array[0].loop=true;
+		pageStart();
+	});*/
 	
 	/*声音脚本 开始*/
 		
