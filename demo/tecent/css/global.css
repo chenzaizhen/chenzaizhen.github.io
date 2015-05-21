@@ -40,10 +40,10 @@ q:before, q:after { content: ''; }
 
 /*global*/
 
-html,body{ background:#fff; display:block; height:100%; width:100%;}
-.head_wrap{ background:#0075bc; height:84px; width:100%;}
+html,body{ background:#fff; display:block; min-width:1200px;}
+.head_wrap{ background:#0075bc; height:84px; min-width:1200px;}
 .head_wrap_index{ height:625px; margin-bottom:60px;}
-.head{ border-bottom:1px solid rgba(255,255,255,0.3); height:83px;}
+.head{ border-bottom:1px solid rgba(255,255,255,0.3); height:83px; min-width:1200px;}
 .head_con{ width:1200px; margin:0px auto; position:relative;}
 .head_con .logo{ display:block; height:26px; width:202px; background:url(../images/global/logo.png) no-repeat 0 0; _background:url(../images/global/logo_ie6.jpg) no-repeat 0 0; text-indent:-9999px; overflow:hidden; position:absolute; left:15px; top:28px;}
 .menu_list{ display:block; height:83px; width:660px; position:absolute; right:0px; top:0px;}
@@ -162,7 +162,6 @@ html,body{ background:#fff; display:block; height:100%; width:100%;}
     right: 0;
 }
 .footer_copyright{
-	width: 100%;
 	padding-top: 18px;
 	padding-left: 20px;
 	font-family: Arial;
