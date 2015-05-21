@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+.main{ width: 1200px; margin: 45px auto 70px; overflow: hidden;}
+
+.culture_item{ margin-bottom: 54px; font-family: 'microsoft yahei'; border-bottom: 1px solid #e4e0e0;}
+.culture_title .title{ position: relative; padding-bottom: 18px; color: #000; font-size: 20px; font-weight: normal;}
+.culture_title .streetscape{position: absolute; right: 0; color: #0075bc; font-size: 16px; text-decoration: none;}
+
+.box_row:before, .box_row:after{ content: ''; display: table;}
+.box_row:after{ clear: both;}
+.box_row{ *zoom: 1; margin-bottom: 30px;}
+.idea_item{ width: 351px;}
+.idea_item .idea_img{ width: 351px; height: 153px; padding-bottom: 10px;}
+.idea_item .idea_tit{ color: #000; font-size: 20px; font-weight: normal;}
+.idea_item .idea_subtit{ padding-bottom: 8px; color: #666; font-size: 16px; font-weight: normal;}
+.idea_item .idea_txt{width: 351px; color: #5e6267; font-size: 12px; font-family: '宋体',tahoma, Arial, 'hiragino sans gb', 'microsoft yahei', sans-serif; line-height: 2; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; _padding-bottom: 10px;}
+.idea_item .dot{display: inline-block; *display: inline; *zoom: 1; text-indent: -9999px; *text-indent: 0; overflow: hidden; height: 2px; width: 2px; background-color: #333; margin-right: 7px; vertical-align: middle;}
+.idea_vision, .idea_manage{ float: left; clear: left;}
+.idea_mission, .idea_value{ float: right;}
+
+.dev_box .dev_proc{ line-height: 30px; color: #666; font-size: 16px; margin-bottom: 20px;}
+.dev_box .dev_proc img{margin-left: 5px;}
+.dev_box .dev_txt{color: #5e6267; font-size: 12px; font-family: '宋体',tahoma, Arial, 'hiragino sans gb', 'microsoft yahei', sans-serif;}
+.dev_acedemic{ padding-top: 20px;}
+.culture_dev{ padding-bottom: 10px;}
+.culture_dev .box_row{ margin-bottom: 20px;}
+.dev_item .item_title{ color: #333; font-size: 16px; font-weight: normal;}
+.dev_item .item_txt{line-height: 2; color: #5e6267; font-size: 12px; font-family: '宋体',tahoma, Arial, 'hiragino sans gb', 'microsoft yahei', sans-serif;}
+.dev_staff{ width: 349px;}
+.dev_build{ width: 351px;}
+.dev_staff_img{ width: 349px; height: 300px; margin-top: 20px;}
+.dev_build_img{ width: 351px; height: 536px; margin-top: 20px;}
+.dev_staff{ float: left; clear: left;}
+.dev_build{ float: right;}
+
+.env_box .evn_img{ width: 747px; height: 441px; margin-bottom: 10px;}
+.env_box .evn_txt{ margin-bottom: 30px; color: #5e6267; font-size: 12px; font-family: '宋体',tahoma, Arial, 'hiragino sans gb', 'microsoft yahei', sans-serif;}
+
+.culture_act{ border-bottom: none;}
+.act_item{ width: 351px;}
+.act_item .act_img{ width: 351px; height: 153px; padding-bottom: 8px;}
+.act_item .act_tit{ padding-bottom: 4px; color: #000; font-size: 16px; font-weight: normal;}
+.act_item .act_txt{ color: #5e6267; font-size: 12px; font-family: '宋体',tahoma, Arial, 'hiragino sans gb', 'microsoft yahei', sans-serif;line-height: 2;}
+.act_staffmetting, .act_cult, .act_QGQM, .act_lunch{ float: left; clear: left;}
+.act_chrism, .act_carnival, .act_image, .act_association{ float: right;}

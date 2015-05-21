@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+.main{ width:1200px; margin:45px auto 70px; overflow:hidden;}
+.article_content{ color:#5e6267;}
+
+.system_list{ display:block; border-bottom:1px solid #e4e0e0; margin-bottom:50px;}
+.system_list .list_title{ font-size:20px; font-family:'microsoft yahei'; font-weight:normal; color:#000; margin-bottom:25px;}
+.system_title .icon{ display:block; height:48px; width:48px; float:left; margin-right:10px; margin-top: 5px;}
+.icon_wechat{ background:url(../images/system/icon_wechat.jpg) no-repeat 0 0;}
+.icon_qq{ background:url(../images/system/icon_qq.jpg) no-repeat 0 0;}
+.icon_qzone{ background:url(../images/system/icon_qzone.jpg) no-repeat 0 0;}
+.icon_pay{ background:url(../images/system/icon_pay.jpg) no-repeat 0 0;}
+.icon_wechat_pay{ background:url(../images/system/icon_wechat_pay.jpg) no-repeat 0 0;}
+.icon_qq_pay{ background:url(../images/system/icon_qq_pay.jpg) no-repeat 0 0;}
+.icon_game{ background:url(../images/system/icon_game.jpg) no-repeat 0 0;}
+.icon_article{ background:url(../images/system/icon_article.jpg) no-repeat 0 0;}
+.icon_cartoon{ background:url(../images/system/icon_cartoon.jpg) no-repeat 0 0;}
+.icon_video{ background:url(../images/system/icon_video.jpg) no-repeat 0 0;}
+.icon_music{ background:url(../images/system/icon_music.jpg) no-repeat 0 0;}
+.icon_news{ background:url(../images/system/icon_news.jpg) no-repeat 0 0;}
+.icon_weibo{ background:url(../images/system/icon_weibo.jpg) no-repeat 0 0;}
+.icon_map{ background:url(../images/system/icon_map.jpg) no-repeat 0 0;}
+.icon_mail{ background:url(../images/system/icon_mail.jpg) no-repeat 0 0;}
+.icon_browser{ background:url(../images/system/icon_browser.jpg) no-repeat 0 0;}
+.icon_appstore{ background:url(../images/system/icon_appstore.jpg) no-repeat 0 0;}
+.icon_manager{ background:url(../images/system/icon_manager.jpg) no-repeat 0 0;}
+.icon_manager_2{ background:url(../images/system/icon_manager_2.jpg) no-repeat 0 0;}
+
+.system_title .title{ display:block; font-size:16px; font-weight:normal; font-family:'microsoft yahei'; color:#000; margin-bottom:3px;}
+.system_title .sub_title{ display:block; font-size:14px; font-weight:normal; font-family:'microsoft yahei'; color:#000;}
+
+.system_details{ margin:10px 0 30px;}
+.system_details p{ line-height:2;}
+
+.system_tools{ border-bottom:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

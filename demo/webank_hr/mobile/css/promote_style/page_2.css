@@ -539,12 +539,12 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 
 .con_wrap_7 .plane{ display:block; height:22px; width:31px; background:url(../../images/promote_images/page_2/page_7.png) no-repeat -202px -222px; background-size:437px 254px; position:absolute; left:-32px; top:140px;}
 
-.wrap_show .s_line{ -webkit-animation:a_page_1_con_txt 0.3s 0.8s linear both;}
+.wrap_show .s_line{ -webkit-animation:a_page_1_con_txt 0.6s 0.8s linear both;}
 
 .wrap_show .building_1{ -webkit-animation:a_page_7_building 0.3s 0.3s ease both; }
 .wrap_show .building_2{ -webkit-animation:a_page_7_building 0.3s 0.5s ease both; }
-.wrap_show.con_wrap_7 .con_tit{ -webkit-animation-delay:0.8s;}
-.wrap_show.con_wrap_7 .con_txt{  -webkit-animation:a_page_1_con_txt 0.3s 1.1s linear both;}
+.wrap_show.con_wrap_7 .con_tit{  -webkit-animation:a_page_1_con_txt 0.6s 0.8s linear both;}
+.wrap_show.con_wrap_7 .con_txt{  -webkit-animation:a_page_1_con_txt 0.6s 1.4s linear both;}
 
 .wrap_show .cloud_wrap .cloud_1{ -webkit-animation:a_page_7_cloud_1 45s 0.3s linear infinite; }
 .wrap_show .cloud_wrap .cloud_2{ -webkit-animation:a_page_7_cloud_2 25s 0.3s linear infinite; }
@@ -624,12 +624,6 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 	0%{ -webkit-transform: rotate(0deg);}
 	100%{ -webkit-transform: rotate(360deg);}
 }
-
-
-
-
-
-
 
 
 

@@ -1,0 +1,98 @@
+@charset 'utf-8';
+
+.main{ width:1200px; margin:45px auto 70px; overflow:hidden;}
+.article_content{color:#5e6267;}
+
+.info_item{margin-bottom: 40px; padding-bottom: 10px; border-bottom: 1px solid #e4e0e0;}
+.info_dynamic, .info_news, .info_perform, .info_investor{ border-bottom: none;}
+
+.info_title .title{ margin-bottom: 10px; color: #000; font-size: 20px; font-weight: normal;font-family: 'microsoft yahei';}
+.info_con:after, .info_con:before{ content: ''; display: table;}
+.info_con:after{ clear: both;}
+.info_con{ position: relative; *zoom: 1;}
+.info_con .time_selector{ position: absolute; top: -32px; right: 0; width: 66px; height: 22px; background: url(../images/company/bg_date_sel.png) no-repeat; cursor: pointer;}
+.time_selector span{ padding-left: 5px; line-height: 20px; color: #0084d4; font-size: 16px; font-family: 'microsoft yahei';}
+.info_con .tit{ color: #333; font-size: 16px; font-family: 'microsoft yahei'; font-weight: normal; padding: 14px 0;}
+.info_con .txt{ color: #5e6267; font-size: 12px; line-height: 30px;}
+
+.news_cont:after, .news_cont:before{ content: ''; display: table;}
+.news_cont:after{ clear: both;}
+.news_cont{ position: relative; *zoom: 1;}
+.news_cont .time_selector{ position: absolute; top: -32px; right: 0; width: 66px; height: 22px; background: url(../images/company/bg_date_sel.png) no-repeat; cursor: pointer;}
+.time_selector span{ padding-left: 5px; line-height: 20px; color: #0084d4; font-size: 16px; font-family: 'microsoft yahei';}
+.news_item{ display: none; width: 100%; padding-bottom: 10px;}
+.news_ol_list{border-bottom: 1px solid #e4e0e0;}
+.news_ol_list .current{ display: block;}
+.news_sub_list li:after, .news_sub_list li:before{content: ''; display: table;}
+.news_sub_list li:after{ clear: both;}
+.news_sub_list li{ *zoom: 1;}
+.news_sub_list a.txt{float: left; line-height: 30px; color: #5e6267; font-size: 14px;text-decoration: none;}
+.news_sub_list a.txt:hover{color: #0084d4;}
+.news_sub_list .time{ line-height: 30px; float: right; color: #999;}
+
+.tab_list{ position: absolute; right: 0; bottom: -30px;}
+.tab_list .tab_item{ display: inline-block; *display: inline; *zoom: 1; width: 8px; height: 8px; border-radius: 4px; background-color: #a6a6a6; -webkit-transition: width 0.15s linear, background-color 0.15s linear; -moz-transition: width 0.15s linear, background-color 0.15s linear;-ms-transition: width 0.15s linear, background-color 0.15s linear; -o-transition: width 0.15s linear, background-color 0.15s linear; transition: width 0.15s linear, background-color 0.15s linear;}
+.tab_list .tab_item i{font-size: 0; line-height: 0; color: rgba(0,0,0,0);}
+.tab_list .current{ width: 45px; background-color: #0084d4;}
+
+.info_item_list{ border-bottom: 1px solid #e4e0e0; padding-bottom: 10px;}
+.info_item_list li:before, .info_item_list li:after{content: ''; display: table;}
+.info_item_list li:after{clear: both;}
+.info_item_list li{*zoom: 1;}
+.info_item_list a{}
+.info_item_list a.txt{ line-height: 30px; color: #5e6267; font-size: 14px;text-decoration: none; float: left;}
+.info_item_list a.txt:hover{color: #0084d4;}
+.info_item_list .time{ line-height: 30px; float: right; color: #999;}
+.performance_list .report_img{float: left; width: 101px; height: 145px; margin: 20px 20px 0 0;}
+.company_detail{ margin-top: 35px;}
+.company_detail .txt{ font-size: 12px; color: #5e6267;}
+.company_detail .details_items{ padding-left: 12px; border-left: 5px solid #0075bc; line-height: 28px; background-color: #f2f8fc;}
+.details_items .txt{ color: #0075bc; font-size: 12px; padding-right: 48px; text-decoration: none;}
+
+.tab_list{ float: right; margin-top: 15px; clear: both;}
+.tab_list .tab_item{ display: inline-block; *display: inline; *zoom: 1; width: 8px; height: 8px; border-radius: 4px; background-color: #a6a6a6;}
+.tab_list .tab_item.current{ width: 45px; background-color: #0084d4;}
+
+.performance_list .per_item:before, .performance_list .per_item:after{content: ''; display: table;}
+.performance_list .per_item:after{clear: both;}
+.performance_list .per_item{ padding: 10px 0 20px 0; line-height: 30px; border-bottom: 1px solid #e4e0e0; *zoom: 1;}
+/*.per_item a{text-decoration: none;}*/
+.per_item{cursor: pointer;}
+.per_item .tit{ display: block; color: #333; font-size: 16px; text-decoration: none;}
+.per_item:hover .tit{color: #0075bc; font-size: 16px;}
+.per_item .txt{ color: #5e6267; font-size: 12px; margin-left: 120px;}
+.performance_list .list_end{ padding-bottom: 0; border-bottom: none;}
+.per_item .tit{ color: #000; font-size: 16px;}
+
+.document_list:before, .document_list:after{content: ""; display: table;}
+.document_list:after{clear: both;}
+.document_list{ text-align: center; margin-top: 20px; *zoom: 1;}
+.document_list li{float: left; position: relative; margin-right: 128px;}
+.document_list li.list_end{margin-right: 0;}
+.document_list .icon{ display:inline-block; *display: inline; *zoom: 1; width: 76px; height: 74px; background-repeat: no-repeat;}
+.document_list .icon_intro{ background-image: url(../images/investor/ico_doc_1.png);}
+.document_list .icon_show{ background-image: url(../images/investor/ico_doc_2.png);}
+.document_list .icon_data{ background-image: url(../images/investor/ico_doc_3.png);}
+.document_list .icon_product{ background-image: url(../images/investor/ico_doc_4.png);}
+.document_list li .link{ color: #0075bc; font-size: 16px; font-family: 'microsoft yahei'; text-decoration: none;}
+
+.info_holdings .stock_unit{ color: #666; font-size: 16px; font-family: 'microsoft yahei';}
+.holdings_charts .txt{ color: #999; font-size: 12px;}
+.holdings_table{ margin-top: 20px;}
+.holdings_table .stock_table, .holdings_table .stock_chart_table{ margin-bottom: 20px;}
+
+.info_analyst .analyst_table{width: 100%; table-layout: fixed; margin-bottom: 20px;}
+.info_analyst .analyst_table th{padding: 0 12px; text-align: left; line-height: 34px; font-size: 16px; font-family: 'microsoft yahei'; font-weight: bold;}
+.info_analyst .analyst_table td{ padding: 3px 12px; line-height: 28px; text-align: left; }
+.info_analyst .analyst_table .even{ background-color: #fff;}
+.info_analyst .analyst_table .odd{ background-color: #f2f8fc;}
+.info_analyst .analyst_table .col_1{ width: 50%;}
+.info_analyst .analyst_table .col_2{ width: 35%;}
+.info_analyst .analyst_table .col_3{ width: 15%;}
+
+.info_tel .tel_txt{ color: #5e6267; font-size: 14px; line-height: 30px;}
+.info_tel .tel_txt a{color: #0075bc;}
+
+.info_list .info_contact{ border-bottom: none; margin-bottom: 0;}
+.info_contact .sub_title{ padding: 12px 0; font-size: 16px; color: #333; font-family: 'microsoft yahei'; font-weight: normal;}
+.info_contact .txt{ color: #5e6267; font-size: 14px; line-height: 30px;}
