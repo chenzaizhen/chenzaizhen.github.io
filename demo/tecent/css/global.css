@@ -40,11 +40,11 @@ q:before, q:after { content: ''; }
 
 /*global*/
 
-html,body{ background:#fff; display:block; min-width:1200px;}
-.head_wrap{ background:#0075bc; height:84px; min-width:1200px;}
+html,body{ background:#fff; display:block; min-width:1200px; width:100%;}
+.head_wrap{ background:#0075bc; height:84px; width:100%;}
 .head_wrap_index{ height:625px; margin-bottom:60px;}
-.head{ border-bottom:1px solid rgba(255,255,255,0.3); height:83px; min-width:1200px;}
-.head_con{ width:1200px; margin:0px auto; position:relative;}
+.head{ border-bottom:1px solid rgba(255,255,255,0.3); height:83px; width:100%; min-width:1200px;}
+.head_con{ margin:0px auto; position:relative; width:100%; height:83px;}
 .head_con .logo{ display:block; height:26px; width:202px; background:url(../images/global/logo.png) no-repeat 0 0; _background:url(../images/global/logo_ie6.jpg) no-repeat 0 0; text-indent:-9999px; overflow:hidden; position:absolute; left:15px; top:28px;}
 .menu_list{ display:block; height:83px; width:660px; position:absolute; right:0px; top:0px;}
 .menu_list li{ float:left; width:132px; display:block;}
@@ -79,14 +79,12 @@ html,body{ background:#fff; display:block; min-width:1200px;}
 
 .footer{
 	width: 100%;
-    min-width: 1200px;
 	background: #ecf0f1;
 }
 .footer_con{
 	margin:0 auto;
-	width: 1200px;
+	width:100%;
 	min-height: 285px;
-    min-width: 1200px;
 	_height: 285px;
     background:url(../images/index/bg-footer8.png) no-repeat right 17px;
 }
@@ -99,7 +97,6 @@ html,body{ background:#fff; display:block; min-width:1200px;}
 	border-bottom:1px solid #fff;
 }
 .footer_path{
-	width:1185px;
 	margin:0px auto;
 	padding-left:15px;
 	display:block;
@@ -229,13 +226,13 @@ html,body{ background:#fff; display:block; min-width:1200px;}
 .banner_wrap .tab_list .tab_item{ background:rgba(255,255,255,0.3);}
 .banner_wrap .tab_list .current{ background:#fff;}
 .banner_area{ width:100%; padding-top:84px;}
-.banner{ width:1200px; margin:0px auto; position:relative; height:540px;}
+.banner{ width:100%; margin:0px auto; position:relative; height:540px;}
 
 .banner_txt{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; z-index:2; pointer-events:none;}
 .banner_txt .title{ display:block; height:57px; width:418px; background:url(../images/index/banner_txt.png) no-repeat 0 0;_background-image: none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/index/banner_txt.png'); position:absolute; left:50%; top:190px; margin-left:-209px; text-indent:-9999px; overflow:hidden;}
 .banner_txt .sub_title{ display:block; height:34px; width:638px; background:url(../images/index/banner_subtitle.png) no-repeat 0 0;_background-image: none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/index/banner_subtitle.png'); position:absolute; left:50%; top:278px; margin-left:-319px; text-indent:-9999px; overflow:hidden;}
 
-.icon_wrap{ display:block; width:1200px; margin:0px auto; position:relative; height:540px; z-index:1; overflow:hidden;}
+.icon_wrap{ display:block; width:100%; margin:0px auto; position:relative; height:540px; z-index:1; overflow:hidden;}
 /*.icon_area{ display:block; height:32px; width:32px;  position:absolute; left:146px; top:200px; -webkit-animation:a_icon_area_1 5s linear infinite;}
 .icon_area span.icon_1{ position:absolute; left:0; top:0px; display:block; height:32px; width:32px;}
 .icon_area span.icon_1 .txt{ color:#80add5; font-family:'microsoft yahei'; font-size:14px; position:absolute; width:50px;}
@@ -357,3 +354,10 @@ html,body{ background:#fff; display:block; min-width:1200px;}
 .back_to_top a:hover{opacity: 1;}
 * html,* html body{background-image:url(about:blank);background-attachment:fixed}  /*IE6下滚动不那么明显*/
 
+
+/*600<?<960*/
+
+@media all and (min-width:600px) and (max-height:961px){
+	html,body{ min-width:600px; width:100%;}
+	.head{ min-width:600px;}
+}
