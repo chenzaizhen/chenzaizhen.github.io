@@ -218,5 +218,20 @@
 <script language="javascript" type="text/javascript" src="../../js/wel_screen/jquery-1.9.0.min.js"></script>
 <script language="javascript" type="text/javascript" src="../../js/wel_screen/js.js"></script>
 
+<script language="javascript" type="text/javascript">
+
+	$(document).ready(function(e) {
+		var phone_h=736;
+		var phone_w=414;
+		var screen_w=document.body.clientWidth;
+		var screen_h=document.body.clientHeight;
+		//console.log(screen_w+" , "+screen_h);
+        $(".wrap").css({
+			"-webkit-transform":"scale("+Math.ceil(screen_w/phone_w*100)/100+","+Math.ceil(screen_h/phone_h*100)/100+")"
+		});
+    });
+
+</script>
+
 </body>
 </html>
