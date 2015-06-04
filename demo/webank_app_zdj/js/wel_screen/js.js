@@ -8,6 +8,16 @@ $(document).ready(function(){
 	var first_load=1;
 	var timer_time=1300;
 	
+	//屏幕缩放适配
+	var phone_h=736;
+	var phone_w=414;
+	var screen_w=document.body.clientWidth;
+	var screen_h=document.body.clientHeight;
+	//console.log(screen_w+" , "+screen_h);
+	$(".wrap").css({
+		"-webkit-transform":"scale("+Math.ceil(screen_w/phone_w*100)/100+","+Math.ceil(screen_h/phone_h*100)/100+")"
+	});
+	
 	
 	//触摸触发事件
 	$("body").touchwipe({
@@ -191,6 +201,34 @@ $(document).ready(function(){
 		}
     }
 	
+	//PC直接打开，就不缩放
+	var pc=true;
+	var ua = navigator.userAgent;
+	var istablet = /android/i.test(ua) && !/mobile/i.test(ua);
+	if (!istablet && /(android)|(iphone)|(ipod)/i.test(ua) && (!/mi pad/i.test(ua))) {
+		pc=false;
+	}
+	if(pc){
+		$(".wrap").css({
+			"-webkit-transform":"scale(1,1)",
+			"height":"100%",
+			"width":"100%"
+		});
+	}
+	
+	//iPad直接打开，就不缩放
+	var str=brower.versions();
+	if(str=='iPad'){
+		$(".wrap").css({
+			"-webkit-transform":"scale(1,1)",
+			"height":"100%",
+			"width":"100%"
+		});
+	}
+	
+	
+	
+	console.log(window.navigator.userAgent);
 	
 });
 
