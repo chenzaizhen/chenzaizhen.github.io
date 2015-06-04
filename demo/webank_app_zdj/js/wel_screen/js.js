@@ -79,12 +79,6 @@ $(document).ready(function(){
 					moving=0;
 				},300);*/
 				
-				if(page_index==5){
-					timer_time=600;
-				}else{
-					timer_time=1300;
-				}	
-				
 				var timer=setTimeout(function(){
 					
 					$(".con_wrap_"+(page_index+1)).addClass("wrap_prepare").removeClass("wrap_show").removeClass("wrap_hide");
