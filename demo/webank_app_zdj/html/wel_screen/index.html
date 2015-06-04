@@ -224,7 +224,7 @@
 
 <script language="javascript" type="text/javascript">
 
-	$(document).ready(function(e) {
+/*	$(document).ready(function(e) {
 		var phone_h=736;
 		var phone_w=414;
 		var screen_w=document.body.clientWidth;
@@ -233,7 +233,43 @@
         $(".wrap").css({
 			"-webkit-transform":"scale("+Math.ceil(screen_w/phone_w*100)/100+","+Math.ceil(screen_h/phone_h*100)/100+")"
 		});
-    });
+    });*/
+	
+	
+!function() {
+   var count = 0;
+   /*
+      # 按照宽高比例设定html字体
+      # 说明：
+         - baseWidth和baseHeiht是设计稿尺寸baseHeiht
+         - baseFontSize是720设计稿下body的fontsize
+         - 按照当前屏幕宽高比跟设计稿宽高比较小的值作为缩放比例
+   */
+   function setHtmlFontSize(callback) {
+      var baseWidth = 828, baseHeiht = 1472, baseFontSize = 24, newSize = 24,sacle = 1;
+
+       //如果此时屏幕宽度不准确，就尝试再次获取分辨率，只尝试10次，否则使用innerWidth计算
+      if(document.body.clientWidth !== window.innerWidth && count < 10) {
+         document.body.style.display = "none";
+         window.setTimeout(setHtmlFontSize, 0);
+         count++;
+      } 
+      else {
+          var sacle = Math.min(window.innerWidth / baseWidth, window.innerHeight / baseHeiht),
+          newSize = parseInt( sacle * 10000 * baseFontSize ) / 10000;
+          document.body.style.display = "none";
+          setTimeout(function() {
+            document.body.style.display = "";
+            if(callback) {
+              callback();
+            }
+            document.documentElement.style.fontSize = newSize + "px";
+         }, 0);
+      }
+   }
+   setHtmlFontSize();
+}();
+
 
 </script>
 
