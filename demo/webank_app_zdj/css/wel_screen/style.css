@@ -73,6 +73,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden; backgro
 .penguin_wrap .penguin_area{ display:block; height:175px; width:192px; position:absolute; left:50%; margin-left:-96px; bottom:-5px; }
 .penguin_wrap .penguin_area .penguin_body{ display:block; height:175px; width:192px; background:url(../../images/wel_screen/page_1_penguin_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
 .penguin_wrap .penguin_area .penguin_eye{ display:block; height:35px; width:35px; background:url(../../images/wel_screen/page_1_penguin_eye.png) no-repeat 0 0; background-size:contain; position:absolute; left:62px; top:42px; opacity:0;}
+.penguin_wrap .penguin_area_cover{ display:block; height:292px; width:277px; background:url(../../images/wel_screen/page_1_penguin_body_cover.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
 
 
 /*3*/
