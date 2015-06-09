@@ -598,6 +598,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden; backgro
 .scan_area .scan_line{ display:block; height:3px; width:180px; background:rgba(255,255,255,0.6); position:absolute; left:0px; top:0px; border-radius:180px/3px; box-shadow:0px 0px 3px rgba(255,255,255,0.2),0px 0px 7px rgba(255,255,255,0.5); opacity:0;}
 
 .btn_wrap .btn_enter{ display:block; height:42px; width:186px; line-height:42px; position:absolute; left:50%; margin-left:-93px; bottom:40px; text-align:center; border-radius:5px; background:#305795; color:#fff; font-size:20px; font-weight:normal; font-family:'microsoft yahei'; opacity:0;}
+.btn_wrap .btn_enter:hover{ text-decoration:none;}
 
 
 .wrap_show .penguin_wrap .penguin_area .penguin_hand .hand{ -webkit-animation:a_penguin_hand 0.4s 0.3s linear both;}
