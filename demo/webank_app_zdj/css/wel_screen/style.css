@@ -70,7 +70,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden; backgro
 
 .con_area{ display:block; height:277px; width:277px; position:absolute; left:50%; top:50%; margin-left:-139px; margin-top:-194px;}
 .penguin_wrap{ display:block; height:277px; width:277px; background:#dddbd3; position:absolute; left:0; top:0; border-radius:277px; overflow:hidden; -webkit-transform-origin:50% 100%;}
-.penguin_wrap .penguin_area{ display:block; height:175px; width:192px; position:absolute; left:50%; margin-left:-96px; bottom:-5px; }
+.penguin_wrap .penguin_area{ display:block; height:175px; width:192px; position:absolute; left:50%; margin-left:-96px; bottom:-15px; }
 .penguin_wrap .penguin_area .penguin_body{ display:block; height:175px; width:192px; background:url(../../images/wel_screen/page_1_penguin_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
 .penguin_wrap .penguin_area .penguin_eye{ display:block; height:35px; width:35px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -107px -28px; background-size:371px 183px; position:absolute; left:62px; top:42px; opacity:0;}
 .penguin_wrap .penguin_area .penguin_hand{ display:block; height:48px; width:72px; position:absolute; left:40px; top:127px;}
