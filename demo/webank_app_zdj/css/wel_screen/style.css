@@ -21,12 +21,12 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden; backgro
 /*1*/
 .con_wrap{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; z-index:1; background:#f2f1ed;}
 .con_wrap_1 .logo_img .logo{ display:none;}
-.con_wrap_1 .logo_img{ display:block; height:105px; width:105px; background:url(../../images/wel_screen/logo_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; top:50%; margin-left:-52px; margin-top:-180px; box-shadow:1px 1px 2px rgba(150,174,174,0.1); border-radius:28px;}
-.con_wrap_1 .logo_title{ display:block; height:36px; width:118px; background:url(../../images/wel_screen/logo_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; top:50%; margin-left:-59px; margin-top:-55px; text-indent:-9999px; overflow:hidden;}
+.con_wrap_1 .logo_img{ display:block; height:105px; width:105px; background:url(../../images/wel_screen/page_sprite.png) no-repeat 0 -28px; background-size:371px 183px; position:absolute; left:50%; top:50%; margin-left:-52px; margin-top:-180px; box-shadow:1px 1px 2px rgba(150,174,174,0.1); border-radius:28px;}
+.con_wrap_1 .logo_title{ display:block; height:36px; width:118px; background:url(../../images/wel_screen/page_sprite.png) no-repeat 0 -135px; background-size:371px 183px; position:absolute; left:50%; top:50%; margin-left:-59px; margin-top:-55px; text-indent:-9999px; overflow:hidden;}
 
 .con_wrap_1 .webank_logo_wrap{ display:block; height:94px; width:100%; position:absolute; left:0px; bottom:0px; background:#fff;}
 .con_wrap_1 .webank_logo_wrap .logo_txt{ display:none;}
-.con_wrap_1 .webank_logo_wrap .logo{ display:block; height:26px; width:205px; background:url(../../images/wel_screen/logo_webank.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; top:50%; margin-left:-102px; margin-top:-13px;}
+.con_wrap_1 .webank_logo_wrap .logo{ display:block; height:26px; width:205px; background:url(../../images/wel_screen/page_sprite.png) no-repeat 0 0; background-size:371px 183px; position:absolute; left:50%; top:50%; margin-left:-102px; margin-top:-13px;}
 
 .wrap_show .logo_img{ -webkit-animation:a_logo_img 1s 0.3s linear both;}
 .wrap_show .logo_title{ -webkit-animation:a_logo_title 0.8s 1.1s linear both;}
@@ -50,17 +50,17 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden; backgro
 }
 
 .title_wrap{ display:block; height:130px; width:275px; position:absolute; left:50%; top:50%; margin-left:-137px; margin-top:130px; z-index:1;}
-.title_wrap .we{ display:block; height:57px; width:113px; background:url(../../images/wel_screen/title_we.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-56px; top:0px; text-indent:-9999px; overflow:hidden;}
-.title_wrap .tit{ display:block; height:28px; width:245px; background:url(../../images/wel_screen/page_1_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-122px; top:70px; text-indent:-9999px; overflow:hidden;}
-.title_wrap .txt{ display:block; height:17px; width:161px; background:url(../../images/wel_screen/page_1_txt.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-80px; top:111px; text-indent:-9999px; overflow:hidden;}
+.title_wrap .we{ display:block; height:57px; width:113px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -207px -126px; background-size:371px 183px; position:absolute; left:50%; margin-left:-56px; top:0px; text-indent:-9999px; overflow:hidden;}
+.title_wrap .tit{ display:block; height:28px; width:245px; background:url(../../images/wel_screen/page_title.png) no-repeat 0 0; background-size:245px 194px; position:absolute; left:50%; margin-left:-122px; top:70px; text-indent:-9999px; overflow:hidden;}
+.title_wrap .txt{ display:block; height:17px; width:161px; background:url(../../images/wel_screen/page_title.png) no-repeat 0 -120px; background-size:245px 194px; position:absolute; left:50%; margin-left:-80px; top:111px; text-indent:-9999px; overflow:hidden;}
 
-.title_wrap .tit_2{ background-image:url(../../images/wel_screen/page_2_title.png);}
-.title_wrap .tit_3{ background-image:url(../../images/wel_screen/page_3_title.png);}
-.title_wrap .tit_4{ background-image:url(../../images/wel_screen/page_4_title.png);}
+.title_wrap .tit_2{ background-position:0 -30px;}
+.title_wrap .tit_3{ background-position:0 -60px;}
+.title_wrap .tit_4{ background-position:0 -90px;}
 
-.title_wrap .txt_2{ background-image:url(../../images/wel_screen/page_2_txt.png);}
-.title_wrap .txt_3{ background-image:url(../../images/wel_screen/page_3_txt.png);}
-.title_wrap .txt_4{ background-image:url(../../images/wel_screen/page_4_txt.png);}
+.title_wrap .txt_2{ background-position:0 -139px;}
+.title_wrap .txt_3{ background-position:0 -158px;}
+.title_wrap .txt_4{ background-position:0 -177px;}
 
 
 .pager_wrap{ display:block; height:10px; width:100%; position:absolute; left:0px; bottom:40px; text-align:center; z-index:10; display:none;}
@@ -72,10 +72,10 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden; backgro
 .penguin_wrap{ display:block; height:277px; width:277px; background:#dddbd3; position:absolute; left:0; top:0; border-radius:277px; overflow:hidden; -webkit-transform-origin:50% 100%;}
 .penguin_wrap .penguin_area{ display:block; height:175px; width:192px; position:absolute; left:50%; margin-left:-96px; bottom:-5px; }
 .penguin_wrap .penguin_area .penguin_body{ display:block; height:175px; width:192px; background:url(../../images/wel_screen/page_1_penguin_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
-.penguin_wrap .penguin_area .penguin_eye{ display:block; height:35px; width:35px; background:url(../../images/wel_screen/page_1_penguin_eye.png) no-repeat 0 0; background-size:contain; position:absolute; left:62px; top:42px; opacity:0;}
+.penguin_wrap .penguin_area .penguin_eye{ display:block; height:35px; width:35px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -107px -28px; background-size:371px 183px; position:absolute; left:62px; top:42px; opacity:0;}
 .penguin_wrap .penguin_area .penguin_hand{ display:block; height:48px; width:72px; position:absolute; left:40px; top:127px;}
-.penguin_wrap .penguin_area .penguin_hand .hand{ display:block; height:48px; width:72px; background:url(../../images/wel_screen/page_1_penguin_hand.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; opacity:1; z-index:3; -webkit-transform-origin: 70% 20%;}
-.penguin_wrap .penguin_area .penguin_hand .coin{ display:block; height:65px; width:65px; background:url(../../images/wel_screen/page_4_coin.png) no-repeat 0 0; background-size:contain; position:absolute; left:-25px; top:-36px; opacity:1; z-index:2; -webkit-transform-origin: 200% 0%;}
+.penguin_wrap .penguin_area .penguin_hand .hand{ display:block; height:48px; width:72px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -120px -109px; background-size:371px 183px; position:absolute; left:0; top:0; opacity:1; z-index:3; -webkit-transform-origin: 70% 20%;}
+.penguin_wrap .penguin_area .penguin_hand .coin{ display:block; height:65px; width:65px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -306px 0; background-size: 371px 183px; position:absolute; left:-25px; top:-36px; opacity:1; z-index:2; -webkit-transform-origin: 200% 0%;}
 
 .penguin_wrap .penguin_area_cover{ display:block; height:292px; width:277px; background:url(../../images/wel_screen/page_1_penguin_body_cover.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:5;}
 
@@ -105,15 +105,15 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden; backgro
 .coin_wrap{ display:block; height:223px; width:302px; position:absolute; left:0px; top:0px;}
 .coin_wrap .coin_1{ display:block; height:37px; width:37px; position:absolute; left:234px; bottom:33px;}
 .coin_wrap .coin_1 .coin_hook{ display:block; height:37px; width:37px; position:absolute; left:0; top:0;}
-.coin_wrap .coin_1 i{ display:block; height:37px; width:37px; background:url(../../images/wel_screen/page_1_coin_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
+.coin_wrap .coin_1 i{ display:block; height:37px; width:37px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -154px -65px; background-size:371px 183px; position:absolute; left:0; top:0;}
 .coin_wrap .coin_2{ display:block; height:25px; width:25px; position:absolute; left:107px; bottom:145px;}
 .coin_wrap .coin_2 .coin_hook{ display:block; height:25px; width:25px; position:absolute; left:0; top:0;}
-.coin_wrap .coin_2 i{ display:block; height:25px; width:25px; background:url(../../images/wel_screen/page_1_coin_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
+.coin_wrap .coin_2 i{ display:block; height:25px; width:25px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -144px -28px; background-size:371px 183px; position:absolute; left:0; top:0;}
 
 .coin_wrap .coin_3{ display:block; height:37px; width:37px; position:absolute; left:123px; bottom:150px;}
-.coin_wrap .coin_3 i{ display:block; height:37px; width:37px; background:url(../../images/wel_screen/page_1_coin_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; -webkit-transform:scale(0.9);}
+.coin_wrap .coin_3 i{ display:block; height:37px; width:37px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -154px -65px; background-size:371px 183px; position:absolute; left:0; top:0; -webkit-transform:scale(0.9);}
 .coin_wrap .coin_4{ display:block; height:25px; width:25px; position:absolute; left:-4px; bottom:78px;}
-.coin_wrap .coin_4 i{ display:block; height:25px; width:25px; background:url(../../images/wel_screen/page_1_coin_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; -webkit-transform:scale(0.8);}
+.coin_wrap .coin_4 i{ display:block; height:25px; width:25px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -144px -28px; background-size:371px 183px; position:absolute; left:0; top:0; -webkit-transform:scale(0.8);}
 
 
 .first_load.con_wrap_2 .penguin_wrap{ -webkit-animation:a_penguin_wrap 0.5s 0.3s linear both;}
@@ -315,7 +315,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden; backgro
 
 /*3*/
 .shield_wrap{ display:block; height:190px; width:190px; position:absolute; left:50%; top:50%; margin-left:-85px; margin-top:-250px; z-index:5;}
-.shield_wrap .shield{ display:block; height:136px; width:120px; background:url(../../images/wel_screen/page_2_shield.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; top:50%; margin-left:-60px; margin-top:-62px; z-index:3;}
+.shield_wrap .shield{ display:block; height:136px; width:120px; background:url(../../images/wel_screen/page_2_sprite.png) no-repeat 0 0; background-size:120px 264px; position:absolute; left:50%; top:50%; margin-left:-60px; margin-top:-62px; z-index:3;}
 .shield_wrap .icon_wrap{ display:block; height:190px; width:190px; position:absolute; left:0px; top:0px; z-index:1;}
 .shield_wrap .icon_wrap .bg_circle{ display:block; height:190px; width:190px; border:2px solid #5897c4; border-radius:170px; position:absolute; left:-2px; top:-2px; z-index:1;}
 .shield_wrap .icon_wrap .icon_1{ display:block; height:24px; width:24px; position:absolute; left:21px; top:9px; z-index:2;}
@@ -329,16 +329,16 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden; backgro
 .shield_wrap .icon_wrap .icon_9{ display:block; height:43px; width:43px; position:absolute; left:119px; top:-10px; z-index:2;}
 .shield_wrap .icon_wrap .icon_10{ display:block; height:29px; width:29px; position:absolute; left:67px; top:-14px; z-index:2;}
 
-.shield_wrap .icon_wrap .icon_1 i{ display:block; height:24px; width:24px; background:url(../../images/wel_screen/page_2_icon_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
-.shield_wrap .icon_wrap .icon_2 i{ display:block; height:37px; width:37px; background:url(../../images/wel_screen/page_2_icon_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
-.shield_wrap .icon_wrap .icon_3 i{ display:block; height:18px; width:18px; background:url(../../images/wel_screen/page_2_icon_3.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
-.shield_wrap .icon_wrap .icon_4 i{ display:block; height:35px; width:35px; background:url(../../images/wel_screen/page_2_icon_4.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
-.shield_wrap .icon_wrap .icon_5 i{ display:block; height:30px; width:30px; background:url(../../images/wel_screen/page_2_icon_5.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
-.shield_wrap .icon_wrap .icon_6 i{ display:block; height:42px; width:42px; background:url(../../images/wel_screen/page_2_icon_6.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
-.shield_wrap .icon_wrap .icon_7 i{ display:block; height:29px; width:29px; background:url(../../images/wel_screen/page_2_icon_7.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
-.shield_wrap .icon_wrap .icon_8 i{ display:block; height:29px; width:29px; background:url(../../images/wel_screen/page_2_icon_8.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
-.shield_wrap .icon_wrap .icon_9 i{ display:block; height:43px; width:43px; background:url(../../images/wel_screen/page_2_icon_9.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
-.shield_wrap .icon_wrap .icon_10 i{ display:block; height:29px; width:29px; background:url(../../images/wel_screen/page_2_icon_10.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
+.shield_wrap .icon_wrap .icon_1 i{ display:block; height:24px; width:24px; background:url(../../images/wel_screen/page_2_sprite.png) no-repeat 0 -138px; background-size:120px 264px; position:absolute; left:0; top:0;}
+.shield_wrap .icon_wrap .icon_2 i{ display:block; height:37px; width:37px; background:url(../../images/wel_screen/page_2_sprite.png) no-repeat -26px -138px; background-size:120px 264px; position:absolute; left:0; top:0;}
+.shield_wrap .icon_wrap .icon_3 i{ display:block; height:18px; width:18px; background:url(../../images/wel_screen/page_2_sprite.png) no-repeat -65px -138px; background-size:120px 264px; position:absolute; left:0; top:0;}
+.shield_wrap .icon_wrap .icon_4 i{ display:block; height:35px; width:35px; background:url(../../images/wel_screen/page_2_sprite.png) no-repeat -85px -138px; background-size:120px 264px; position:absolute; left:0; top:0;}
+.shield_wrap .icon_wrap .icon_5 i{ display:block; height:30px; width:30px; background:url(../../images/wel_screen/page_2_sprite.png) no-repeat 0 -177px; background-size:120px 264px; position:absolute; left:0; top:0;}
+.shield_wrap .icon_wrap .icon_6 i{ display:block; height:42px; width:42px; background:url(../../images/wel_screen/page_2_sprite.png) no-repeat -32px -177px; background-size:120px 264px; position:absolute; left:0; top:0;}
+.shield_wrap .icon_wrap .icon_7 i{ display:block; height:29px; width:29px; background:url(../../images/wel_screen/page_2_sprite.png) no-repeat -76px -177px; background-size:120px 264px; position:absolute; left:0; top:0;}
+.shield_wrap .icon_wrap .icon_8 i{ display:block; height:29px; width:29px; background:url(../../images/wel_screen/page_2_sprite.png) no-repeat 0 -221px; background-size:120px 264px; position:absolute; left:0; top:0;}
+.shield_wrap .icon_wrap .icon_9 i{ display:block; height:43px; width:43px; background:url(../../images/wel_screen/page_2_sprite.png) no-repeat -32px -221px; background-size:120px 264px; position:absolute; left:0; top:0;}
+.shield_wrap .icon_wrap .icon_10 i{ display:block; height:29px; width:29px; background:url(../../images/wel_screen/page_2_sprite.png) no-repeat -76px -221px; background-size:120px 264px; position:absolute; left:0; top:0;}
 
 .wrap_show .shield_wrap .shield{ -webkit-animation:a_shield 0.4s 0.3s linear both;}
 .wrap_show .shield_wrap .icon_wrap .bg_circle{ -webkit-animation:a_bg_circle 0.3s 0.7s linear both;}
@@ -460,20 +460,20 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden; backgro
 
 /*4*/
 .dialog_wrap{ display:block; height:189px; width:262px; position:absolute; left:50%; margin-left:-131px; bottom:186px; z-index:5;}
-.dialog_wrap .dialog_1{ display:block; height:92px; width:112px; background:url(../../images/wel_screen/page_3_dialog_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:75px; top:57px; -webkit-transform-origin:80% 100%;}
-.dialog_wrap .dialog_2{ display:block; height:56px; width:53px; background:url(../../images/wel_screen/page_3_dialog_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:54px; top:17px; -webkit-transform-origin:30% 100%;}
-.dialog_wrap .dialog_3{ display:block; height:47px; width:49px; background:url(../../images/wel_screen/page_3_dialog_3.png) no-repeat 0 0; background-size:contain; position:absolute; left:197px; top:36px; -webkit-transform-origin:10% 100%;}
-.dialog_wrap .dialog_4{ display:block; height:64px; width:78px; background:url(../../images/wel_screen/page_3_dialog_4.png) no-repeat 0 0; background-size:contain; position:absolute; left:117px; top:0px; -webkit-transform-origin:100% 100%;}
-.dialog_wrap .dialog_5{ display:block; height:45px; width:56px; background:url(../../images/wel_screen/page_3_dialog_5.png) no-repeat 0 0; background-size:contain; position:absolute; left:46px; top:136px; -webkit-transform-origin:90% 100%;}
-.dialog_wrap .dialog_6{ display:block; height:78px; width:70px; background:url(../../images/wel_screen/page_3_dialog_6.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:60px; -webkit-transform-origin:30% 100%;}
-.dialog_wrap .dialog_7{ display:block; height:71px; width:72px; background:url(../../images/wel_screen/page_3_dialog_7.png) no-repeat 0 0; background-size:contain; position:absolute; left:189px; top:87px; -webkit-transform-origin:10% 100%;}
-.dialog_wrap .dialog_8{ display:block; height:46px; width:63px; background:url(../../images/wel_screen/page_3_dialog_8.png) no-repeat 0 0; background-size:contain; position:absolute; left:110px; top:145px; -webkit-transform-origin:5% 100%;}
+.dialog_wrap .dialog_1{ display:block; height:92px; width:112px; background:url(../../images/wel_screen/page_3_dialog.png) no-repeat 0 0; background-size:282px 172px; position:absolute; left:75px; top:57px; -webkit-transform-origin:80% 100%;}
+.dialog_wrap .dialog_2{ display:block; height:56px; width:53px; background:url(../../images/wel_screen/page_3_dialog.png) no-repeat -114px 0; background-size:282px 172px; position:absolute; left:54px; top:17px; -webkit-transform-origin:30% 100%;}
+.dialog_wrap .dialog_3{ display:block; height:47px; width:49px; background:url(../../images/wel_screen/page_3_dialog.png) no-repeat -169px 0; background-size:282px 172px; position:absolute; left:197px; top:36px; -webkit-transform-origin:10% 100%;}
+.dialog_wrap .dialog_4{ display:block; height:64px; width:78px; background:url(../../images/wel_screen/page_3_dialog.png) no-repeat 0 -94px; background-size:282px 172px; position:absolute; left:117px; top:0px; -webkit-transform-origin:100% 100%;}
+.dialog_wrap .dialog_5{ display:block; height:45px; width:56px; background:url(../../images/wel_screen/page_3_dialog.png) no-repeat -80px -94px; background-size:282px 172px; position:absolute; left:46px; top:136px; -webkit-transform-origin:90% 100%;}
+.dialog_wrap .dialog_6{ display:block; height:78px; width:70px; background:url(../../images/wel_screen/page_3_dialog.png) no-repeat -138px -94px; background-size:282px 172px; position:absolute; left:0px; top:60px; -webkit-transform-origin:30% 100%;}
+.dialog_wrap .dialog_7{ display:block; height:71px; width:72px; background:url(../../images/wel_screen/page_3_dialog.png) no-repeat -210px -94px; background-size:282px 172px; position:absolute; left:189px; top:87px; -webkit-transform-origin:10% 100%;}
+.dialog_wrap .dialog_8{ display:block; height:46px; width:63px; background:url(../../images/wel_screen/page_3_dialog.png) no-repeat -219px -46px; background-size:282px 172px; position:absolute; left:110px; top:145px; -webkit-transform-origin:5% 100%;}
 
-.dialog_wrap .dialog_1 .bulb{ display:block; height:38px; width:23px; background:url(../../images/wel_screen/page_3_bulb.png) no-repeat 0 0; background-size:contain; position:absolute; left:43px; top:30px;}
-.dialog_wrap .dialog_1 .light{ display:block; height:26px; width:48px; background:url(../../images/wel_screen/page_3_light.png) no-repeat 0 0; background-size:contain; position:absolute; left:30px; top:18px;}
+.dialog_wrap .dialog_1 .bulb{ display:block; height:38px; width:23px; background:url(../../images/wel_screen/page_3_dialog.png) no-repeat -169px -49px; background-size:282px 172px; position:absolute; left:43px; top:30px;}
+.dialog_wrap .dialog_1 .light{ display:block; height:26px; width:48px; background:url(../../images/wel_screen/page_3_dialog.png) no-repeat -220px 0; background-size:282px 172px; position:absolute; left:30px; top:18px;}
 
 .dialog_wrap .dialog_7 .heart{ display:block; height:19px; width:21px; position:absolute; left:26px; top:28px; opacity:0;}
-.dialog_wrap .dialog_7 .heart i{ display:block; height:19px; width:21px; background:url(../../images/wel_screen/page_3_heart.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
+.dialog_wrap .dialog_7 .heart i{ display:block; height:19px; width:21px; background:url(../../images/wel_screen/page_3_dialog.png) no-repeat -114px -58px; background-size:282px 172px; position:absolute; left:0; top:0;}
 
 .dot_area{ display:block; height:5px; width:30px; position:absolute; left:13px; top:19px;}
 .dot_area .dot_1{ display:block; height:5px; width:5px; border-radius:5px; background:#f8cc25; position:absolute; left:0px; top:0px;}
@@ -590,12 +590,12 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden; backgro
 
 .scan_area .scan_border_wrap .border_rb{ display:block; height:24px; width:4px; background:#5f9bc6; position:absolute; right:-2px; bottom:-2px;}
 .scan_area .scan_border_wrap .border_rb i{ display:block; height:4px; width:24px; background:#5f9bc6; position:absolute; right:0px; bottom:0px;}
-.scan_area .user{ display:block; height:113px; width:97px; background: url(../../images/wel_screen/page_4_user.png) no-repeat 0 0; background-size:contain; position:absolute; left:41px; top:10px; opacity:0;}
-.scan_area .crown{ display:block; height:42px; width:45px; background: url(../../images/wel_screen/page_4_crown.png) no-repeat 0 0; background-size:contain; position:absolute; left:35px; top:-20px; opacity:0;}
+.scan_area .user{ display:block; height:113px; width:97px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -207px 0; background-size:371px 183px; position:absolute; left:41px; top:10px; opacity:0;}
+.scan_area .crown{ display:block; height:42px; width:45px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -107px -65px; background-size:371px 183px; position:absolute; left:35px; top:-20px; opacity:0;}
 
 .scan_area .user_info{ display:block; height:15px; width:119px; background:#5897c4; text-align:center; position:absolute; left:50%; margin-left:-60px; top:133px; opacity:0;}
-.scan_area .user_info .name{ display:block; height:9px; width:87px; background:url(../../images/wel_screen/page_4_info.png) repeat-x 0 0; background-size: contain; position:absolute; left:50%; margin-left:-43px; top:3px;}
-.scan_area .scan_line{ display:block; height:2px; width:180px; background:rgba(255,255,255,0.6); position:absolute; left:0px; top:0px; border-radius:180px/2px; box-shadow:0px 0px 3px rgba(255,255,255,0.2),0px 0px 7px rgba(255,255,255,0.5); opacity:0;}
+.scan_area .user_info .name{ display:block; height:9px; width:87px; background:url(../../images/wel_screen/page_sprite.png) no-repeat -207px -115px; background-size:371px 183px; position:absolute; left:50%; margin-left:-43px; top:3px;}
+.scan_area .scan_line{ display:block; height:3px; width:180px; background:rgba(255,255,255,0.6); position:absolute; left:0px; top:0px; border-radius:180px/3px; box-shadow:0px 0px 3px rgba(255,255,255,0.2),0px 0px 7px rgba(255,255,255,0.5); opacity:0;}
 
 .btn_wrap .btn_enter{ display:block; height:42px; width:186px; line-height:42px; position:absolute; left:50%; margin-left:-93px; bottom:40px; text-align:center; border-radius:5px; background:#305795; color:#fff; font-size:20px; font-weight:normal; font-family:'microsoft yahei'; opacity:0;}
 
