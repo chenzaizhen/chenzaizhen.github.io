@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/* 浏览器样式清除 reset */
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body, button, input, select, textarea{ font:12px/1.5 Tahoma,Arial,'宋体'; }
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:focus,input,button,select,textarea{outline:none; font-size:100%;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-variant: normal;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+button {cursor:pointer;}
+
+html,body{ height:100%; width:100%; position: relative;}
+
+.notice_wrap{ padding-top:25px;}
+.notice_wrap .notice_title{ font-size:20px; font-family:'microsoft yahei'; text-align:center; margin-bottom:15px;}
+.notice_wrap .notice_txt{ margin-bottom:50px;}
+.notice_wrap .notice_txt .txt{ font-size:14px; font-family:'microsoft yahei'; margin-bottom:10px; padding:0px 15px; text-indent:2em;}
+
+.signature_area{ text-align:right; font-size:14px; font-family:'microsoft yahei'; padding-bottom:100px;}
+.signature_area .signature{ padding-right:15px;}
+.signature_area .date{ padding-right:15px;}
+
+.download_wrap{ display:block; position:fixed; left:0px; bottom:0px; background:#f3f3f3; border-top:1px solid #e9e9e9; height:54px; width:100%; text-align:center;}
+.download_wrap .link_download{ display:inline-block; height:40px; line-height:40px; margin-top:5px;}
+.download_wrap .icon_pdf{ display:inline-block; height:18px; width:16px; background:url(../images/notice/icon_pdf.png) no-repeat 0 0; background-size:contain; margin-right:5px; vertical-align:middle;}
+.download_wrap .txt{ display:inline-block; vertical-align:middle; font-size:14px; font-family:'microsoft yahei'; color:#22539f;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
