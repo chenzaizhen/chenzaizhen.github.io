@@ -141,6 +141,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 .con_wrap_3 .timeline_wrap .bg_line{ display:block; height:240px; width:4px; background:#fff; position:absolute; left:0; top:0;}
 .con_wrap_3 .timeline_wrap .timeline_list{}
 .con_wrap_3 .timeline_wrap .timeline_list li{ width:140px; position:absolute; font-size:14px; color:#fff; font-family:"microsoft yahei";}
+.con_wrap_3 .timeline_wrap .timeline_list li .time{ font-family:'Arial';}
 .con_wrap_3 .timeline_wrap .timeline_list li .txt{ display:block;}
 .con_wrap_3 .timeline_wrap .timeline_list .li_1{ top:-5px; left:-6px; padding-left:25px;}
 .con_wrap_3 .timeline_wrap .timeline_list .li_2{ top:41px; left:-156px; padding-right:25px; text-align:right;}
@@ -209,7 +210,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 /*5*/
 .con_wrap_5{ background:#3fc1b9;}
 .con_wrap_5 .page_5_main_pic{ display:block; height:220px; width:199px; background:url(../images/page_5_main_pic.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; top:50%; margin-top:-244px; margin-left:-92px; z-index:2;}
-.con_wrap_5 .way_wrap{ display:block; position:absolute; left:50%; top:50%; margin-left:-148px; margin-top:45px; width:300px;}
+.con_wrap_5 .way_wrap{ display:block; position:absolute; left:50%; top:50%; margin-left:-148px; margin-top:20px; width:300px;}
 .con_wrap_5 .way_wrap .tit{ font-size:18px; font-weight:bold; font-family:"microsoft yahei"; color:#ffe92b; margin-bottom:5px;}
 .con_wrap_5 .way_wrap .intro{ font-size:16px; font-family:"microsoft yahei"; color:#fff;}
 .con_wrap_5 .way_wrap .tips{ font-size:14px; font-family:"microsoft yahei"; color:#27938c; margin-bottom:25px;}
