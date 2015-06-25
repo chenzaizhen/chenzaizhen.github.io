@@ -17,7 +17,7 @@ textarea{resize:none;}
 button {cursor:pointer;}
 
 html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
-/*.wrap{ height:603px; width:375px; position: relative; overflow:hidden; -webkit-transform-origin:0% 0%;}*/
+.wrap{ height:504px; width:320px; position: relative; overflow:hidden; -webkit-transform-origin:0% 0%;}
 
 .con_wrap{ display: block; height:100%; width:100%; position:absolute; left:0px; top:0px; z-index:1; display:none; background:#d5c9a1;}
 .page_arrow{ display:block; height:10px; width:16px; background:url(../images/arrow.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-8px; bottom:15px; text-indent:-9999px; overflow:hidden; z-index:10; opacity:0.5;}

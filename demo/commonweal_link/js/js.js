@@ -5,16 +5,16 @@ $(document).ready(function(){
 	/*翻页标识*/
 	var page_index=1;//当前在哪个页面
 	var moving=0;
-/*	
+	
 	//屏幕缩放适配
-	var phone_h=603;
-	var phone_w=375;
+	var phone_h=504;
+	var phone_w=320;
 	var screen_w=document.body.clientWidth;
 	var screen_h=document.body.clientHeight;
 	//console.log(screen_w+" , "+screen_h);
 	$(".wrap").css({
 		"-webkit-transform":"scale("+Math.ceil(screen_w/phone_w*100)/100+","+Math.ceil(screen_h/phone_h*100)/100+")"
-	});*/
+	});
 	
 	//触摸触发事件
 	$("body").touchwipe({
