@@ -28,27 +28,27 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 .con_wrap_1 .detail_wrap{ display:block; height:73px; width:104px; background:url(../images/page_1.png) no-repeat 0 -51px; background-size:166px 139px; position:absolute; right:27px; bottom:32px; z-index:2;}
 .con_wrap_1 .detail_wrap p{ display:none;}
 
-.wrap_show.con_wrap_1 .bg_1{ -webkit-animation:a_bg_1 1s 0.3s ease both; -webkit-transform-origin:30% 48.9%; }
-.wrap_show.con_wrap_1 .bg_2{ -webkit-animation:a_bg_2 1s 0.8s ease both;}
-.wrap_show.con_wrap_1 .bg_3{ -webkit-animation:a_bg_3 0.5s 1.3s ease both; -webkit-transform-origin:87.1% 2.35%;}
+.wrap_show.con_wrap_1 .bg_1{ -webkit-animation:a_bg_1 1.3s 0.3s linear both; -webkit-transform-origin:30% 48.9%; }
+.wrap_show.con_wrap_1 .bg_2{ -webkit-animation:a_bg_2 1.3s 0.8s linear both;}
+.wrap_show.con_wrap_1 .bg_3{ -webkit-animation:a_bg_3 0.5s 1.6s linear both; -webkit-transform-origin:87.1% 2.35%;}
 
-.wrap_show.con_wrap_1 .main_title{ -webkit-animation:a_page_1_main_title 0.3s 1.8s linear both;}
-.wrap_show.con_wrap_1 .detail_wrap{ -webkit-animation:a_page_1_main_title 0.3s 2.1s linear both;}
-.wrap_show.con_wrap_1 .logo_tencent{ -webkit-animation:a_page_1_logo_tencent 0.2s 2.4s linear both;}
+.wrap_show.con_wrap_1 .main_title{ -webkit-animation:a_page_1_main_title 0.3s 2.1s linear both;}
+.wrap_show.con_wrap_1 .detail_wrap{ -webkit-animation:a_page_1_main_title 0.3s 2.4s linear both;}
+.wrap_show.con_wrap_1 .logo_tencent{ -webkit-animation:a_page_1_logo_tencent 0.2s 2.7s linear both;}
 
-.wrap_show.con_wrap_1 .arrow_hook{ -webkit-animation:a_opacity 0.3s 2.6s linear both;}
+.wrap_show.con_wrap_1 .arrow_hook{ -webkit-animation:a_opacity 0.3s 2.9s linear both;}
 .wrap_show .page_arrow{ -webkit-animation:a_page_arrow 1.2s 0.3s linear infinite;}
 
 @-webkit-keyframes a_bg_1{
 	0%{ opacity:0; -webkit-transform:scale(1);}
-	50%{ opacity:1; -webkit-transform:scale(1);}
+	38.46%{ opacity:1; -webkit-transform:scale(1);}
 	100%{ opacity:0; -webkit-transform:scale(9.6);}
 }
 
 @-webkit-keyframes a_bg_2{
 	0%{ opacity:0; -webkit-transform:scale(0.1); -webkit-transform-origin:30% 48.9%;}
-	50%{ opacity:1; -webkit-transform:scale(1); -webkit-transform-origin:30% 48.9%;}
-	50.5%{ opacity:1; -webkit-transform:scale(1); -webkit-transform-origin:87.1% 2.35%;}
+	61.54%{ opacity:1; -webkit-transform:scale(1); -webkit-transform-origin:30% 48.9%;}
+	62%{ opacity:1; -webkit-transform:scale(1); -webkit-transform-origin:87.1% 2.35%;}
 	100%{ opacity:0; -webkit-transform:scale(0.292); -webkit-transform-origin:87.1% 2.35%;}
 }
 
@@ -95,12 +95,12 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 .con_wrap_2 .word_wrap .word_txt_3{ display:block; height:85px; width:262px; background:url(../images/page_2.png) no-repeat 0 -241px; background-size:263px 417px; position:absolute; left:50%; top:50%; margin-left:-132px; margin-top:25px; overflow:hidden; text-indent:-9999px; z-index:2;}
 .con_wrap_2 .word_wrap .word_txt_4{ display:block; height:67px; width:262px; background:url(../images/page_2.png) no-repeat 0 -328px; background-size:263px 417px; position:absolute; left:50%; top:50%; margin-left:-132px; margin-top:120px; overflow:hidden; text-indent:-9999px; z-index:2;}
 
-.wrap_show .word_wrap .word_title{ -webkit-animation:a_page_2_word_title 1.2s 0.3s ease both;}
-.wrap_show .word_wrap .signature{ -webkit-animation:a_page_2_signature 0.8s 0.7s ease both;}
-.wrap_show .word_wrap .word_txt_1{ -webkit-animation:a_opacity 0.3s 1.5s linear both;}
-.wrap_show .word_wrap .word_txt_2{ -webkit-animation:a_opacity 0.3s 1.7s linear both;}
-.wrap_show .word_wrap .word_txt_3{ -webkit-animation:a_opacity 0.3s 1.9s linear both;}
-.wrap_show .word_wrap .word_txt_4{ -webkit-animation:a_opacity 0.3s 2.1s linear both;}
+.wrap_show .word_wrap .word_title{ -webkit-animation:a_page_2_word_title 1.5s 0.3s ease both;}
+.wrap_show .word_wrap .signature{ -webkit-animation:a_page_2_signature 1s 0.8s ease both;}
+.wrap_show .word_wrap .word_txt_1{ -webkit-animation:a_opacity 0.5s 1.8s linear both;}
+.wrap_show .word_wrap .word_txt_2{ -webkit-animation:a_opacity 0.5s 2.3s linear both;}
+.wrap_show .word_wrap .word_txt_3{ -webkit-animation:a_opacity 0.5s 2.8s linear both;}
+.wrap_show .word_wrap .word_txt_4{ -webkit-animation:a_opacity 0.5s 3.3s linear both;}
 
 @-webkit-keyframes a_page_2_word_title{
 	0%{ opacity:0; -webkit-transform:translate(0,0) scale(1);}
@@ -145,9 +145,9 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 }
 
 @-webkit-keyframes a_page_3_txt_7{
-	0%{ -webkit-transform:translate(0,0) scale(0.783);}
-	90%{ -webkit-transform:translate(-365px,0) scale(0.783);}
-	100%{ -webkit-transform:translate(-284px,-148px) scale(1);}
+	0%{ -webkit-transform:translate(0,0) scale(0.783); opacity:1;}
+	90%{ -webkit-transform:translate(-365px,0) scale(0.783); opacity:0.4;}
+	100%{ -webkit-transform:translate(-284px,-148px) scale(1); opacity:1;}
 }
 
 
