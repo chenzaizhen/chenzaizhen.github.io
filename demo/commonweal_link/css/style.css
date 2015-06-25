@@ -28,9 +28,9 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 .con_wrap_1 .detail_wrap{ display:block; height:73px; width:104px; background:url(../images/page_1.png) no-repeat 0 -51px; background-size:166px 139px; position:absolute; right:27px; bottom:32px; z-index:2;}
 .con_wrap_1 .detail_wrap p{ display:none;}
 
-.wrap_show.con_wrap_1 .bg_1{ -webkit-animation:a_bg_1 1.3s 0.3s linear both; -webkit-transform-origin:30% 48.9%; }
-.wrap_show.con_wrap_1 .bg_2{ -webkit-animation:a_bg_2 1.3s 0.8s linear both;}
-.wrap_show.con_wrap_1 .bg_3{ -webkit-animation:a_bg_3 0.5s 1.6s linear both; -webkit-transform-origin:87.1% 2.35%;}
+.wrap_show.con_wrap_1 .bg_1{ -webkit-animation:a_bg_1 1.3s 0.3s ease both; -webkit-transform-origin:30% 48.9%; }
+.wrap_show.con_wrap_1 .bg_2{ -webkit-animation:a_bg_2 1.3s 0.8s ease both;}
+.wrap_show.con_wrap_1 .bg_3{ -webkit-animation:a_bg_3 0.5s 1.6s ease both; -webkit-transform-origin:87.1% 2.35%;}
 
 .wrap_show.con_wrap_1 .main_title{ -webkit-animation:a_page_1_main_title 0.3s 2.1s linear both;}
 .wrap_show.con_wrap_1 .detail_wrap{ -webkit-animation:a_page_1_main_title 0.3s 2.4s linear both;}
