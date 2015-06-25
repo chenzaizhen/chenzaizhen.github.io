@@ -56,7 +56,7 @@ $(document).ready(function(){
 	
 	function wipe_down(){
 		if(moving!=1){
-			if(page_index>=7){ return ;}
+			if(page_index>=4){ return ;}
 			$(".con_wrap_"+page_index).addClass("wrap_prepare").removeClass("wrap_show");
 			$(".con_wrap_"+(page_index+1)).addClass("wrap_show").removeClass("wrap_prepare");
 			
