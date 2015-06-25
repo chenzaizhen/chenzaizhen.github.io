@@ -39,17 +39,19 @@ $(document).ready(function(){
 		if(moving!=1){//当页面在切换时候，禁止滑屏
 			if(page_index<=1){ return ;}
 			
-			$(".con_wrap_"+page_index).addClass("wrap_prepare").removeClass("wrap_show");
+			$(".con_wrap_"+page_index).addClass("wrap_hide");
 			$(".con_wrap_"+(page_index-1)).addClass("wrap_show").removeClass("wrap_prepare");
 			
 			var timer=setTimeout(function(){
+				
+				$(".con_wrap_"+(page_index+1)).addClass("wrap_prepare").removeClass("wrap_show").removeClass("wrap_hide");
 				moving=0;
+				
 			},300);
 			
 			
 			moving=1;
 			page_index--;	
-			console.log(page_index);
 
 		}
 	}
@@ -57,12 +59,15 @@ $(document).ready(function(){
 	function wipe_down(){
 		if(moving!=1){
 			if(page_index>=4){ return ;}
-			$(".con_wrap_"+page_index).addClass("wrap_prepare").removeClass("wrap_show");
+			
+			$(".con_wrap_"+page_index).addClass("wrap_hide");
 			$(".con_wrap_"+(page_index+1)).addClass("wrap_show").removeClass("wrap_prepare");
 			
 			var timer=setTimeout(function(){
+				
+				$(".con_wrap_"+(page_index-1)).addClass("wrap_prepare").removeClass("wrap_show").removeClass("wrap_hide");
 				moving=0;
-				console.log(page_index);
+				
 			},300);
 			
 			

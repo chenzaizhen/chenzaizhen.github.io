@@ -79,7 +79,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 	100%{ -webkit-transform: translate(0,0px);}
 }
 
-.bg_1{ display:block; height:100%; width:100%; background:url(../images/bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; z-index:1;}
+.bg_1{ display:block; height:100%; width:100%; background:url(../images/bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; z-index:1; opacity:0.4;}
 .bg_2{ display:block; height:100%; width:100%; background:url(../images/bg_qq.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; z-index:2;}
 .bg_3{ display:block; height:100%; width:100%; background:url(../images/bg_qq_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; z-index:1;}
 
@@ -197,7 +197,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 
 .wrap_show{ display:block; opacity:1; z-index:10;}
 .wrap_prepare{ display:block; opacity:0; z-index:1;}
-
+.wrap_hide{ opacity:0; -webkit-transition:opacity 0.3s linear; z-index:11;}
 
 
 
