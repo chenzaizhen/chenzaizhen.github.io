@@ -87,7 +87,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 .logo_area .logo_title{ display:none;}
 .logo_area .logo_img{ display:block; height:109px; width:109px; background:url(../../images/invitation_code/sprite.png) no-repeat 0 -160px; background-size:118px 308px; position:absolute; left:0; top:0;}
 .logo_area .logo_flection{ display:block; height:37px; width:107px; background:url(../../images/invitation_code/sprite.png) no-repeat 0 -271px; background-size:118px 308px; position:absolute; left:0; top:110px;}
-.logo_wrap .main_title{ display:block; height:45px; width:100%; position:absolute; left:0; top:50%; margin-top:-10px; text-align:center; color:#fff; font-family:"microsoft yahei"; font-size:14px;}
+.logo_wrap .main_title{ display:block; height:45px; width:100%; position:absolute; left:0; top:50%; margin-top:-10px; text-align:center; color:#fff; font-family:"Arial","microsoft yahei"; font-size:14px;}
 .logo_wrap .main_title .title{ font-weight:normal; font-size:18px; margin-bottom:4px;}
 
 .share_wrap{ position:absolute; left:0px; top:50%; margin-top:77px; z-index:3; height:110px;}
