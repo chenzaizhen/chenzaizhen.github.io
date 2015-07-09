@@ -134,6 +134,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 .btn_start_area .start_tips{ display:block; height:43px; width:140px; color:#d3dbeb; text-align:center; line-height:43px; font-size:16px; font-family:'microsoft yahei'; position:absolute; left:0; top:-43px;}
 .btn_start_area .btn_start:hover{ text-decoration:none;}
 .btn_start_area .btn_start:active{ margin-top:1px;}
+.ac_tips{ display:block; width:100%; position:absolute; left:0px; bottom:15px; z-index:3; color:#6480b8; font-family:"microsoft yahei"; font-size:12px; text-align:center;}
 
 
 
@@ -182,6 +183,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 .wrap_show .logo_hook{ -webkit-animation:a_logo_hook1 0.3s 0.5s linear both; }*/
 .wrap_show .btn_start_area{ -webkit-animation:a_btn_start_area 0.3s 1.6s linear both; }
 .wrap_show .btn_start_area .btn_start{ -webkit-animation:a_btn_start 1.5s 1.9s linear infinite; }
+.wrap_show .ac_tips{ -webkit-animation:a_logo_wrap 0.3s 1.8s linear both;}
 
 
 @-webkit-keyframes a_logo_wrap{
