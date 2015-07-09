@@ -95,7 +95,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 .share_wrap .share_row .btn{ display:block; height:35px; line-height:35px; width:110px; background:#f29360; color:#fff; font-size:16px; font-family:"microsoft yahei"; border-radius:35px; text-align:center; position: absolute; left:50%; margin-left:19px;}
 .share_wrap .share_row .btn_shared{ background:rgba(157,157,157,0.3);}
 
-.code_area{ display:block; height:30px; width:118px; background:#fff; text-align:center; line-height:30px; font-family:"Arial","microsoft yahei"; font-size:16px; letter-spacing:2px; position:absolute; left:50%; top:50%; margin-left:-120px; top:2px;}
+.code_area{ display:block; height:30px; width:118px; background:#fff; text-align:center; line-height:30px; font-family:"Arial","microsoft yahei"; font-size:16px; letter-spacing:2px; position:absolute; left:50%; top:50%; margin-left:-120px; margin-top:25px;}
 .scratch_area_wrap{display:block; height:30px; width:118px; position:absolute; left:0px; top:0px; z-index:1; pointer-events:none;}
 .scratch_area_wrap .scratch_area{display:block; height:30px; width:118px; position:absolute; right:0px; top:0px; z-index:1; background:url(../../images/invitation_code/sprite.png) no-repeat right 0; background-size:118px 308px;}
 .scratch_area_wrap .scratch_area_1{ background-position:right 0; z-index:5;}
@@ -131,7 +131,7 @@ html,body{ height:100%; width:100%; position: relative; overflow:hidden;}
 	
 	.code_wrap{ margin-top:45px;}
 	.code_wrap .code_title{ font-size:16px;}
-	.code_wrap .code_area{ top:30px;}
+	.code_wrap .code_area{ top:5px;}
 	.code_wrap .btn_copy{ top:88px;}
 }
 
