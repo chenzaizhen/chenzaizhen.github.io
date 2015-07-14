@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html><!--  manifest="js/cache.appcache" -->
+<head>
+<meta  charset="utf-8" />
+<title>WeBank 微众银行</title>
+<meta name="description" content="WeBank" />
+<meta name="keywords" content="深圳前海微众银行、前海微众银行、微众银行、腾讯银行、企鹅银行、WeBank、互联网银行、首家民营银行、民营银行" />
+<link type="image/x-icon" href="fav_icon_32.ico" rel="Shortcut Icon">
+<link type="image/x-icon" href="fav_icon_32.ico" rel="bookmark">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />-->
+
+<script type="text/javascript">
+(function() {
+
+	var ua = navigator.userAgent;
+	var istablet = /android/i.test(ua) && !/mobile/i.test(ua);
+	if (!istablet && /(android)|(iphone)|(ipod)/i.test(ua) && (!/mi pad/i.test(ua))) {
+		try {
+			var jumpUrl = "mobile/index.html";
+			location.replace(jumpUrl)
+		} catch (d) {}
+	}
+	
+})(); </script>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+
+</head>
+<body>
+
+<div class="wrap">
+	<div class="menu">#menu</div>
+    <div class="con_wrap con_wrap_1 con_wrap_show">
+        <p>#1</p>
+    </div>
+    <div class="con_wrap_hook"></div>
+    <div class="con_wrap con_wrap_2 con_wrap_prepare">
+        <p>#2</p>
+    </div>
+    <div class="con_wrap con_wrap_3 con_wrap_prepare">
+        <div class="phone phone_1">phone</div>
+        <div class="txt txt_1">#3_1</div>
+        <div class="txt txt_2">#3_2</div>
+        <div class="txt txt_3">#3_3</div>
+    </div>
+    <div class="con_wrap con_wrap_4 con_wrap_prepare">
+        <p>#footer</p>
+    </div>
+
+</div>
+
+<script language="javascript" type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=39617597" charset="UTF-8"></script>
+
+</body>
+</html>

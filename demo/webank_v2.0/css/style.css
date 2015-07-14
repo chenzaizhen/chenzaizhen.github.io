@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/* 浏览器样式清除 reset */
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body, button, input, select, textarea{ font:12px/1.5 Tahoma,Arial,'宋体'; }
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:focus,input,button,select,textarea{outline:none; font-size:100%;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-variant: normal;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+button {cursor:pointer;}
+
+body,html{ display:block; height:100%; width:100%;}
+body{ background:#fff;}
+.wrap{ width:100%; height:100%; overflow-x:hidden; background:#fff;}
+
+.menu{ display:block; height:50px; width:100%; position:fixed; left:0px; top:0px; right:0; background:#CCC; text-align:center; line-height:50px; color:#fff; font-family:"Arial","microsoft yahei"; font-size:20px; z-index:3;}
+.con_wrap{ display:block; height:100%; width:100%; background:#FC9; text-align:center; line-height:200px; color:#666; font-family:"Arial","microsoft yahei"; font-size:20px; position:relative; z-index:2;}
+.con_wrap_prepare{}
+.con_wrap_1{ background:#FC9;}
+.con_wrap_2{ background:#CFC;}
+.con_wrap_3{ background:#FFC; height:auto;}
+
+.con_wrap_1{}
+.con_wrap_hook{ display:block; height:100%; width:100%; display:none; }
+
+
+.con_wrap_3 .phone{ display:block; position: absolute; left:0px; top:0px; height:500px; width:300px; background:#CCC; line-height:800px;}
+.con_wrap_3 .phone_fix_top{ position:fixed;}
+.con_wrap_3 .phone_fix_bottom{ position:absolute; bottom:0px; left:0px; top:auto;}
+
+.con_wrap_3 .phone_1{ color:#0CF;}
+.con_wrap_3 .phone_2{ color:#96F;}
+.con_wrap_3 .phone_3{ color:#C03;}
+
+.con_wrap_3 .txt{ height:500px; width:100%; display:block;}
+.con_wrap_3 .txt_1{ background:#6FF;}
+.con_wrap_3 .txt_2{ background:#9FC;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
