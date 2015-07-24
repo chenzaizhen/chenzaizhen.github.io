@@ -294,11 +294,14 @@ $(document).ready(function(){
 		function slideSticky(distance_x){
 			if(distance_x>0&&distance_x<160){
 				var timer=setInterval(function(){
-					if(distance_x>=0){
+					if(distance_x>0){
 						distance_x-=5;
+						if(distance_x<=0){
+							distance_x=0;
+						}
 						slideJudge(distance_x);
 					}else{
-						
+						distance_x=0;
 						distance_x_pre=distance_x;
 						clearInterval(timer);
 					}
@@ -318,6 +321,9 @@ $(document).ready(function(){
 				var timer=setInterval(function(){
 					if(distance_x<0){
 						distance_x+=5;
+						if(distance_x>=0){
+							distance_x=0;
+						}
 						slideJudge(distance_x);
 					}else{
 						
