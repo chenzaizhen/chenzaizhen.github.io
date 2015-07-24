@@ -71,6 +71,17 @@ $(document).ready(function(){
 		});
 		f_top_start=$(".txt_1").offset().top;
 		f_top_end=$(".txt_3").offset().top;
+		
+		
+		//app产品展示页重定宽
+		loan_width_pre=$(".product_info").width()/2; //获取页面宽度，不包含滚动条；
+		app_width_pre=loan_width_pre;
+		
+		$($loan_wrap).width(loan_width_pre+distance_x);
+		$($app_wrap).width(app_width_pre-distance_x);
+		
+		slideInit();
+		
 	}
 	
 	resetSize();
@@ -133,7 +144,6 @@ $(document).ready(function(){
 	var loan_width_pre=$($loan_wrap).width();
 	var app_width_pre=$($app_wrap).width();
 	
-	
 	function slideInit(){
 		$(".loan_container").css({
 			"left": loan_width_pre-500+"px"
@@ -145,12 +155,6 @@ $(document).ready(function(){
 	
 	slideInit();
 	
-	
-	
-	
-	
-	
-	var i=0;
 	
 	$(document).mousedown(function(eve_d){
 		//console.log("fuck_down");
@@ -190,10 +194,8 @@ $(document).ready(function(){
 				}
 				
 				//console.log(mouse_move_x+" "+mouse_move_y);
+				console.log(distance_x);
 				
-				$(".separate_wrap").css({
-					"-webkit-transform":"translate("+distance_x+"px,0px)"
-				});
 				/*
 				// 拖动150px会越过屏幕
 				if(distance_x>0&&distance_x<=150){
@@ -206,281 +208,8 @@ $(document).ready(function(){
 					});
 				}*/
 				
-				if(distance_x>=0){
-					
-					resetNegative();
-					EffectFadeInOut($(".loan_wrap .bg_color"),0,150,distance_x,0);
-					EffectFadeInOut($(".app_wrap .detail_info .title"),50,100,distance_x,0);
-					EffectFadeInOut($(".app_wrap .detail_info .logo_tips"),50,170,distance_x,0);
-					EffectFadeInOut($(".app_wrap .detail_info .qr_code_area"),50,240,distance_x,0);
-					EffectFadeInOut($(".loan_bg"),0,300,distance_x,1);
-					
-					EffectTranslate($(".app_wrap .detail_info .logo_pic"),50,240,distance_x,0,0,90,25);
-					EffectTranslate($(".app_wrap .detail_info .logo_name"),50,240,distance_x,0,0,90,15);
-					
-					EffectColor($(".loan_wrap .detail_info .title"),0,300,distance_x,"#666","#fff");
-					EffectColor($(".loan_wrap .detail_info .logo_tips"),0,300,distance_x,"#666","#fff");
-					EffectColor($(".loan_wrap .detail_info .logo_name"),0,300,distance_x,"#666","#fff");
-					EffectColor($(".loan_wrap .detail_info .scan_tips"),0,300,distance_x,"#666","#fff");
-					EffectColor($(".product_info"),0,300,distance_x,"#8d8d8d","#fff");
-					
-				}else{
-					
-					resetPositive();
-					EffectFadeInOut($(".app_wrap .bg_color"),0,-150,distance_x,0);
-					EffectFadeInOut($(".loan_wrap .detail_info .title"),-50,-100,distance_x,0);
-					EffectFadeInOut($(".loan_wrap .detail_info .logo_tips"),-50,-170,distance_x,0);
-					EffectFadeInOut($(".loan_wrap .detail_info .qr_code_area"),-50,-240,distance_x,0);
-					EffectFadeInOut($(".loan_bg"),0,-300,distance_x,1);
-					
-					EffectTranslate($(".loan_wrap .detail_info .logo_pic"),-50,-240,distance_x,0,0,-90,25);
-					EffectTranslate($(".loan_wrap .detail_info .logo_name"),-50,-240,distance_x,0,0,-90,15);
-					
-					EffectColor($(".loan_wrap .detail_info .logo_name"),0,-300,distance_x,"#666","#fff");
-					
-				}
+				slideJudge(distance_x);
 				
-				//console.log("distance: "+distance_x);
-				//复位，防止快速移动，导致鼠标监听不及时
-				function resetNegative(){
-					$(".app_wrap .bg_color").attr("style","");
-					$(".loan_wrap .detail_info .title").attr("style","");
-					$(".loan_wrap .detail_info .logo_tips").attr("style","");
-					$(".loan_wrap .detail_info .qr_code_area").attr("style","");
-					$(".loan_wrap .detail_info .logo_pic").attr("style","");
-					$(".loan_wrap .detail_info .logo_name").attr("style","");
-				}
-				
-				function resetPositive(){
-					$(".loan_wrap .bg_color").attr("style","");
-					$(".app_wrap .detail_info .title").attr("style","");
-					$(".app_wrap .detail_info .logo_tips").attr("style","");
-					$(".app_wrap .detail_info .qr_code_area").attr("style","");
-					$(".app_wrap .detail_info .logo_pic").attr("style","");
-					$(".app_wrap .detail_info .logo_name").attr("style","");
-				}
-				
-				function EffectFadeInOut(elem,dis_start,dis_end,distance_x,direction){
-					//console.log(direction)
-					if(direction==0){
-						if(distance_x>=0){
-							if(distance_x>dis_start&&distance_x<=dis_end){
-								
-								var num=1-(Math.floor((distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
-								$(elem).css({
-									"opacity": num
-								});
-								
-							}else if(distance_x<=dis_start){
-							
-								$(elem).css({
-									"opacity": 1
-								});
-								
-							}else if(distance_x>dis_end){
-								
-								$(elem).css({
-									"opacity": 0
-								});
-								
-							}
-							
-						}else{
-							if(distance_x>dis_end&&distance_x<=dis_start){
-								
-								var num=1-(Math.floor(Math.abs(distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
-								$(elem).css({
-									"opacity": num
-								});
-								
-							}else if(distance_x>dis_start){
-								
-								$(elem).css({
-									"opacity": 1
-								});
-								
-							}else if(distance_x<=dis_end){
-								
-								$(elem).css({
-									"opacity": 0
-								});
-								
-							}
-						}	
-					}else{
-						if(distance_x>=0){
-							if(distance_x>dis_start&&distance_x<=dis_end){
-								
-								var num=(Math.floor((distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
-								$(elem).css({
-									"opacity": num
-								});
-								
-							}else if(distance_x<=dis_start){
-								
-								$(elem).css({
-									"opacity": 0
-								});
-								
-							}else if(distance_x>dis_end){
-								
-								$(elem).css({
-									"opacity": 1
-								});
-								
-							}
-							
-						}else{
-							if(distance_x>dis_end&&distance_x<=dis_start){
-								
-								var num=(Math.floor(Math.abs(distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
-								$(elem).css({
-									"opacity": num
-								});
-								
-							}else if(distance_x>dis_start){
-								
-								$(elem).css({
-									"opacity": 0
-								});
-								
-							}else if(distance_x<=dis_end){
-								
-								$(elem).css({
-									"opacity": 1
-								});
-								
-							}
-						}
-					}
-				}
-				
-				function EffectTranslate(elem,dis_start,dis_end,distance_x,t_s_x,t_s_y,t_e_x,t_e_y){//translate_start_x translate_end_x 
-					if(distance_x>=0){
-						
-						if(distance_x>dis_start&&distance_x<=dis_end){
-							
-							var param=(Math.floor((distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
-							var num1=param*(t_e_x-t_s_x);
-							var num2=param*(t_e_y-t_s_y);
-							
-							$(elem).css({
-								"-webkit-transform": "translate("+num1+"px,"+num2+"px)"
-							});
-							//.app_wrap .detail_info .logo_pic
-						}else if(distance_x<=dis_start){
-							
-							$(elem).css({
-								"-webkit-transform": "translate("+t_s_x+"px,"+t_s_y+"px)"
-							});
-							
-						}else if(distance_x>dis_end){
-							
-							$(elem).css({
-								"-webkit-transform": "translate("+t_e_x+"px,"+t_e_y+"px)"
-							});
-							
-						}
-						
-					}else{
-						
-						if(distance_x>dis_end&&distance_x<=dis_start){
-							
-							var param=(Math.floor(Math.abs(distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
-							var num1=param*(t_e_x-t_s_x);
-							var num2=param*(t_e_y-t_s_y);
-							
-							$(elem).css({
-								"-webkit-transform": "translate("+num1+"px,"+num2+"px)"
-							});
-							
-						}else if(distance_x>dis_start){
-							
-							$(elem).css({
-								"-webkit-transform": "translate("+t_s_x+"px,"+t_s_y+"px)"
-							});
-							
-						}else if(distance_x<=dis_end){
-							
-							$(elem).css({
-								"-webkit-transform": "translate("+t_e_x+"px,"+t_e_y+"px)"
-							});
-							
-						}
-						
-					}
-				}
-				
-				function EffectColor(elem,dis_start,dis_end,distance_x,color_start,color_end){//translate_start_x translate_end_x 
-					
-					$(elem).css({
-						"-webkit-transition":"color 0.3s linear"
-					});
-					
-					if(distance_x>=0){
-						
-						if(distance_x>dis_start&&distance_x<=dis_end){
-							
-							var param=(Math.floor((distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
-							if(param>=0.6){
-								$(elem).css({
-									"color": color_end
-								});
-							}else{
-								$(elem).css({
-									"color": color_start
-								});
-							}
-							
-						}else if(distance_x<=dis_start){
-							
-							$(elem).css({
-								"color": color_start
-							});
-							
-						}else if(distance_x>dis_end){
-							
-							$(elem).css({
-								"color": color_end
-							});
-							
-						}
-						
-					}else{
-						
-						if(distance_x>dis_end&&distance_x<=dis_start){
-							
-							var param=(Math.floor((distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
-							//console.log(param);
-							if(param<=-0.6){
-								$(elem).css({
-									"color": color_end
-								});
-							}else{
-								$(elem).css({
-									"color": color_start
-								});
-							}
-							
-						}else if(distance_x>dis_start){
-							
-							$(elem).css({
-								"color": color_start
-							});
-							
-						}else if(distance_x<=dis_end){
-							
-							$(elem).css({
-								"color": color_end
-							});
-							
-						}
-						
-					}
-				}
-				
-				$($loan_wrap).width(loan_width_pre+distance_x);
-				$($app_wrap).width(app_width_pre-distance_x);
 				
 				//console.log("fuck_move"+(i++));
 				//console.log("width: "+loan_width_pre+" distance: "+distance_x);
@@ -489,13 +218,63 @@ $(document).ready(function(){
 			}
 		});
 		
+		function slideJudge(distance_x){
+			
+			if(distance_x>=0){
+				
+				resetNegative();
+				EffectFadeInOut($(".loan_wrap .bg_color"),0,150,distance_x,0);
+				EffectFadeInOut($(".app_wrap .detail_info .title"),50,100,distance_x,0);
+				EffectFadeInOut($(".app_wrap .detail_info .logo_tips"),50,170,distance_x,0);
+				EffectFadeInOut($(".app_wrap .detail_info .qr_code_area"),50,240,distance_x,0);
+				EffectFadeInOut($(".loan_bg"),0,300,distance_x,1);
+				
+				EffectTranslate($(".app_wrap .detail_info .logo_pic"),50,240,distance_x,0,0,90,25);
+				EffectTranslate($(".app_wrap .detail_info .logo_name"),50,240,distance_x,0,0,90,15);
+				
+				EffectColor($(".loan_wrap .detail_info .title"),0,300,distance_x,"#666","#fff");
+				EffectColor($(".loan_wrap .detail_info .logo_tips"),0,300,distance_x,"#666","#fff");
+				EffectColor($(".loan_wrap .detail_info .logo_name"),0,300,distance_x,"#666","#fff");
+				EffectColor($(".loan_wrap .detail_info .scan_tips"),0,300,distance_x,"#666","#fff");
+				EffectColor($(".product_info"),0,300,distance_x,"#8d8d8d","#fff");
+				
+			}else{
+				
+				resetPositive();
+				EffectFadeInOut($(".app_wrap .bg_color"),0,-150,distance_x,0);
+				EffectFadeInOut($(".loan_wrap .detail_info .title"),-50,-100,distance_x,0);
+				EffectFadeInOut($(".loan_wrap .detail_info .logo_tips"),-50,-170,distance_x,0);
+				EffectFadeInOut($(".loan_wrap .detail_info .qr_code_area"),-50,-240,distance_x,0);
+				EffectFadeInOut($(".loan_bg"),0,-300,distance_x,1);
+				
+				EffectTranslate($(".loan_wrap .detail_info .logo_pic"),-50,-240,distance_x,0,0,-90,25);
+				EffectTranslate($(".loan_wrap .detail_info .logo_name"),-50,-240,distance_x,0,0,-90,15);
+				
+				EffectColor($(".loan_wrap .detail_info .logo_name"),0,-300,distance_x,"#666","#fff");
+				
+			}
+			
+			//console.log("distance: "+distance_x);
+			
+			
+			$($loan_wrap).width(loan_width_pre+distance_x);
+			$($app_wrap).width(app_width_pre-distance_x);
+			
+			$(".separate_wrap").css({
+				"-webkit-transform":"translate("+distance_x+"px,0px)"
+			});
+		}
+		
 		
 		$(document).mouseup(function(eve_u){
 			if(dragging==1){
 				//console.log("fuck_up");
 		/*		mouse_move_x=eve_u.clientX;
 				mouse_move_y=eve_u.clientY;*/
-		
+				
+				slideSticky(distance_x);
+				
+				
 				distance_x_pre=distance_x;
 				
 				$(".separate_wrap").css({
@@ -505,9 +284,307 @@ $(document).ready(function(){
 				dragging=0;
 				$(".arrow_area_outter").removeClass("dragging").removeClass("dragging_left").removeClass("dragging_right");//添加类名触发按下效果
 				
+				
 				//console.log(distance_x);
 			}
 		});
+		
+		
+		//鼠标释放 自动吸附
+		function slideSticky(distance_x){
+			if(distance_x>0&&distance_x<160){
+				var timer=setInterval(function(){
+					if(distance_x>=0){
+						distance_x-=5;
+						slideJudge(distance_x);
+					}else{
+						
+						distance_x_pre=distance_x;
+						clearInterval(timer);
+					}
+				},5);
+			}else if(distance_x>=160&&distance_x<300){
+				var timer=setInterval(function(){
+					if(distance_x<300){
+						distance_x+=5;
+						slideJudge(distance_x);
+					}else{
+						
+						distance_x_pre=distance_x;
+						clearInterval(timer);
+					}
+				},5);
+			}else if(distance_x<0&&distance_x>-160){
+				var timer=setInterval(function(){
+					if(distance_x<0){
+						distance_x+=5;
+						slideJudge(distance_x);
+					}else{
+						
+						distance_x_pre=distance_x;
+						clearInterval(timer);
+					}
+				},5);
+			}else if(distance_x<-160&&distance_x>-300){
+				var timer=setInterval(function(){
+					if(distance_x>-300){
+						distance_x-=5;
+						slideJudge(distance_x);
+					}else{
+						
+						distance_x_pre=distance_x;
+						clearInterval(timer);
+					}
+				},5);
+			}
+			
+			
+			$($loan_wrap).width(loan_width_pre+distance_x);
+			$($app_wrap).width(app_width_pre-distance_x);
+			$(".separate_wrap").css({
+				"-webkit-transform":"translate("+distance_x+"px,0px)"
+			});
+			
+		}
+		
+		
+		//复位，防止快速移动，导致鼠标监听不及时
+		function resetNegative(){
+			$(".app_wrap .bg_color").attr("style","");
+			$(".loan_wrap .detail_info .title").attr("style","");
+			$(".loan_wrap .detail_info .logo_tips").attr("style","");
+			$(".loan_wrap .detail_info .qr_code_area").attr("style","");
+			$(".loan_wrap .detail_info .logo_pic").attr("style","");
+			$(".loan_wrap .detail_info .logo_name").attr("style","");
+		}
+		
+		function resetPositive(){
+			$(".loan_wrap .bg_color").attr("style","");
+			$(".app_wrap .detail_info .title").attr("style","");
+			$(".app_wrap .detail_info .logo_tips").attr("style","");
+			$(".app_wrap .detail_info .qr_code_area").attr("style","");
+			$(".app_wrap .detail_info .logo_pic").attr("style","");
+			$(".app_wrap .detail_info .logo_name").attr("style","");
+		}
+		
+		function EffectFadeInOut(elem,dis_start,dis_end,distance_x,direction){
+			//console.log(direction)
+			if(direction==0){
+				if(distance_x>=0){
+					if(distance_x>dis_start&&distance_x<=dis_end){
+						
+						var num=1-(Math.floor((distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
+						$(elem).css({
+							"opacity": num
+						});
+						
+					}else if(distance_x<=dis_start){
+					
+						$(elem).css({
+							"opacity": 1
+						});
+						
+					}else if(distance_x>dis_end){
+						
+						$(elem).css({
+							"opacity": 0
+						});
+						
+					}
+					
+				}else{
+					if(distance_x>dis_end&&distance_x<=dis_start){
+						
+						var num=1-(Math.floor(Math.abs(distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
+						$(elem).css({
+							"opacity": num
+						});
+						
+					}else if(distance_x>dis_start){
+						
+						$(elem).css({
+							"opacity": 1
+						});
+						
+					}else if(distance_x<=dis_end){
+						
+						$(elem).css({
+							"opacity": 0
+						});
+						
+					}
+				}	
+			}else{
+				if(distance_x>=0){
+					if(distance_x>dis_start&&distance_x<=dis_end){
+						
+						var num=(Math.floor((distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
+						$(elem).css({
+							"opacity": num
+						});
+						
+					}else if(distance_x<=dis_start){
+						
+						$(elem).css({
+							"opacity": 0
+						});
+						
+					}else if(distance_x>dis_end){
+						
+						$(elem).css({
+							"opacity": 1
+						});
+						
+					}
+					
+				}else{
+					if(distance_x>dis_end&&distance_x<=dis_start){
+						
+						var num=(Math.floor(Math.abs(distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
+						$(elem).css({
+							"opacity": num
+						});
+						
+					}else if(distance_x>dis_start){
+						
+						$(elem).css({
+							"opacity": 0
+						});
+						
+					}else if(distance_x<=dis_end){
+						
+						$(elem).css({
+							"opacity": 1
+						});
+						
+					}
+				}
+			}
+		}
+		
+		function EffectTranslate(elem,dis_start,dis_end,distance_x,t_s_x,t_s_y,t_e_x,t_e_y){//translate_start_x translate_end_x 
+			if(distance_x>=0){
+				
+				if(distance_x>dis_start&&distance_x<=dis_end){
+					
+					var param=(Math.floor((distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
+					var num1=param*(t_e_x-t_s_x);
+					var num2=param*(t_e_y-t_s_y);
+					
+					$(elem).css({
+						"-webkit-transform": "translate("+num1+"px,"+num2+"px)"
+					});
+					//.app_wrap .detail_info .logo_pic
+				}else if(distance_x<=dis_start){
+					
+					$(elem).css({
+						"-webkit-transform": "translate("+t_s_x+"px,"+t_s_y+"px)"
+					});
+					
+				}else if(distance_x>dis_end){
+					
+					$(elem).css({
+						"-webkit-transform": "translate("+t_e_x+"px,"+t_e_y+"px)"
+					});
+					
+				}
+				
+			}else{
+				
+				if(distance_x>dis_end&&distance_x<=dis_start){
+					
+					var param=(Math.floor(Math.abs(distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
+					var num1=param*(t_e_x-t_s_x);
+					var num2=param*(t_e_y-t_s_y);
+					
+					$(elem).css({
+						"-webkit-transform": "translate("+num1+"px,"+num2+"px)"
+					});
+					
+				}else if(distance_x>dis_start){
+					
+					$(elem).css({
+						"-webkit-transform": "translate("+t_s_x+"px,"+t_s_y+"px)"
+					});
+					
+				}else if(distance_x<=dis_end){
+					
+					$(elem).css({
+						"-webkit-transform": "translate("+t_e_x+"px,"+t_e_y+"px)"
+					});
+					
+				}
+				
+			}
+		}
+		
+		function EffectColor(elem,dis_start,dis_end,distance_x,color_start,color_end){//translate_start_x translate_end_x 
+			
+			$(elem).css({
+				"-webkit-transition":"color 0.3s linear"
+			});
+			
+			if(distance_x>=0){
+				
+				if(distance_x>dis_start&&distance_x<=dis_end){
+					
+					var param=(Math.floor((distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
+					if(param>=0.6){
+						$(elem).css({
+							"color": color_end
+						});
+					}else{
+						$(elem).css({
+							"color": color_start
+						});
+					}
+					
+				}else if(distance_x<=dis_start){
+					
+					$(elem).css({
+						"color": color_start
+					});
+					
+				}else if(distance_x>dis_end){
+					
+					$(elem).css({
+						"color": color_end
+					});
+					
+				}
+				
+			}else{
+				
+				if(distance_x>dis_end&&distance_x<=dis_start){
+					
+					var param=(Math.floor((distance_x-dis_start)/Math.abs(dis_end-dis_start)*1000))/1000;
+					//console.log(param);
+					if(param<=-0.6){
+						$(elem).css({
+							"color": color_end
+						});
+					}else{
+						$(elem).css({
+							"color": color_start
+						});
+					}
+					
+				}else if(distance_x>dis_start){
+					
+					$(elem).css({
+						"color": color_start
+					});
+					
+				}else if(distance_x<=dis_end){
+					
+					$(elem).css({
+						"color": color_end
+					});
+					
+				}
+				
+			}
+		}
 		
 	});
 	
